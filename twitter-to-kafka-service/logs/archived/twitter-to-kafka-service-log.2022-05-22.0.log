@@ -1,0 +1,11 @@
+2022-05-22 00:22:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 15020 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-05-22 00:22:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-05-22 00:22:05 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 4.669 seconds (JVM running for 11.58)
+2022-05-22 00:22:05 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-05-22 00:22:05 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-05-22 00:28:54 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 10336 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-05-22 00:28:54 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-05-22 00:28:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 2.115 seconds (JVM running for 3.132)
+2022-05-22 00:28:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-05-22 00:28:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-05-22 00:28:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
