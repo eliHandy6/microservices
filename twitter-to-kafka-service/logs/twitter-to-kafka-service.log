@@ -1,180 +1,295 @@
-2022-05-24 23:27:01 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14116 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
-2022-05-24 23:27:01 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-05-24 23:27:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 4.036 seconds (JVM running for 8.613)
-2022-05-24 23:27:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
-2022-05-24 23:27:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:27:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
-2022-05-24 23:27:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 10904 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
-2022-05-24 23:27:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-05-24 23:27:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 2.056 seconds (JVM running for 3.267)
-2022-05-24 23:27:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
-2022-05-24 23:27:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:27:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
-2022-05-24 23:27:39 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:27:39 [main] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Started filtering twitter streams for keywords [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:27:42 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:27:42 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 10000 milliseconds
-2022-05-24 23:27:52 [Twitter Stream consumer /  [1][Waiting for 10000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:27:53 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:27:53 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 20000 milliseconds
-2022-05-24 23:28:13 [Twitter Stream consumer /  [1][Waiting for 20000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:28:14 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:28:14 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 40000 milliseconds
-2022-05-24 23:28:54 [Twitter Stream consumer /  [1][Waiting for 40000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:28:56 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:28:56 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 80000 milliseconds
-2022-05-24 23:30:16 [Twitter Stream consumer /  [1][Waiting for 80000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:30:17 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:30:17 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 160000 milliseconds
-2022-05-24 23:30:25 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
-2022-05-24 23:30:29 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 16240 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
-2022-05-24 23:30:29 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-05-24 23:30:30 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.456 seconds (JVM running for 2.745)
-2022-05-24 23:30:30 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
-2022-05-24 23:30:30 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:30:30 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
-2022-05-24 23:30:30 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:30:30 [main] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Started filtering twitter streams for keywords [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:30:32 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:30:32 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 10000 milliseconds
-2022-05-24 23:30:42 [Twitter Stream consumer /  [1][Waiting for 10000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:30:43 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 401:Authentication credentials (https://dev.twitter.com/pages/auth) were missing or incorrect. Ensure that you have set valid consumer key/secret, access token/secret, and the system clock is in sync.
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 401 Unauthorized</title>
-</head>
-<body>
-<h2>HTTP ERROR: 401</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    Unauthorized</pre>
-</body>
-</html>
-
-2022-05-24 23:30:43 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 20000 milliseconds
-2022-05-24 23:30:54 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
-2022-05-24 23:30:59 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 11888 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
-2022-05-24 23:30:59 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-05-24 23:31:00 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.657 seconds (JVM running for 3.001)
-2022-05-24 23:31:00 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
-2022-05-24 23:31:00 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:31:00 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
-2022-05-24 23:31:00 [main] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Started filtering twitter streams for keywords [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:31:00 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:31:01 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
-
-2022-05-24 23:31:01 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
-
-2022-05-24 23:31:01 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
-2022-05-24 23:37:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 7296 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
-2022-05-24 23:37:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-05-24 23:37:27 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.957 seconds (JVM running for 3.503)
-2022-05-24 23:37:27 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
-2022-05-24 23:37:27 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:37:27 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
-2022-05-24 23:37:27 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2022-05-24 23:37:27 [main] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Started filtering twitter streams for keywords [-Java -Microservices -Spring -Kafka -Elasticsearch]
-2022-05-24 23:37:29 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
-
-2022-05-24 23:37:29 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
-
-2022-05-24 23:37:29 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
+2022-10-30 16:14:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 17.0.3.1 on DESKTOP-SSKB1PM with PID 7700 (C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Zack Ogoma in C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-10-30 16:14:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-10-30 16:14:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 2.294 seconds (JVM running for 4.952)
+2022-10-30 16:14:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-10-30 16:14:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-10-30 16:14:38 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-10-30 16:14:38 [main] INFO  c.z.t.t.k.s.r.I.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Microservices]
+2022-10-30 16:14:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasMaecenaslectusFusceametconsectetuerLoremsedMicroservicessitmalesuadapurussitdolorliberomassa
+2022-10-30 16:14:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorultriciesmagnalectusultricieselitMicroservicesFusceconsectetuerlectusconsectetuerFusce
+2022-10-30 16:14:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaLoremsedelitametLorempurusmalesuadaMicroserviceselitporttitorpulvinarLoremmassacongue
+2022-10-30 16:15:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusliberomassaMaecenascongueipsumMicroservicesmagnalectuspurusFusce
+2022-10-30 16:15:18 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedelitLoremsedlectusMicroservicesFusceultriciesmassa
+2022-10-30 16:15:28 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerLorempurusMicroservicesmagnamagna
+2022-10-30 16:15:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueporttitorsitelitporttitormagnalectusipsumMicroservicescongueliberosedsitporttitorlectus
+2022-10-30 16:15:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscelectusMaecenasMicroservicesconsectetuerdolor
+2022-10-30 16:15:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusmagnaLoremliberoliberoadipiscingMicroservicesmassasitLoremmagnaelit
+2022-10-30 16:16:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitsedconguesitultriciesMicroservicesLoremipsummassa
+2022-10-30 16:16:18 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceelitametadipiscingMicroservicesconsectetuerFuscepulvinar
+2022-10-30 16:16:28 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusultriciesmagnaLoremsedsedMicroservicessitelitmagnaultricieslectus
+2022-10-30 16:16:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitdolorMaecenasadipiscingadipiscingmalesuadapulvinarMicroservicesdolormassaipsumMaecenascongue
+2022-10-30 16:16:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingelitadipiscingLoremporttitorametultriciesMicroservicesipsumLoremametFuscemalesuadaLorem
+2022-10-30 16:16:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnasedposuereconsectetuerliberoposuereMicroservicesporttitoradipiscingadipiscingametamet
+2022-10-30 16:17:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingconguepurusadipiscingporttitoradipiscingmassaliberoMicroservicescongueporttitorLoremsitlectusconsectetuer
+2022-10-30 16:17:18 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarMaecenasadipiscingliberoposuereipsumsitpulvinarMicroservicesconsectetueripsumlectusmalesuadalectuselit
+2022-10-30 16:17:28 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusliberoelitametelitliberoMicroservicespulvinarliberoametipsum
+2022-10-30 16:17:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamassaconsectetuerliberodolorMicroservicessitsitMaecenaspurus
+2022-10-30 16:17:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaconsectetuermagnaposuerecongueLoremelitametMicroserviceslectuspulvinarpulvinarposuereadipiscingmagnaLorem
+2022-10-30 16:17:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitsitconsectetuerconsectetuerpuruspurusadipiscingLoremMicroservicesMaecenaselitLoremipsumipsummassa
+2022-10-30 16:18:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorsedMaecenassedconsectetuerMicroservicesultriciesmalesuadalectuspurus
+2022-10-30 16:18:18 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuersedsitporttitordolorconguelectusMicroservicessitmagnamassaultriciespurusconsectetuer
+2022-10-30 16:18:28 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenaspurusconguepulvinaripsumadipiscingcongueMicroservicespuruscongueultriciesipsumsedsit
+2022-10-30 16:18:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscemagnamalesuadasitametMicroservicesconsectetuersedliberoporttitor
+2022-10-30 16:18:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorposuereFuscepurusconguemalesuadaipsumposuereMicroservicesultriciesMaecenasFusceadipiscingadipiscingamet
+2022-10-30 16:18:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceporttitorliberosedmalesuadasitMicroservicesdolorsitsedpurussit
+2022-10-30 16:19:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaultriciesadipiscingconsectetuerposuereMaecenasMicroservicesmassaelitMaecenasconsectetuer
+2022-10-30 16:19:18 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitormalesuadaadipiscingMicroservicesliberoMaecenas
+2022-10-30 16:19:28 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscepurusultriciesporttitorMicroservicessedFusceelit
+2022-10-30 16:19:38 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedmassamassaFusceipsumsedadipiscingpulvinarMicroservicesdolorsitpurusametcongueMaecenasdolor
+2022-10-30 16:19:48 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingliberomassaconsectetuerposueredolorMicroservicesconguepulvinarultriciesporttitorpulvinar
+2022-10-30 16:19:58 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoliberoelitLorempulvinarMicroservicesametmagnaadipiscing
+2022-10-30 16:20:08 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesMaecenasametcongueliberoporttitorMicroservicesposueresedipsumelitLorem
+2022-10-30 16:20:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitmagnamassasitMicroservicesadipiscingsit
+2022-10-30 16:20:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaipsumsedliberoipsumMicroserviceslectusconsectetuersedpulvinar
+2022-10-30 16:20:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitoripsumametametelitconguepulvinarMicroservicesadipiscinglectusliberoporttitoripsum
+2022-10-30 16:20:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueametsedLoremMicroservicesipsumipsumsit
+2022-10-30 16:20:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitFusceLoremsitMicroservicesposuereLorem
+2022-10-30 16:21:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnadoloradipiscingcongueadipiscingipsummassaMicroserviceselitporttitorultriciesdolorporttitor
+2022-10-30 16:21:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorsedpulvinaripsumMicroservicesposuerecongue
+2022-10-30 16:21:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingelitametsitpurusMicroservicesmagnaadipiscingipsummalesuada
+2022-10-30 16:21:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametmassaFuscelectusipsumconsectetuerMicroserviceslectusMaecenasLoremlectusadipiscing
+2022-10-30 16:21:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massasedlectusultriciesLoremsedMicroservicesmagnaconsectetuerLoremamet
+2022-10-30 16:21:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmassapulvinarmalesuadamassaconsectetueripsumelitMicroservicessedadipiscingpurusipsumporttitorlectus
+2022-10-30 16:22:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingliberolectussitcongueMicroservicesliberomalesuadaelitLorem
+2022-10-30 16:22:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadamalesuadaipsumpulvinarmalesuadaMicroserviceselitipsumconsectetuerultricies
+2022-10-30 16:22:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnapulvinarFusceFusceporttitorpulvinarLoremMicroservicesposueresitdolordolorelitadipiscing
+2022-10-30 16:22:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusMaecenasadipiscingelitlectuspurusMaecenasdolorMicroservicesposueredolorlectusmassasedposuere
+2022-10-30 16:22:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremFuscelectusconguecongueFuscepurusMicroservicesmagnaposueremassalectusultriciesFusce
+2022-10-30 16:22:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectussedsitporttitorsitMicroservicesmassasedlibero
+2022-10-30 16:23:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorconsectetuerpulvinarmagnaametpurusMicroservicesametmagnadolordolormagna
+2022-10-30 16:23:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummassapurusFusceelitconsectetuerMicroservicesFusceametultriciesconsectetuer
+2022-10-30 16:23:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceposuereametmalesuadasitdolorporttitorconsectetuerMicroserviceselitadipiscingpulvinarFuscepurussedsed
+2022-10-30 16:23:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusmagnaadipiscingelitipsumMicroservicesmalesuadaipsumadipiscingconsectetuer
+2022-10-30 16:23:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadamassalectusporttitorMicroserviceslectusdolorFusce
+2022-10-30 16:23:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusmalesuadaametposuereametadipiscingFuscesedMicroservicesmagnacongueultriciesmalesuadaipsumdolorlibero
+2022-10-30 16:24:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaFuscelectusmassaMicroservicesipsumLorem
+2022-10-30 16:24:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarmassaadipiscingmassaMaecenasMicroservicesliberolectusmassaposuere
+2022-10-30 16:24:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummalesuadamassaliberomagnaliberoMicroservicesposueresitFuscesed
+2022-10-30 16:24:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedmalesuadapulvinaripsumelitMicroservicessedadipiscingmalesuadacongue
+2022-10-30 16:24:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitMaecenasipsumpulvinarMicroservicesametlectus
+2022-10-30 16:24:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremsitMaecenaspurusadipiscingLoremmalesuadasedMicroserviceselitmalesuadamagnaipsummalesuadaultriciesadipiscing
+2022-10-30 16:25:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusposuereultriciesporttitoripsumultriciesconsectetuerMicroservicespurusultriciessedliberomassa
+2022-10-30 16:25:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasmassamalesuadamagnaipsumMicroservicesFusceconsectetuerLorem
+2022-10-30 16:25:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerpurusliberoposuereMicroservicesmagnaporttitor
+2022-10-30 16:25:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaLoremdolorcongueipsummassaliberoMicroservicessitpulvinarconsectetuerametsed
+2022-10-30 16:25:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerdoloripsummagnaMicroservicessedmagna
+2022-10-30 16:25:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamassaultriciesconguemalesuadaadipiscingMicroservicesultriciessitdolorposueredolor
+2022-10-30 16:26:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusLoremMaecenasMaecenasMicroservicesconguedolordolor
+2022-10-30 16:26:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumipsummagnaelitcongueultriciesMicroserviceslectusadipiscingultriciesadipiscingultricies
+2022-10-30 16:26:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuscongueadipiscingMicroservicespulvinarultricies
+2022-10-30 16:26:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametlectusmassaporttitorsedsitMaecenasmalesuadaMicroserviceselitMaecenaspurusdolormagnamassa
+2022-10-30 16:26:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerconsectetueradipiscingconguecongueMicroservicessitmagnapurusFusce
+2022-10-30 16:26:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametipsumposuereadipiscingcongueconsectetuerFusceMicroservicessedFusceLoremmassapulvinar
+2022-10-30 16:27:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremposuerelectusposueresitLoremporttitorporttitorMicroservicesporttitorconguepulvinarmalesuadaipsumpurus
+2022-10-30 16:27:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaFusceipsumconsectetueripsummalesuadaMaecenasMicroservicesconsectetuerFusceelitLoremmassa
+2022-10-30 16:27:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenascongueposueresitmagnaMicroservicesadipiscingMaecenasmalesuada
+2022-10-30 16:27:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarelitadipiscingelitLoremMaecenasMicroserviceslectusMaecenasliberomagnadolor
+2022-10-30 16:27:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitLoremametMicroservicesipsumLorem
+2022-10-30 16:27:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarLoremmagnaconguemassaposuereMaecenasipsumMicroservicessitadipiscingporttitoradipiscingametultriciesmalesuada
+2022-10-30 16:28:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massadolorMaecenasultriciesdolormalesuadaultriciesMicroservicesconsectetuerFuscesedsedipsumposuere
+2022-10-30 16:28:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuselitipsumporttitorMicroservicespulvinaripsumlibero
+2022-10-30 16:28:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruslectusipsumametlectusmassadolorsitMicroserviceslectuspulvinardolorposuereultriciesmagna
+2022-10-30 16:28:48 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 17.0.3.1 on DESKTOP-SSKB1PM with PID 4280 (C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Zack Ogoma in C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-10-30 16:28:48 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-10-30 16:28:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 2.084 seconds (JVM running for 4.044)
+2022-10-30 16:28:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-10-30 16:28:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-10-30 16:28:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-10-30 16:28:49 [main] INFO  c.z.t.t.k.s.r.I.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Microservices]
+2022-10-30 16:28:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnapurussedmagnamassaMicroserviceslectusadipiscingmagna
+2022-10-30 16:28:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremFusceconsectetuerliberopulvinarLoremconguelectusMicroservicespurusultriciesadipiscingmagnamassaposuere
+2022-10-30 16:29:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitoradipiscingipsumposuereliberoMicroservicessedelitpurusmalesuada
+2022-10-30 16:29:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaipsumadipiscingmassaMicroservicesporttitorlibero
+2022-10-30 16:29:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesametpurusliberoMicroservicesmassaconsectetuer
+2022-10-30 16:29:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomassaadipiscingadipiscingliberoMicroservicesconsectetuerpulvinarmalesuadaconsectetuer
+2022-10-30 16:29:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasposuereametposueremagnaporttitorliberocongueMicroservicesFusceliberomassasedliberoporttitoradipiscing
+2022-10-30 16:29:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummagnaporttitorMaecenasMicroservicesliberoLorem
+2022-10-30 16:30:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumposueredoloripsumMicroserviceselitsed
+2022-10-30 16:30:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguepurussedsitMicroservicessitadipiscinglectus
+2022-10-30 16:30:29 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametultriciesposuerelectusultriciesFusceliberoMicroservicesametposueremassamassasit
+2022-10-30 16:30:39 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueredolormalesuadaametipsumipsumMicroserviceselitMaecenasposuereametmagna
+2022-10-30 16:30:49 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitMaecenasMaecenasmalesuadamagnaMicroservicesliberositporttitor
+2022-10-30 16:30:59 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedpurusposuereposueremagnaMaecenasadipiscingMicroservicesliberoLoremFuscemagnaconsectetuerpurus
+2022-10-30 16:31:09 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereelitpurusipsumMicroservicessedLoremmalesuada
+2022-10-30 16:31:19 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesitcongueliberoipsumposuereMaecenaslectusMicroservicessedelitFusceposuereporttitorFusceporttitor
+2022-10-30 16:31:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingMaecenasmagnamagnaadipiscingelitFusceMicroservicessedposuereMaecenasliberoMaecenas
+2022-10-30 16:31:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusMaecenasametcongueadipiscingLoremmassaMicroservicesadipiscingpuruspurussitLorem
+2022-10-30 16:31:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaposueresitpulvinarpurusliberoMicroservicesposueredoloripsumlectus
+2022-10-30 16:32:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingultriciesconguemassaipsummagnaMicroserviceselitMaecenasmassaelit
+2022-10-30 16:32:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorLoremadipiscingposueredolorMicroservicesconguepulvinarelit
+2022-10-30 16:32:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametpurusipsumFusceultriciesMicroservicesadipiscingadipiscingMaecenas
+2022-10-30 16:32:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciessitdolormalesuadaMicroservicesultriciesipsumposuere
+2022-10-30 16:32:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadacongueconsectetuerpulvinarMicroservicesipsumcongue
+2022-10-30 16:32:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesposueresitlectusadipiscingporttitorpurusFusceMicroservicesdolorametipsumconguesitsitipsum
+2022-10-30 16:33:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruselitelitpulvinarmalesuadaconsectetuerFuscemalesuadaMicroservicesposueremalesuadalectussitcongueelit
+2022-10-30 16:33:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumcongueporttitorliberoMicroservicesLoremMaecenas
+2022-10-30 16:33:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitposuereLoremFusceLoremporttitorconguemagnaMicroservicessitposuereconsectetuerconguedolorpuruslibero
+2022-10-30 16:33:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massasitipsumposuerelectusadipiscingMicroservicesFuscemassaconsectetuersit
+2022-10-30 16:33:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuersitadipiscingposueredolorametsitmassaMicroservicesFuscepulvinarultriciespulvinarcongueconguesed
+2022-10-30 16:33:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerultriciesLoremultriciesmassalectusMicroservicessedmagnaliberomassaelit
+2022-10-30 16:34:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaLoremconsectetuerpulvinarmalesuadasitlectusMicroservicessitmassaLoremametliberosit
+2022-10-30 16:34:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarconsectetuerporttitorMaecenasMicroservicesconsectetuerposuere
+2022-10-30 16:34:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorsedporttitorpulvinarmassaMicroservicesdolorelitelit
+2022-10-30 16:34:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedconsectetuerMaecenaslectusMicroserviceslectuspurus
+2022-10-30 16:34:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremsedliberoipsumametpurusporttitorcongueMicroservicesporttitorcongueadipiscingadipiscingsedsit
+2022-10-30 16:34:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomalesuadapuruscongueliberocongueMicroservicescongueLoremconsectetuerporttitor
+2022-10-30 16:35:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremcongueliberosedFusceliberoposuereMicroservicessitelitmagnaconguesedsed
+2022-10-30 16:35:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingdolorsitLoremmagnaposueresitpulvinarMicroservicescongueelitpulvinaradipiscingipsumposuere
+2022-10-30 16:35:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaconsectetuerdolorultriciesdolorLoremMicroservicesMaecenasultriciesliberoadipiscingposuere
+2022-10-30 16:35:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitcongueliberoconsectetuerMicroservicesametporttitordolor
+2022-10-30 16:35:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitormagnaposuerepulvinarconsectetueradipiscingametadipiscingMicroservicespulvinarliberoposueresitMaecenasamet
+2022-10-30 16:35:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text doloradipiscingpulvinarpulvinarsedMicroserviceselitmassaMaecenas
+2022-10-30 16:36:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceMaecenasliberopulvinarMaecenasMicroservicesliberoporttitorsitFusce
+2022-10-30 16:36:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenassitametipsumdolorelitconsectetuerposuereMicroserviceselitliberomassapurusametsit
+2022-10-30 16:36:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitposueresitposueredoloradipiscingcongueMaecenasMicroservicessitporttitorultriciesmassaFusceelitMaecenas
+2022-10-30 16:36:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorconsectetuersedliberoLoremsedMicroservicesipsumultriciesliberositultricies
+2022-10-30 16:36:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedultriciesadipiscingconguepuruselitlectusMicroserviceselitlectussedFuscedolor
+2022-10-30 16:36:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoMaecenasconsectetuermassaMicroservicesMaecenassedposuere
+2022-10-30 16:37:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasporttitormassaLoremultriciesametsitposuereMicroservicesultriciesmagnaametmagnaporttitorMaecenas
+2022-10-30 16:37:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarMaecenasipsumametMaecenasMicroservicesMaecenasLoremdolor
+2022-10-30 16:37:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumdoloripsumametsitMicroservicesametpulvinarporttitor
+2022-10-30 16:37:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarelitconsectetuerLoremliberomassaMicroservicesametsedmalesuadaLorem
+2022-10-30 16:37:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarmagnaFusceLoremMaecenaselitelitsedMicroservicesmalesuadaposuereconsectetuersitlectuscongueelit
+2022-10-30 16:37:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaLoremMaecenasLoremsitMicroservicessedsitmagnalectus
+2022-10-30 16:38:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerposuereporttitorLoremMicroservicesipsumdolor
+2022-10-30 16:38:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametMaecenaspurusposuereMicroservicespurusmassaconsectetuer
+2022-10-30 16:38:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaconguemalesuadaipsumlectusMicroservicesconsectetuerelitultriciesconsectetuer
+2022-10-30 16:38:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesconsectetuerdolormassaMicroserviceselitpulvinarsed
+2022-10-30 16:38:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusLoremipsummagnamagnaMicroserviceselitmagnadolor
+2022-10-30 16:38:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaMaecenaselitconguepurusmassaMicroservicesposuerepurusmalesuadamagnapurus
+2022-10-30 16:39:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamagnacongueadipiscingmagnasedMicroservicesporttitorsitpurusconsectetuer
+2022-10-30 16:39:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massapulvinaripsumlectusconsectetuerliberoMicroservicespurusMaecenassitmalesuada
+2022-10-30 16:39:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremporttitorametmalesuadaMicroservicesmassaFusceamet
+2022-10-30 16:39:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametLoremporttitorFusceporttitorelitMicroservicesLoremposuerepulvinarliberoamet
+2022-10-30 16:39:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitmagnapurusmassaFusceametporttitorMicroservicespulvinarporttitordolorFuscemassasit
+2022-10-30 16:39:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massadolorpulvinarlectusMicroservicesultriciesipsumlectus
+2022-10-30 16:40:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceadipiscingipsumcongueadipiscingmassaMicroservicesFusceipsumultriciesmagnaposuere
+2022-10-30 16:40:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorsitelitelitmassaultriciesposuereadipiscingMicroservicesFuscedolorametultriciesultricieselit
+2022-10-30 16:40:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceametconsectetuerlectuslectusametpurusametMicroservicespurusFusceipsumelitmagnadolorporttitor
+2022-10-30 16:40:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesMaecenaslectusultriciesFusceMaecenasMicroservicesdolorametmagnacongue
+2022-10-30 16:40:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorliberoFusceMicroservicesmagnamassa
+2022-10-30 16:40:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuselitametconsectetuerultriciesipsumMicroservicessitlectusFusceLoremmalesuada
+2022-10-30 16:41:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamassaipsumMicroservicesdolorconsectetuer
+2022-10-30 16:41:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarLoremMaecenasMaecenasMicroservicesdolorcongue
+2022-10-30 16:41:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmassaultriciesporttitorpulvinarliberoadipiscingMicroservicessedliberomassaporttitorconsectetuer
+2022-10-30 16:41:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaFusceLoremMaecenasMicroservicespurusmassaipsum
+2022-10-30 16:41:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametmalesuadapurusLoremametmalesuadamassaultriciesMicroservicesposuereconsectetueripsumadipiscingultriciesporttitor
+2022-10-30 16:41:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitipsumconsectetuerpurusipsummagnaMicroservicesipsumcongueliberoporttitorporttitor
+2022-10-30 16:42:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuerepulvinarmalesuadaMaecenasMaecenasconsectetuerMicroservicesadipiscingposuereultricieslectus
+2022-10-30 16:42:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitpurusmagnaMicroservicessedelit
+2022-10-30 16:42:20 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusconguesedposuereporttitorMicroserviceslectusFusceelit
+2022-10-30 16:42:30 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarlectusporttitormagnapulvinarMicroservicespurusametmassalibero
+2022-10-30 16:42:40 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerametipsumlectusmalesuadaMicroservicesmagnamassaposuere
+2022-10-30 16:42:50 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusmalesuadaMaecenaselitadipiscingconsectetuerliberoadipiscingMicroservicesMaecenaselitcongueelitmassaconsectetuerlectus
+2022-10-30 16:43:00 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueremagnaFuscedolorpurussedultriciesMaecenasMicroservicespulvinarsedconguemalesuadadolorultricies
+2022-10-30 16:43:10 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesedmalesuadaelitliberoporttitorametFusceMicroserviceselitultriciesipsumdolormassaultricies
+2022-10-30 16:43:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueLoremmalesuadaipsumpurusmalesuadaametMicroservicespuruselitFusceametsedFusce
+2022-10-30 16:43:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumpulvinarmalesuadaelitmassaMicroservicesmassapurusposuerepulvinar
+2022-10-30 16:43:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedliberopulvinarelitporttitorMicroservicesametcongueporttitormalesuada
+2022-10-30 16:43:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerLoremFusceLoremposueredolorpulvinarconsectetuerMicroserviceslectussitmagnapurusadipiscingLoremipsum
+2022-10-30 16:44:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarconsectetueripsumelitmagnaultriciessedFusceMicroservicesametmassamagnaposuereposuerepuruslibero
+2022-10-30 16:44:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomagnaFusceMaecenasametcongueultriciesmagnaMicroservicesdolorsitporttitorconguemalesuadaultriciesultricies
+2022-10-30 16:44:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarpurussitconsectetuerelitelitLoremMicroservicesconguesitmalesuadapulvinaripsum
+2022-10-30 16:44:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremultriciesultriciessedmassapurusporttitoradipiscingMicroservicesporttitorliberopulvinarpurusMaecenasadipiscing
+2022-10-30 16:44:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinardolorconguemagnaporttitormalesuadamalesuadaFusceMicroservicesliberolectussitadipiscingelitlectusultricies
+2022-10-30 16:44:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedLoremdolorliberosedMaecenascongueadipiscingMicroservicesporttitorcongueconguemalesuadaposuereconsectetuermassa
+2022-10-30 16:45:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceMaecenasLorempurusliberomagnasitMicroservicesipsumpurussedposueredolor
+2022-10-30 16:45:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueredolorLoremposuereMicroservicesadipiscinglectus
+2022-10-30 16:45:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereMaecenasmagnaelitametpulvinarliberoconsectetuerMicroservicesultriciesFusceLoremadipiscingcongueadipiscing
+2022-10-30 16:45:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitpulvinarporttitormassaporttitorMicroservicesmagnaelitLorem
+2022-10-30 16:45:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingpulvinarametelitconguepulvinarmassaMicroservicessitmalesuadamalesuadaFusceultriciescongue
+2022-10-30 16:45:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremultriciespulvinarposuereadipiscingMaecenaspulvinarFusceMicroservicesporttitorMaecenasLoremsedmagnaFusce
+2022-10-30 16:46:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscinglectusporttitorMaecenasametLoremMicroserviceselitpulvinaripsumconsectetuercongue
+2022-10-30 16:46:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumsedadipiscingFusceultriciesconsectetuerametMicroserviceselitMaecenassedliberodolorelit
+2022-10-30 16:46:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesdolorconsectetuermassaultriciespurusliberosedMicroservicesultriciesmalesuadaametmassapulvinarliberolectus
+2022-10-30 16:46:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguelectuspulvinarelitMicroservicesposuereadipiscing
+2022-10-30 16:46:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarultriciessitLoremLorempurusMicroserviceslectusconsectetuermagnaipsum
+2022-10-30 16:46:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremametconsectetuerconguemagnaMicroservicesmagnapulvinarcongueFusce
+2022-10-30 16:47:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text doloradipiscingporttitorMicroservicesultricieslibero
+2022-10-30 16:47:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaposueresitconsectetuerMaecenassedlectusconsectetuerMicroservicesultriciesipsumFuscesitsitamet
+2022-10-30 16:47:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruspurusFusceMaecenasporttitorconsectetuerMicroservicesadipiscingametliberoporttitor
+2022-10-30 16:47:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarsedpulvinarmalesuadaametFusceMicroservicesposueremagnadolorLorem
+2022-10-30 16:47:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmalesuadamagnapulvinarMicroservicespurusmalesuadaelit
+2022-10-30 16:47:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitliberoametdolorliberoMicroservicesconguepurusadipiscingelit
+2022-10-30 16:48:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedelitliberoporttitorposuereLoremmagnaMicroservicesFusceultriciesMaecenassitLoremdolor
+2022-10-30 16:48:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumporttitormagnaconsectetuerultriciesdolorFuscepurusMicroservicesmalesuadalectusmagnapurusmassaposuerepulvinar
+2022-10-30 16:48:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametultriciessitporttitorametposuereposueremagnaMicroservicesliberoadipiscingliberomalesuadamassased
+2022-10-30 16:48:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaLoremsitipsumMicroserviceslectuspurusFusce
+2022-10-30 16:48:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceconsectetuerMaecenaselitmassaadipiscingelitMaecenasMicroservicesporttitorliberoFuscemalesuadaMaecenasdolorcongue
+2022-10-30 16:48:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerpurusipsumMaecenaselitMicroserviceselitsitsitelit
+2022-10-30 16:49:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasmassamalesuadamassaposuereelitMaecenasMicroservicespurusconsectetuerpulvinarFuscemalesuadaamet
+2022-10-30 16:49:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitLoremelitMicroservicessedpulvinar
+2022-10-30 16:49:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaipsumsitporttitorconsectetuerMicroservicesLoremultriciesmagnacongue
+2022-10-30 16:49:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusdolorposueremagnaposuerepurusMicroservicesmalesuadaFusceFuscedolor
+2022-10-30 16:49:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumelitMaecenasMaecenasMicroservicesmagnaMaecenas
+2022-10-30 16:49:52 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarmassaadipiscingultriciesipsumsitpulvinarconsectetuerMicroservicessedconsectetuerporttitorconguesedMaecenassed
+2022-10-30 16:50:02 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaultriciesFusceipsumMicroservicespurusporttitor
+2022-10-30 16:50:12 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueremalesuadamassaMicroservicesliberoMaecenas
+2022-10-30 16:50:22 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingliberomassaconguemagnapulvinaradipiscingsedMicroservicesporttitorporttitorelitametsedposuerelectus
+2022-10-30 16:50:32 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasmassaMaecenasMicroservicesmagnaelit
+2022-10-30 16:50:42 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusmassaconguedolorMicroservicesLorempurusconsectetuer
+2022-10-30 16:50:52 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerametFusceconguesitliberoconsectetuerMicroserviceslectusdolorpulvinarpurusipsummagna
+2022-10-30 16:51:02 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesitdolorpuruspurusMicroservicescongueporttitorpulvinardolor
+2022-10-30 16:51:12 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorpulvinaripsumipsummassapulvinarliberomassaMicroservicesconsectetueradipiscingsedliberoadipiscingconsectetuer
+2022-10-30 16:51:22 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaconsectetuerFusceMicroservicespulvinarmagna
+2022-10-30 16:51:32 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusmagnadolorametliberoMicroservicesporttitormalesuadapulvinarLorem
+2022-10-30 16:51:42 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarconsectetueripsumMicroserviceslectusultricies
+2022-10-30 16:51:52 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguemagnadolorMaecenasconsectetuermagnaLoremMaecenasMicroservicesametsitliberomassacongueLoremlibero
+2022-10-30 16:52:02 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedelitmalesuadaMicroservicesmassamagna
+2022-10-30 16:52:12 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnalectuspurusametposuereMicroservicesMaecenasmalesuadaelitmagna
+2022-10-30 16:52:22 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceFusceametmalesuadaipsumdolorFusceelitMicroservicesLoremcongueelitpulvinarpurusamet
+2022-10-30 16:53:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 17.0.3.1 on DESKTOP-SSKB1PM with PID 2264 (C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Zack Ogoma in C:\Users\Zack Ogoma\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-10-30 16:53:49 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-10-30 16:53:50 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 2.134 seconds (JVM running for 3.85)
+2022-10-30 16:53:50 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-10-30 16:53:50 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-10-30 16:53:50 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-10-30 16:53:50 [main] INFO  c.z.t.t.k.s.r.I.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Microservices]
+2022-10-30 16:53:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massamassaadipiscinglectussitMicroservicespurusmalesuadaposueredolor
+2022-10-30 16:54:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciespulvinarelitpulvinarelitsedmassasedMicroservicessedadipiscingconguelectuselitconsectetueramet
+2022-10-30 16:54:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscedolormagnaFuscemalesuadaMicroservicessedpuruslibero
+2022-10-30 16:54:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscesitpulvinarMaecenasconsectetuerMicroservicesconsectetuerMaecenasipsumultricies
+2022-10-30 16:54:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusLoremcongueconsectetuerMicroservicesliberodolor
+2022-10-30 16:54:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumdolordolorFusceametelitMicroserviceselitlectusLoremsedmagna
+2022-10-30 16:54:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerpurusametelitmalesuadamalesuadaporttitorMicroservicespulvinarametsedlectusliberolibero
+2022-10-30 16:55:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadapurusadipiscingliberoultriciesconsectetuercongueMicroservicespurusadipiscingMaecenasMaecenasultriciesipsum
+2022-10-30 16:55:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitdolorFusceMicroserviceselitlibero
+2022-10-30 16:55:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnalectussedipsumMaecenasconsectetuerconsectetuerpulvinarMicroservicesmagnaelitMaecenaselitporttitorelit
+2022-10-30 16:55:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedMaecenasmalesuadadolorLoremliberoultriciesporttitorMicroservicesmassadolorporttitormalesuadamassacongueelit
+2022-10-30 16:55:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametconsectetuerFusceadipiscinglectusliberomassaMicroservicesconguelectusipsummagnalectus
+2022-10-30 16:55:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorposueresedMicroservicesipsumLorem
+2022-10-30 16:56:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguemassacongueadipiscingelitLoremMicroservicesultriciesipsummalesuadalectusipsum
+2022-10-30 16:56:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopulvinarconguepurusMicroservicescongueamet
+2022-10-30 16:56:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueposueremagnalectusmassapurusMicroservicesametmalesuadaliberosed
+2022-10-30 16:56:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesultricieslectusLoremMicroservicesipsumlectusultricies
+2022-10-30 16:56:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomalesuadasitconsectetuerametMaecenasMicroservicespurusadipiscingmassapulvinar
+2022-10-30 16:56:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruspulvinarsedmalesuadaconsectetuerposuereposuereMicroservicespurusliberoporttitormalesuadaMaecenaspulvinar
+2022-10-30 16:57:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasliberoporttitorpurusdolorMicroservicescongueametmalesuadaporttitor
+2022-10-30 16:57:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceMaecenasporttitoradipiscingmalesuadaMicroservicesMaecenasconsectetuerporttitorcongue
+2022-10-30 16:57:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoliberosedconsectetuerdolordolorliberoMicroservicesmalesuadaconsectetueripsummassaposuerepurus
+2022-10-30 16:57:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceametliberopulvinarMicroservicessitamet
+2022-10-30 16:57:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitLoremelitFuscesedMaecenasdolorMicroservicesmagnamalesuadaporttitorpulvinarsit
+2022-10-30 16:57:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorsitconsectetuerultriciescongueLoremadipiscingMicroservicesdolorFuscedolorultriciesMaecenasmagna
+2022-10-30 16:58:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingametmagnaultriciesipsumMicroservicescongueseddoloramet
+2022-10-30 16:58:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LorempulvinarposuereFusceMicroserviceselitmalesuada
+2022-10-30 16:58:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorelitadipiscingporttitorconguemalesuadapulvinarMicroservicespurusmalesuadamagnaporttitordolorLorem
+2022-10-30 16:58:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusmassaFusceMaecenasMaecenasadipiscingipsumMicroservicessitmalesuadamagnaametporttitorsed
+2022-10-30 16:58:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorLoremultriciesultricieslectuselitMaecenascongueMicroservicesipsumpurusmassadolorconguesedlibero
+2022-10-30 16:58:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarcongueMaecenaslectusmalesuadadolorMicroservicesseddolorelitmalesuada
+2022-10-30 16:59:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorFusceultriciesametlectuslectusMicroservicesmassaporttitorpurusultricieselit
+2022-10-30 16:59:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguemassamassaMaecenaspulvinarMaecenasMicroservicesipsummalesuadaadipiscingmagnaMaecenas
+2022-10-30 16:59:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorLoremlectuspulvinardolorsedMicroservicesLoremconsectetuersedpulvinarpurus
+2022-10-30 16:59:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorlectusconsectetuermassaFusceMicroservicesametFuscemassa
+2022-10-30 16:59:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueposueremagnamagnadolorsitadipiscingMicroservicesLoremmalesuadaametmassaipsumsed
+2022-10-30 16:59:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberodolorultricieselitultriciesMicroservicesFuscemagnasit
+2022-10-30 17:00:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesitametMaecenasadipiscingametMicroservicesconguemagnamalesuadaelitadipiscing
+2022-10-30 17:00:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumseddolormalesuadaMicroservicesMaecenasLorem
+2022-10-30 17:00:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusFusceposuereadipiscingFusceMicroservicesporttitorporttitorpulvinarpurus
+2022-10-30 17:00:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoametelitmagnaelitliberoMicroservicesmalesuadaMaecenaslectusmalesuadaFusce
+2022-10-30 17:00:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerMaecenasconsectetuerultriciesMaecenasFusceporttitorpurusMicroservicespulvinarFuscesitMaecenasdolorMaecenas
+2022-10-30 17:00:51 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarpulvinarcongueMicroservicesametpurus
+2022-10-30 17:01:01 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedsedposuereultriciesFusceMicroservicesadipiscingMaecenasmalesuadaelit
+2022-10-30 17:01:11 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingadipiscingultriciesdolorMaecenasmassaMaecenasMicroservicesmagnamagnaametlectusametelit
+2022-10-30 17:01:21 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciessedconsectetuerpurusLoremmagnaporttitorlectusMicroservicesliberomalesuadalectuslectusMaecenasultricies
+2022-10-30 17:01:31 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorpurusadipiscingMicroservicesLoremFusce
+2022-10-30 17:01:41 [pool-1-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusMaecenasdolormagnaFuscesedmassalectusMicroservicessedconsectetuerametliberolectusmalesuada

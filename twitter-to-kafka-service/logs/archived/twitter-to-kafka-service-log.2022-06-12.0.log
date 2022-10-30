@@ -1,0 +1,441 @@
+2022-06-12 12:23:29 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 3768 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 12:23:29 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 12:23:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 3.565 seconds (JVM running for 15.67)
+2022-06-12 12:23:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 12:23:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 12:23:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 12:23:31 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-06-12 12:23:31 [main] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Started filtering twitter streams for keywords [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 12:23:34 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-06-12 12:23:34 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-06-12 12:23:34 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
+2022-06-12 13:23:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 17364 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:23:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:23:58 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaService': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.zackilabs.twitter.to.kafka.service.runner.StreamRunner' available: expected single matching bean but found 2: twitterKafkaStreamRunner,twitterV2KafkaStreamRunner
+2022-06-12 13:23:58 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:23:58 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService required a single bean, but 2 were found:
+	- twitterKafkaStreamRunner: defined in file [C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes\com\zackilabs\twitter\to\kafka\service\runner\Imp\TwitterKafkaStreamRunner.class]
+	- twitterV2KafkaStreamRunner: defined in file [C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes\com\zackilabs\twitter\to\kafka\service\runner\Imp\TwitterV2KafkaStreamRunner.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14580 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.472 seconds (JVM running for 2.448)
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:25:23 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:25:25 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:25:25 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: org.json.JSONException: JSONObject["data"] not found.
+	at org.json.JSONObject.get(JSONObject.java:587)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:31:51 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 11072 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:31:51 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:31:52 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.775 seconds (JVM running for 4.665)
+2022-06-12 13:31:52 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:31:52 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:31:52 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:31:52 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:31:53 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:31:53 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: org.json.JSONException: JSONObject["data"] not found.
+	at org.json.JSONObject.get(JSONObject.java:587)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:33:40 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13860 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:33:40 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:33:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.404 seconds (JVM running for 2.426)
+2022-06-12 13:33:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:33:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:33:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:33:41 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:33:42 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"detail":"Unauthorized","title":"Unauthorized","type":"about:blank","status":401}
+2022-06-12 13:33:42 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:33:42 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: org.json.JSONException: JSONObject["data"] not found.
+	at org.json.JSONObject.get(JSONObject.java:587)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:161)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:34:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13900 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:34:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:34:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.502 seconds (JVM running for 2.482)
+2022-06-12 13:34:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:34:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:34:37 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:34:37 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:34:39 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"meta":{"sent":"2022-06-12T10:34:19.464Z","result_count":0}}
+2022-06-12 13:34:40 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream -Java -Microservices -Spring -Kafka -Elasticsearch
+2022-06-12 13:34:41 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:34:41 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 6328 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.293 seconds (JVM running for 2.412)
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:35:46 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"meta":{"sent":"2022-06-12T10:35:26.583Z","result_count":0}}
+2022-06-12 13:35:47 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream -Java -Microservices -Spring -Kafka -Elasticsearch
+2022-06-12 13:35:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:35:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:41:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 9052 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:41:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:41:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.602 seconds (JVM running for 2.679)
+2022-06-12 13:41:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:41:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:41:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:41:57 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch]
+2022-06-12 13:41:58 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"meta":{"sent":"2022-06-12T10:41:38.975Z","result_count":0}}
+2022-06-12 13:41:59 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream -Java -Microservices -Spring -Kafka -Elasticsearch
+2022-06-12 13:42:00 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:42:00 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:42:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 15608 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:42:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:42:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.446 seconds (JVM running for 2.423)
+2022-06-12 13:42:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:42:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [-Java -Microservices -Spring -Kafka -Elasticsearch -president]
+2022-06-12 13:42:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:42:32 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [-Java -Microservices -Spring -Kafka -Elasticsearch -president]
+2022-06-12 13:42:34 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"meta":{"sent":"2022-06-12T10:42:14.282Z","result_count":0}}
+2022-06-12 13:42:35 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream -Java -Microservices -Spring -Kafka -Elasticsearch -president
+2022-06-12 13:42:36 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:42:36 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:46:46 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 9108 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:46:46 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:46:47 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.714 seconds (JVM running for 2.894)
+2022-06-12 13:46:47 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:46:47 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch president]
+2022-06-12 13:46:47 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:46:47 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch president]
+2022-06-12 13:46:49 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"meta":{"sent":"2022-06-12T10:46:29.759Z","result_count":0}}
+2022-06-12 13:46:52 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch president
+2022-06-12 13:46:53 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:46:53 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:49:11 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 6580 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:49:11 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:49:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.522 seconds (JVM running for 2.909)
+2022-06-12 13:49:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:49:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch president]
+2022-06-12 13:49:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:49:12 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch president]
+2022-06-12 13:49:13 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535936576169168898","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch president","value":"Java Microservices Spring Kafka Elasticsearch president"}],"meta":{"sent":"2022-06-12T10:48:53.869Z","result_count":1}}
+2022-06-12 13:49:17 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch president
+2022-06-12 13:51:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 12240 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:51:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:51:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.976 seconds (JVM running for 2.986)
+2022-06-12 13:51:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:51:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 13:51:26 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:51:26 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 13:51:28 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535937188634009601","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch president","value":"Java Microservices Spring Kafka Elasticsearch president"}],"meta":{"sent":"2022-06-12T10:51:08.597Z","result_count":1}}
+2022-06-12 13:51:32 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch
+2022-06-12 13:51:33 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 13:51:33 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 13:51:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 8624 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 13:51:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 13:51:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.626 seconds (JVM running for 2.676)
+2022-06-12 13:51:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 13:51:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 13:51:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 13:51:56 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 13:51:57 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535937754290429953","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch","value":"Java Microservices Spring Kafka Elasticsearch"}],"meta":{"sent":"2022-06-12T10:51:38.035Z","result_count":1}}
+2022-06-12 13:52:01 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13476 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.566 seconds (JVM running for 4.439)
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:12:02 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 14:12:04 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535937877384826880","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch","value":"Java Microservices Spring Kafka Elasticsearch"}],"meta":{"sent":"2022-06-12T11:11:44.627Z","result_count":1}}
+2022-06-12 14:12:08 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch
+2022-06-12 14:13:24 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14652 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:13:24 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:13:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.746 seconds (JVM running for 2.815)
+2022-06-12 14:13:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:13:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 14:13:25 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:13:25 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java Microservices Spring Kafka Elasticsearch]
+2022-06-12 14:13:26 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535942937510551553","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch","value":"Java Microservices Spring Kafka Elasticsearch"}],"meta":{"sent":"2022-06-12T11:13:07.056Z","result_count":1}}
+2022-06-12 14:13:31 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Java Microservices Spring Kafka Elasticsearch
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 17280 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.409 seconds (JVM running for 2.346)
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:14:34 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Microservices]
+2022-06-12 14:14:36 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535943284668891142","tag":"Keyword: Java Microservices Spring Kafka Elasticsearch","value":"Java Microservices Spring Kafka Elasticsearch"}],"meta":{"sent":"2022-06-12T11:14:16.639Z","result_count":1}}
+2022-06-12 14:14:39 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Microservices
+2022-06-12 14:17:05 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14228 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:17:05 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:17:06 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.419 seconds (JVM running for 2.482)
+2022-06-12 14:17:06 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:17:06 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-06-12 14:17:06 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:17:06 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Microservices]
+2022-06-12 14:17:07 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535943574327549952","tag":"Keyword: Microservices","value":"Microservices"}],"meta":{"sent":"2022-06-12T11:16:47.868Z","result_count":1}}
+2022-06-12 14:17:12 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Microservices
+2022-06-12 14:17:13 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - hELLO org.apache.http.client.entity.LazyDecompressingInputStream@2392212b
+2022-06-12 14:18:03 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13896 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:18:03 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:18:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.361 seconds (JVM running for 2.305)
+2022-06-12 14:18:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:18:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-06-12 14:18:04 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:18:04 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Microservices]
+2022-06-12 14:18:05 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535944211719147521","tag":"Keyword: Microservices","value":"Microservices"}],"meta":{"sent":"2022-06-12T11:17:46.139Z","result_count":1}}
+2022-06-12 14:18:10 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Microservices
+2022-06-12 14:18:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 14:18:12 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NullPointerException: null
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 8064 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.311 seconds (JVM running for 2.313)
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Microservices]
+2022-06-12 14:19:38 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535944455391428608","tag":"Keyword: Microservices","value":"Microservices"}],"meta":{"sent":"2022-06-12T11:19:18.471Z","result_count":1}}
+2022-06-12 14:19:43 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Microservices
+2022-06-12 15:23:06 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - hELLO {"data":{"id":"1535945391732137984","text":"@yatesco @GeePawHill @Steve_Hayes I think, with some exceptions, often microservices is a solution to scaling development NOT scaling customer base."},"matching_rules":[{"id":"1535944843263979526","tag":"Keyword: Microservices"}]}
+2022-06-12 15:23:06 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 15:23:06 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: org.json.JSONException: JSONObject["created_at"] not found.
+	at org.json.JSONObject.get(JSONObject.java:587)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:231)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:91)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14196 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 1.312 seconds (JVM running for 2.259)
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - [Microservices]
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Welcome Home
+2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Microservices]
+2022-06-12 17:04:34 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"data":[{"id":"1535944843263979526","tag":"Keyword: Microservices","value":"Microservices"}],"meta":{"sent":"2022-06-12T14:04:14.661Z","result_count":1}}
+2022-06-12 17:04:38 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - Created rules for twitter stream Microservices
+2022-06-12 18:33:07 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - hELLO {"data":{"id":"1535987006672875520","text":"RT @MuleSoft: A microservices architecture enables organizations to quickly respond to customer needs. See the top 6 microservices patterns…"},"matching_rules":[{"id":"1535986349328703489","tag":"Keyword: Microservices"}]}
+2022-06-12 18:33:07 [main] INFO  c.z.t.t.k.s.r.I.TwitterV2StreamHelper - {"created_at":"1535987006672875520","id":"RT @MuleSoft: A microservices architecture enables organizations to quickly respond to customer needs. See the top 6 microservices patterns…","text":"{2}","user":{"id":"{3}"}}
+2022-06-12 18:33:08 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-12 18:33:08 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+Caused by: java.lang.NumberFormatException: For input string: "RT @MuleSoft: A microservices architecture enables organizations to quickly respond to customer needs. See the top 6 microservices patterns…"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at twitter4j.ParseUtil.getLong(ParseUtil.java:156)
+	at twitter4j.ParseUtil.getLong(ParseUtil.java:144)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:100)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:91)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:95)
+	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 5 common frames omitted

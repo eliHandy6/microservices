@@ -1,18 +1,20 @@
 package com.zackilabs.twitter.to.kafka.service;
 
-import com.zackilabs.twitter.to.kafka.service.config.TwitterToKafkaConfigData;
 
+import com.zackilabs.appconfigdata.config.TwitterToKafkaConfigData;
 import com.zackilabs.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.zackilabs")
 public class TwitterToKafkaService implements CommandLineRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaService.class);

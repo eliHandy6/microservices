@@ -1,4 +1,4 @@
-package com.zackilabs.twitter.to.kafka.service.config;
+package com.zackilabs.appconfigdata.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -13,4 +13,13 @@ public class TwitterToKafkaConfigData {
 
     private List<String> twitterKeyWords;
     private String message;
+    private String twitterV2BaseUrl;
+    private String twitterV2RulesBaseUrl;
+    private String twitterV2BearerToken;
+    private Boolean enableMockTweets;
+    private Long mockSleepMs;
+    private Integer mockMinTweetLength;
+    private Integer mockMaxTweetLength;
+
+
 }
