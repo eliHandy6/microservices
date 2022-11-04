@@ -1,6 +1,6 @@
-package com.zackLabs.kafka.admin.client;
+package com.zackLabs.kafka.producer.config.admin.client;
 
-import com.zackLabs.kafka.admin.exceptions.KafkaClientException;
+import com.zackLabs.kafka.producer.config.admin.exceptions.KafkaClientException;
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
 import com.zackilabs.appconfigdata.config.RetryConfigData;
 import org.apache.kafka.clients.admin.AdminClient;

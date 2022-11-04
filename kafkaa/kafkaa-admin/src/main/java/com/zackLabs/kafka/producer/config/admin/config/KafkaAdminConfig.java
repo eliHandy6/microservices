@@ -1,4 +1,4 @@
-package com.zackLabs.kafka.admin.config;
+package com.zackLabs.kafka.producer.config.admin.config;
 
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
 import org.apache.kafka.clients.CommonClientConfigs;

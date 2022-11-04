@@ -1,4 +1,4 @@
-package com.zackLabs.kafka.admin.config;
+package com.zackLabs.kafka.producer.config.admin.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

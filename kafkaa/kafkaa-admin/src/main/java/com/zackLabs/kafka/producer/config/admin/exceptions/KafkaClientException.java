@@ -1,4 +1,4 @@
-package com.zackLabs.kafka.admin.exceptions;
+package com.zackLabs.kafka.producer.config.admin.exceptions;
 
 public class KafkaClientException extends RuntimeException {
 
