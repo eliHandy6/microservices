@@ -3,6 +3,7 @@ package com.zackLabs.kafka.admin.config;
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.CreateTopicsResult;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.annotation.EnableRetry;
@@ -24,4 +25,6 @@ public class KafkaAdminConfig {
         return AdminClient.create(Map.of(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG,
                 kafkaConfigData.getBootstrapServers()));
     }
+
+
 }
