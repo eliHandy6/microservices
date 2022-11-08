@@ -4,6 +4,9 @@ docker-compose -f common.yml -f kafka_cluster.yml up.
 docker ps
 
 winpty docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:19092
+
+
+
 winpty docker run -it --network=host confluentinc/cp-kafkacat kafkacat -C -b localhost:19092 -t twitter-topic
 
 
