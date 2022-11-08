@@ -1,17 +1,19 @@
-package com.zackLabs.kafka.producer.config.admin.config;
+package com.zackLabs.kafka.admin.config;
 
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
+import com.zackilabs.appconfigdata.config.KafkaProducerConfigData;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.admin.AdminClient;
-import org.apache.kafka.clients.admin.CreateTopicsResult;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.retry.annotation.EnableRetry;
 
 import java.util.Map;
 
 @EnableRetry
 @Configuration
+@Import({KafkaConfigData.class, KafkaProducerConfigData.class})
 public class KafkaAdminConfig {
 
     private final KafkaConfigData kafkaConfigData;

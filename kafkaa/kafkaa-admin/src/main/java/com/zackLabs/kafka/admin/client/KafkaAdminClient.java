@@ -1,6 +1,6 @@
-package com.zackLabs.kafka.producer.config.admin.client;
+package com.zackLabs.kafka.admin.client;
 
-import com.zackLabs.kafka.producer.config.admin.exceptions.KafkaClientException;
+import com.zackLabs.kafka.admin.exceptions.KafkaClientException;
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
 import com.zackilabs.appconfigdata.config.RetryConfigData;
 import org.apache.kafka.clients.admin.AdminClient;
@@ -60,6 +60,7 @@ public class KafkaAdminClient {
         }
         checkTopicsCreated();
     }
+
     public void checkTopicsCreated() {
         Collection<TopicListing> topics = getTopics();
         int retryCount = 1;
@@ -75,6 +76,7 @@ public class KafkaAdminClient {
             }
         }
     }
+
     public void checkSchemaRegistry() {
         int retryCount = 1;
         Integer maxRetry = retryConfigData.getMaxAttempts();
@@ -112,7 +114,6 @@ public class KafkaAdminClient {
     }
 
 
-
     private void sleep(Long sleepTimeMs) {
         try {
             Thread.sleep(sleepTimeMs);
@@ -135,7 +136,6 @@ public class KafkaAdminClient {
     }
 
 
-
     private Collection<TopicListing> getTopics() {
         Collection<TopicListing> topics;
         try {
@@ -147,12 +147,12 @@ public class KafkaAdminClient {
     }
 
 
-    private  Collection<TopicListing> doGetTopics(RetryContext retryContext) throws ExecutionException, InterruptedException {
-            LOG.info("Reading {} topics(s), attempt {}", kafkaConfigData.getTopicNamesToCreate().toArray(), retryContext.getRetryCount());
-            Collection<TopicListing> topics=adminClient.listTopics().listings().get();
-            if(topics!=null){
-                topics.forEach(topicListing -> LOG.debug("Topic with the name {} ",topicListing.name()));
-            }
+    private Collection<TopicListing> doGetTopics(RetryContext retryContext) throws ExecutionException, InterruptedException {
+        LOG.info("Reading {} topics(s), attempt {}", kafkaConfigData.getTopicNamesToCreate().toArray(), retryContext.getRetryCount());
+        Collection<TopicListing> topics = adminClient.listTopics().listings().get();
+        if (topics != null) {
+            topics.forEach(topicListing -> LOG.debug("Topic with the name {} ", topicListing.name()));
+        }
         return topics;
     }
 }

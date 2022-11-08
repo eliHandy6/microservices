@@ -3,11 +3,13 @@ package com.zackLabs.common.config;
 import com.zackilabs.appconfigdata.config.RetryConfigData;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.retry.backoff.ExponentialBackOffPolicy;
 import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
 @Configuration
+@Import(RetryConfigData.class)
 public class RetryConfig {
 
     private final RetryConfigData retryConfigData;
