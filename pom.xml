@@ -9,6 +9,7 @@
         <module>kafkaa/kafkaa-admin</module>
         <module>kafkaa/kafkaa-producer</module>
         <module>common-config</module>
+        <module>app-config-data</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,7 +24,7 @@
     <description>udemy-event-driven-microservices</description>
     <packaging>pom</packaging>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <spring-boot.version>2.6.8</spring-boot.version>
         <spring-compiler-plugin-version>3.8.1</spring-compiler-plugin-version>
         <twitter4j.version>4.0.7</twitter4j.version>
@@ -47,7 +48,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.zackilabs</groupId>
+                <groupId>com.zackLabs</groupId>
                 <artifactId>app-config-data</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
                 <scope>provided</scope>
@@ -151,8 +152,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${spring-compiler-plugin-version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -162,10 +163,27 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                    <configuration>
+                        <image>
+                            <name>${project.groupId}/twitter.to.kafka.service:${project.version}</name>
+                        </image>
+                    </configuration>
+                    <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
 
     </build>
+
+
+
+
 
 </project>

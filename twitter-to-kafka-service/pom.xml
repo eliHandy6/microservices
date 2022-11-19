@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.zackilabs</groupId>
+            <groupId>com.zackLabs</groupId>
             <artifactId>app-config-data</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>provided</scope>
@@ -70,6 +70,12 @@
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zackLabs</groupId>
+            <artifactId>app-config-data</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
 
 

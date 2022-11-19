@@ -37,7 +37,7 @@ Please use V2 filtered and sample volume stream as alternatives
 2022-06-12 12:23:34 [SpringApplicationShutdownHook] INFO  c.z.t.t.k.s.r.I.TwitterKafkaStreamRunner - Closing twitter streams
 2022-06-12 13:23:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 17364 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
 2022-06-12 13:23:57 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - No active profile set, falling back to 1 default profile: "default"
-2022-06-12 13:23:58 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaService': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.zackilabs.twitter.to.kafka.service.runner.StreamRunner' available: expected single matching bean but found 2: twitterKafkaStreamRunner,twitterV2KafkaStreamRunner
+2022-06-12 13:23:58 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaService': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'StreamRunner' available: expected single matching bean but found 2: twitterKafkaStreamRunner,twitterV2KafkaStreamRunner
 2022-06-12 13:23:58 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
@@ -49,7 +49,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 1 of constructor in com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService required a single bean, but 2 were found:
+Parameter 1 of constructor in TwitterToKafkaService required a single bean, but 2 were found:
 	- twitterKafkaStreamRunner: defined in file [C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes\com\zackilabs\twitter\to\kafka\service\runner\Imp\TwitterKafkaStreamRunner.class]
 	- twitterV2KafkaStreamRunner: defined in file [C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes\com\zackilabs\twitter\to\kafka\service\runner\Imp\TwitterV2KafkaStreamRunner.class]
 
@@ -75,13 +75,13 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: org.json.JSONException: JSONObject["data"] not found.
 	at org.json.JSONObject.get(JSONObject.java:587)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
+	at TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:31:51 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 11072 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -101,13 +101,13 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: org.json.JSONException: JSONObject["data"] not found.
 	at org.json.JSONObject.get(JSONObject.java:587)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:160)
+	at TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:33:40 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13860 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -128,13 +128,13 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: org.json.JSONException: JSONObject["data"] not found.
 	at org.json.JSONObject.get(JSONObject.java:587)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:161)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.getRules(TwitterV2StreamHelper.java:161)
+	at TwitterV2StreamHelper.setupRules(TwitterV2StreamHelper.java:108)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:40)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:34:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 13900 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -156,11 +156,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:35:44 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 6328 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -182,11 +182,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:41:56 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 9052 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -208,11 +208,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:42:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 15608 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -234,11 +234,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:46:46 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 9108 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -260,11 +260,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:49:11 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 6580 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -295,11 +295,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:88)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 13:51:55 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 8624 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -367,11 +367,11 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NullPointerException: null
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 14:19:36 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 8064 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -394,13 +394,13 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: org.json.JSONException: JSONObject["created_at"] not found.
 	at org.json.JSONObject.get(JSONObject.java:587)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:231)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:91)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:231)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:91)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted
 2022-06-12 17:04:32 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService using Java 1.8.0_211 on LAPTOP-CLPJQ6F3 with PID 14196 (C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices\twitter-to-kafka-service\target\classes started by Turnkey in C:\Users\Turnkey\Documents\ZACK ilabs\udemy-event-driven-microservices)
@@ -424,7 +424,7 @@ java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at TwitterToKafkaService.main(TwitterToKafkaService.java:28)
 Caused by: java.lang.NumberFormatException: For input string: "RT @MuleSoft: A microservices architecture enables organizations to quickly respond to customer needs. See the top 6 microservices patterns…"
 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.lang.Long.parseLong(Long.java:589)
@@ -434,8 +434,8 @@ Caused by: java.lang.NumberFormatException: For input string: "RT @MuleSoft: A m
 	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:100)
 	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:91)
 	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:95)
-	at com.zackilabs.twitter.to.kafka.service.runner.Imp.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
-	at com.zackilabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:36)
+	at TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:95)
+	at TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:41)
+	at TwitterToKafkaService.run(TwitterToKafkaService.java:36)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
 	... 5 common frames omitted

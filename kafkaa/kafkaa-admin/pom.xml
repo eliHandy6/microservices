@@ -25,7 +25,7 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>com.zackilabs</groupId>
+            <groupId>com.zackLabs</groupId>
             <artifactId>app-config-data</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>provided</scope>
