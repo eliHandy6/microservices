@@ -1,0 +1,24 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/eliHandy6/event-driven-config-repository.git
+          default-label: main
+          username: eliHandy6
+          password: wakaya2030
+          clone-on-start: true
+    fail-fast: true
+
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
+server:
+  port: 8888
+
+
+
