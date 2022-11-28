@@ -1,7 +1,10 @@
-
 spring:
   application:
     name: config-server
+  security:
+    user:
+      name: eventDrivenZack
+      password: eventDrivenZack
   cloud:
     config:
       server:
