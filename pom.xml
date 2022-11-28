@@ -40,6 +40,7 @@
         <spring-cloud-version>3.1.5</spring-cloud-version>
         <spring-cloud-version-dependencies.version>2021.0.5</spring-cloud-version-dependencies.version>
         <spring-starter-config-version>3.1.5</spring-starter-config-version>
+        <spring.security-version>2.7.6</spring.security-version>
     </properties>
 
     <repositories>
@@ -167,8 +168,11 @@
                 <artifactId>spring-aspects</artifactId>
             </dependency>
 
-
-
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring.security-version}</version>
+            </dependency>
 
 
         </dependencies>
@@ -199,21 +203,18 @@
                         </image>
                     </configuration>
                     <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build-image</goal>
-                        </goals>
-                    </execution>
+                        <execution>
+                            <phase>install</phase>
+                            <goals>
+                                <goal>build-image</goal>
+                            </goals>
+                        </execution>
                     </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
 
     </build>
-
-
-
 
 
 </project>

@@ -6,6 +6,10 @@ spring:
     import: optional:configserver:http://localhost:8888/
   profiles:
     active: twitter_to_kafka
+  security:
+    user:
+      name: eventDrivenZack
+      password: eventDrivenZack
 
 management:
   endpoints:
@@ -16,6 +20,8 @@ management:
   endpoint:
     refresh:
       enabled: true
+
+
 
 
 
