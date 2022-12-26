@@ -12,4 +12,7 @@ public class ConfigServer {
         SpringApplication.run(ConfigServer.class, args);
 
     }
+
+
+
 }
