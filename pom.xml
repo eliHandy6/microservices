@@ -11,6 +11,7 @@
         <module>common-config</module>
         <module>app-config-data</module>
         <module>config-server</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -41,6 +42,8 @@
         <spring-cloud-version-dependencies.version>2021.0.5</spring-cloud-version-dependencies.version>
         <spring-starter-config-version>3.1.5</spring-starter-config-version>
         <spring.security-version>2.7.6</spring.security-version>
+        <jasypt.spring-boot-version>3.0.5</jasypt.spring-boot-version>
+
     </properties>
 
     <repositories>
@@ -173,6 +176,16 @@
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring.security-version}</version>
             </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.spring-boot-version}</version>
+
+            </dependency>
+
 
 
         </dependencies>
