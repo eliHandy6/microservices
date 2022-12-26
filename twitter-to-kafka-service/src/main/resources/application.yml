@@ -1,15 +1,18 @@
-
 spring:
   application:
     name: twitter-to-kafka-service
   config:
     import: optional:configserver:http://localhost:8888/
+    username: spring_cloud_user
+    password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
+    fail-fast: true
+
   profiles:
     active: twitter_to_kafka
   security:
     user:
       name: spring_cloud_user
-      password: spring_cloud_password1234
+      password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
 
 management:
   endpoints:
@@ -20,6 +23,11 @@ management:
   endpoint:
     refresh:
       enabled: true
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD}
+
 
 
 
