@@ -3,8 +3,8 @@ spring:
     name: config-server
   security:
     user:
-      name: eventDrivenZack
-      password: eventDrivenZack
+      name: spring_cloud_user
+      password: spring_cloud_password1234
   cloud:
     config:
       server:

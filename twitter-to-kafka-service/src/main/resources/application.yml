@@ -8,8 +8,8 @@ spring:
     active: twitter_to_kafka
   security:
     user:
-      name: eventDrivenZack
-      password: eventDrivenZack
+      name: spring_cloud_user
+      password: spring_cloud_password1234
 
 management:
   endpoints:
