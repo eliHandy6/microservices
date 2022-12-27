@@ -3,8 +3,8 @@ spring:
     name: config-server
   security:
     user:
-      name: eventDrivenZack
-      password: eventDrivenZack
+      name: spring_cloud_user
+      password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
   cloud:
     config:
       server:
@@ -12,7 +12,7 @@ spring:
           uri: https://github.com/eliHandy6/event-driven-config-repository.git
           default-label: main
           username: eliHandy6
-          password: wakaya2030
+          password: ENC (jE5z4Pw8nFKLxaauObxq70iVAypsX7GPrGQcgw86TCpPCKGlHlwujgskyZ5g3r+3)
           clone-on-start: true
     fail-fast: true
 
@@ -22,6 +22,10 @@ logging:
     org.spring.framework.cloud.config: DEBUG
 server:
   port: 8888
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD}
 
 
 
