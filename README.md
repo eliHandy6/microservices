@@ -21,3 +21,7 @@ winpty docker run -it --network=host confluentinc/cp-kafkacat kafkacat -C -b loc
   
 export JASYPT_ENCRYPTOR_PASSWORD='Demo_Pwd!2020'
 echo $JASYPT_ENCRYPTOR_PASSWORD
+
+
+winpty  docker exec -t 50e8f151251e /bin/bash
+
