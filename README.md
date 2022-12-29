@@ -25,3 +25,5 @@ echo $JASYPT_ENCRYPTOR_PASSWORD
 
 winpty  docker exec -t 50e8f151251e /bin/bash
 
+dos2unix [filename] --->exec /usr/local/bin/check-config-server-started.sh: no such file or directory
+
