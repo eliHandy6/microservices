@@ -49,7 +49,7 @@ services:
       - "./docker-logs:/workspace/twitter-to-kafka-service/logs"
       - "./check-config-server-started.sh:/usr/local/bin/check-config-server-started.sh"
     user: root
-    entrypoint: ['check-config-server-started.sh']
+    entrypoint: [ 'check-config-server-started.sh' ]
     depends_on:
       - config-server
     environment:
@@ -68,6 +68,7 @@ services:
     image: ${GROUP_ID}/config.server:${SERVICE_VERSION:-latest}
     ports:
       - "5006:5006"
+      - "8888:8888"
     volumes:
       - "./docker-logs:/workspace/config-server/logs"
     environment:

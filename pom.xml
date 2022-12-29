@@ -12,6 +12,7 @@
         <module>app-config-data</module>
         <module>config-server</module>
         <module>kafkaa/kafkaa-consumer</module>
+        <module>kafka-to-elastic-service</module>
 
     </modules>
     <parent>
