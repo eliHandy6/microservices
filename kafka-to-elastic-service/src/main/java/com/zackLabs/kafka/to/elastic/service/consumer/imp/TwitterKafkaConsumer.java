@@ -1,11 +1,15 @@
-package kafka.to.elastic.service.consumer.imp;
+package com.zackLabs.kafka.to.elastic.service.consumer.imp;
 
 import com.zackLabs.kafka.admin.client.KafkaAdminClient;
+import com.zackLabs.kafka.consumer.config.KafkaConsumerConfig;
+import com.zackLabs.kafka.to.elastic.service.consumer.KafkaConsumer;
 import com.zackLabs.kafkaa.avro.model.TwitterAvroModel;
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
-import kafka.to.elastic.service.consumer.KafkaConsumer;
+import com.zackilabs.appconfigdata.config.KafkaConsumerConfigData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -16,23 +20,34 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@Import(KafkaConsumerConfig.class)
 public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroModel> {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterKafkaConsumer.class);
-
-    private final KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry;
 
     private final KafkaAdminClient kafkaAdminClient;
 
     private final KafkaConfigData kafkaConfigData;
 
+    private final KafkaConsumerConfigData kafkaConsumerConfigData;
+
+    private final KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry;
+
     public TwitterKafkaConsumer(KafkaListenerEndpointRegistry listenerEndpointRegistry,
                                 KafkaAdminClient adminClient,
-                                KafkaConfigData configData) {
+                                KafkaConfigData configData, KafkaConsumerConfigData kafkaConsumerConfigData) {
         this.kafkaListenerEndpointRegistry = listenerEndpointRegistry;
         this.kafkaAdminClient = adminClient;
         this.kafkaConfigData = configData;
+        this.kafkaConsumerConfigData = kafkaConsumerConfigData;
     }
+    @Bean
+    public KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry() {
+        KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry =  new KafkaListenerEndpointRegistry();
+        return kafkaListenerEndpointRegistry;
+    }
+
+
 
     @Override
     @KafkaListener(id = "twitterTopicListener", topics = "${kafka-config.topic-name}")

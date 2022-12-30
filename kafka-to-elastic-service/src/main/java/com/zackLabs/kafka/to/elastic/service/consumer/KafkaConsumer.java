@@ -1,4 +1,4 @@
-package kafka.to.elastic.service.consumer;
+package com.zackLabs.kafka.to.elastic.service.consumer;
 
 import org.apache.avro.specific.SpecificRecordBase;
 

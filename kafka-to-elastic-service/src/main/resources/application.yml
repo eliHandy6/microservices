@@ -9,3 +9,8 @@ spring:
 
   profiles:
     active: kafka_to_elastic
+
+  cloud:
+    config:
+      allow-override: true
+      override-none: true

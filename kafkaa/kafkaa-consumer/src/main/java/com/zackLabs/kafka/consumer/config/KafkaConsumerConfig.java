@@ -1,4 +1,4 @@
-package kafca.consumer.config;
+package com.zackLabs.kafka.consumer.config;
 
 import com.zackilabs.appconfigdata.config.KafkaConfigData;
 import com.zackilabs.appconfigdata.config.KafkaConsumerConfigData;

@@ -1,0 +1,1009 @@
+2022-12-29 11:20:20 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService v0.0.1-SNAPSHOT using Java 17.0.5 on 50e8f151251e with PID 437 (/workspace/BOOT-INF/classes started by root in /workspace)
+2022-12-29 11:20:20 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - The following 1 profile is active: "twitter_to_kafka"
+2022-12-29 11:20:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2022-12-29 11:20:20 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=twitter-to-kafka-service, profiles=[twitter_to_kafka], label=null, version=1535edf2b1ccbea528c75da76cf5bc62a0b8d46d, state=null
+2022-12-29 11:20:24 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=bd61963f-cd01-3220-9d16-8850548e74ea
+2022-12-29 11:20:24 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configserver:https://github.com/eliHandy6/event-driven-config-repository.git/application-twitter_to_kafka.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 11:20:24 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 11:20:26 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-12-29 11:20:26 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-12-29 11:20:26 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-12-29 11:20:26 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-29 11:20:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2022-12-29 11:20:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2022-12-29 11:20:27 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1672312827165
+2022-12-29 11:20:31 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2022-12-29 11:20:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 17.61 seconds (JVM running for 19.609)
+2022-12-29 11:20:31 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-12-29 11:20:31 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2022-12-29 11:20:31 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2022-12-29 11:20:31 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2022-12-29 11:20:32 [main] INFO  c.z.t.t.k.s.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations!
+2022-12-29 11:20:32 [main] INFO  c.z.t.t.k.s.r.I.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Microservices]
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultricieselitliberoMicroservicespurusmassa
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2787648404345939535, "id": 4713127038670787540, "text": "ultricieselitliberoMicroservicespurusmassa", "createdAt": 1672312832000}' to topic='twitter-topic'
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2022-12-29 11:20:33 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1672312833660
+2022-12-29 11:20:33 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: X_QtthraQp2JJFjbXWjN0A
+2022-12-29 11:20:33 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 26002 with epoch 0
+2022-12-29 11:20:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massacongueadipiscingLoremposuereMicroservicespulvinarelitlectus
+2022-12-29 11:20:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5812954249478809233, "id": 4902814744264984248, "text": "massacongueadipiscingLoremposuereMicroservicespulvinarelitlectus", "createdAt": 1672312844000}' to topic='twitter-topic'
+2022-12-29 11:20:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremipsumpurusadipiscingsitFuscemagnamagnaMicroservicesFusceadipiscingpulvinarporttitormagnamassalibero
+2022-12-29 11:20:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1931951281940800919, "id": 6663526260882475508, "text": "LoremipsumpurusadipiscingsitFuscemagnamagnaMicroservicesFusceadipiscingpulvinarporttitormagnamassalibero", "createdAt": 1672312854000}' to topic='twitter-topic'
+2022-12-29 11:21:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscepulvinarlectusametposuerepurusametdolorMicroservicesmassamalesuadaadipiscingconguepulvinarLoremamet
+2022-12-29 11:21:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2012758589159978263, "id": 4246817936742272901, "text": "FuscepulvinarlectusametposuerepurusametdolorMicroservicesmassamalesuadaadipiscingconguepulvinarLoremamet", "createdAt": 1672312864000}' to topic='twitter-topic'
+2022-12-29 11:21:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorconsectetuerametporttitorelitipsumcongueMicroservicesporttitormalesuadamassapurusmagnadolor
+2022-12-29 11:21:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2789578380198153861, "id": 3370713539498414510, "text": "dolorconsectetuerametporttitorelitipsumcongueMicroservicesporttitormalesuadamassapurusmagnadolor", "createdAt": 1672312874000}' to topic='twitter-topic'
+2022-12-29 11:21:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuerepulvinarporttitormassapulvinarporttitoripsummalesuadaMicroservicespurusporttitorelitsitmalesuadaLoremlectus
+2022-12-29 11:21:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2923871461731012082, "id": 4394544302289047953, "text": "posuerepulvinarporttitormassapulvinarporttitoripsummalesuadaMicroservicespurusporttitorelitsitmalesuadaLoremlectus", "createdAt": 1672312884000}' to topic='twitter-topic'
+2022-12-29 11:21:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolormagnasedpulvinarMicroservicesmassapuruslectus
+2022-12-29 11:21:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2101971505872079136, "id": 1361053590402526371, "text": "dolormagnasedpulvinarMicroservicesmassapuruslectus", "createdAt": 1672312894000}' to topic='twitter-topic'
+2022-12-29 11:21:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumdolorsitMicroservicespuruscongue
+2022-12-29 11:21:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5837160013612226851, "id": 592475950025888210, "text": "ipsumdolorsitMicroservicespuruscongue", "createdAt": 1672312904000}' to topic='twitter-topic'
+2022-12-29 11:21:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasporttitorporttitorcongueconsectetuerporttitorconsectetuerLoremMicroservicesultriciesametdolorametLoremsed
+2022-12-29 11:21:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2831002992053002141, "id": 7762265536428923902, "text": "MaecenasporttitorporttitorcongueconsectetuerporttitorconsectetuerLoremMicroservicesultriciesametdolorametLoremsed", "createdAt": 1672312914000}' to topic='twitter-topic'
+2022-12-29 11:22:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingpurusmagnaLoremliberoMicroserviceslectusdolorlectuselit
+2022-12-29 11:22:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3927712699336891209, "id": 192793655156372477, "text": "adipiscingpurusmagnaLoremliberoMicroserviceslectusdolorlectuselit", "createdAt": 1672312924000}' to topic='twitter-topic'
+2022-12-29 11:22:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerLoremposuereliberopurusMicroservicessedliberoconguelectus
+2022-12-29 11:22:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8603245135432747698, "id": 2059515924153081057, "text": "consectetuerLoremposuereliberopurusMicroservicessedliberoconguelectus", "createdAt": 1672312934000}' to topic='twitter-topic'
+2022-12-29 11:22:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoipsumporttitorMicroserviceslectusmagna
+2022-12-29 11:22:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5548745029447418279, "id": 5652026084340617995, "text": "liberoipsumporttitorMicroserviceslectusmagna", "createdAt": 1672312944000}' to topic='twitter-topic'
+2022-12-29 11:22:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscedolorFusceliberoametpurusMaecenasMicroservicesconguedolorsedadipiscingporttitoradipiscing
+2022-12-29 11:22:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 684556191566069287, "id": 5257530414277101052, "text": "FuscedolorFusceliberoametpurusMaecenasMicroservicesconguedolorsedadipiscingporttitoradipiscing", "createdAt": 1672312954000}' to topic='twitter-topic'
+2022-12-29 11:22:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusFuscepuruslectusMicroservicesadipiscingipsumdolor
+2022-12-29 11:22:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3971706453795767601, "id": 1433113231989257659, "text": "lectusFuscepuruslectusMicroservicesadipiscingipsumdolor", "createdAt": 1672312964000}' to topic='twitter-topic'
+2022-12-29 11:22:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusultriciesadipiscingMicroservicesmagnaamet
+2022-12-29 11:22:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5980225764154351016, "id": 539348253910075251, "text": "purusultriciesadipiscingMicroservicesmagnaamet", "createdAt": 1672312974000}' to topic='twitter-topic'
+2022-12-29 11:23:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarelitposuerelectusFusceMicroservicesdolorsedliberomassa
+2022-12-29 11:23:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4756938911895613830, "id": 5562195592857656823, "text": "pulvinarelitposuerelectusFusceMicroservicesdolorsedliberomassa", "createdAt": 1672312984000}' to topic='twitter-topic'
+2022-12-29 11:23:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesedMaecenasametMicroservicespulvinarsedipsum
+2022-12-29 11:23:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6040517331339251570, "id": 2191568154226823048, "text": "conguesedMaecenasametMicroservicespulvinarsedipsum", "createdAt": 1672312994000}' to topic='twitter-topic'
+2022-12-29 11:23:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummagnamagnaposuereconguemalesuadaMicroservicespulvinardolorpulvinarlectusmalesuada
+2022-12-29 11:23:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3074047946133174043, "id": 7102812995993125911, "text": "ipsummagnamagnaposuereconguemalesuadaMicroservicespulvinardolorpulvinarlectusmalesuada", "createdAt": 1672313004000}' to topic='twitter-topic'
+2022-12-29 11:23:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitliberomagnaultriciesmalesuadadolorMicroservicesconguedolorametLoremmagna
+2022-12-29 11:23:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1637934450441588833, "id": 3778935602831539057, "text": "elitliberomagnaultriciesmalesuadadolorMicroservicesconguedolorametLoremmagna", "createdAt": 1672313014000}' to topic='twitter-topic'
+2022-12-29 11:23:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaporttitorlectusLoremFusceposuerelectusMicroservicesmassaelitpurusametultricieslectus
+2022-12-29 11:23:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5696960541851282157, "id": 2967555528171674716, "text": "magnaporttitorlectusLoremFusceposuerelectusMicroservicesmassaelitpurusametultricieslectus", "createdAt": 1672313024000}' to topic='twitter-topic'
+2022-12-29 11:23:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametFusceposuereMicroservicesmalesuadalibero
+2022-12-29 11:23:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 933501042268114619, "id": 1263176321386892060, "text": "ametFusceposuereMicroservicesmalesuadalibero", "createdAt": 1672313034000}' to topic='twitter-topic'
+2022-12-29 11:24:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesultriciesadipiscingsedposuereultriciesadipiscingultriciesMicroservicesultriciespulvinarmassacongueultriciesFusceconsectetuer
+2022-12-29 11:24:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2858341563275781060, "id": 4304934433018334487, "text": "ultriciesultriciesadipiscingsedposuereultriciesadipiscingultriciesMicroservicesultriciespulvinarmassacongueultriciesFusceconsectetuer", "createdAt": 1672313044000}' to topic='twitter-topic'
+2022-12-29 11:24:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedpulvinarsitpulvinarpulvinaradipiscingporttitorporttitorMicroserviceslectusFuscemagnapulvinarametporttitorMaecenas
+2022-12-29 11:24:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1059886988075375538, "id": 3023626664597955279, "text": "sedpulvinarsitpulvinarpulvinaradipiscingporttitorporttitorMicroserviceslectusFuscemagnapulvinarametporttitorMaecenas", "createdAt": 1672313054000}' to topic='twitter-topic'
+2022-12-29 11:24:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusadipiscingipsumdolorconsectetuerMicroservicesultriciesipsummassaLorem
+2022-12-29 11:24:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4667580480884162927, "id": 1418239173749478109, "text": "lectusadipiscingipsumdolorconsectetuerMicroservicesultriciesipsummassaLorem", "createdAt": 1672313064000}' to topic='twitter-topic'
+2022-12-29 11:24:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaFuscesedelitametMicroservicespurusporttitorFusce
+2022-12-29 11:24:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5054322965169817314, "id": 3244887406070783257, "text": "magnaFuscesedelitametMicroservicespurusporttitorFusce", "createdAt": 1672313074000}' to topic='twitter-topic'
+2022-12-29 11:24:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingdolorLoremMicroservicesposueresed
+2022-12-29 11:24:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8619721248057878003, "id": 2480316002354545196, "text": "adipiscingdolorLoremMicroservicesposueresed", "createdAt": 1672313084000}' to topic='twitter-topic'
+2022-12-29 11:24:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaipsumFusceporttitorcongueFuscelectusMicroservicesmalesuadalectusdolorliberolectusadipiscing
+2022-12-29 11:24:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1435757047240061005, "id": 5304935659006987277, "text": "malesuadaipsumFusceporttitorcongueFuscelectusMicroservicesmalesuadalectusdolorliberolectusadipiscing", "createdAt": 1672313094000}' to topic='twitter-topic'
+2022-12-29 11:25:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopulvinaripsumFusceMicroservicesconsectetueripsum
+2022-12-29 11:25:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8384417085139799016, "id": 2931638988108284963, "text": "liberopulvinaripsumFusceMicroservicesconsectetueripsum", "createdAt": 1672313104000}' to topic='twitter-topic'
+2022-12-29 11:25:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremametsitipsumconguedolorelitMicroservicesmagnalectuselitMaecenasposueredolor
+2022-12-29 11:25:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6066630550630009696, "id": 5554647087674472019, "text": "LoremametsitipsumconguedolorelitMicroservicesmagnalectuselitMaecenasposueredolor", "createdAt": 1672313114000}' to topic='twitter-topic'
+2022-12-29 11:25:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolormagnaelitposuereposuerepurusFuscemassaMicroservicesipsumpuruspulvinarametpurusliberolectus
+2022-12-29 11:25:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5759814813440394138, "id": 4945065991373933594, "text": "dolormagnaelitposuereposuerepurusFuscemassaMicroservicesipsumpuruspulvinarametpurusliberolectus", "createdAt": 1672313124000}' to topic='twitter-topic'
+2022-12-29 11:25:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorposueremagnaliberopurusliberositposuereMicroservicesadipiscingliberoadipiscingpulvinarsedposuere
+2022-12-29 11:25:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1256188527961234731, "id": 6053152654309034697, "text": "porttitorposueremagnaliberopurusliberositposuereMicroservicesadipiscingliberoadipiscingpulvinarsedposuere", "createdAt": 1672313134000}' to topic='twitter-topic'
+2022-12-29 11:25:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasdolorconsectetuermalesuadasitMicroservicespulvinarmagnapulvinarposuere
+2022-12-29 11:25:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5992400001617727575, "id": 6072592039051563831, "text": "MaecenasdolorconsectetuermalesuadasitMicroservicespulvinarmagnapulvinarposuere", "createdAt": 1672313144000}' to topic='twitter-topic'
+2022-12-29 11:25:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedliberoconsectetuerpulvinarliberoMicroservicesultriciesconsectetuerpulvinar
+2022-12-29 11:25:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8861304149890208973, "id": 4158336218168053771, "text": "sedliberoconsectetuerpulvinarliberoMicroservicesultriciesconsectetuerpulvinar", "createdAt": 1672313154000}' to topic='twitter-topic'
+2022-12-29 11:26:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumconguelectuspulvinarMicroservicesultriciesipsumpurus
+2022-12-29 11:26:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1378187771506105303, "id": 3239384738959738958, "text": "ipsumconguelectuspulvinarMicroservicesultriciesipsumpurus", "createdAt": 1672313164000}' to topic='twitter-topic'
+2022-12-29 11:26:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitipsumsitMaecenasMicroservicesadipiscinglectusconsectetuer
+2022-12-29 11:26:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6313382410047276950, "id": 5633439209210700784, "text": "elitipsumsitMaecenasMicroservicesadipiscinglectusconsectetuer", "createdAt": 1672313174000}' to topic='twitter-topic'
+2022-12-29 11:26:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesametlectusmassalectusFusceLoremMicroservicessedpurusdolorelitliberosed
+2022-12-29 11:26:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1056314243330164248, "id": 7430815204584658251, "text": "ultriciesametlectusmassalectusFusceLoremMicroservicessedpurusdolorelitliberosed", "createdAt": 1672313184000}' to topic='twitter-topic'
+2022-12-29 11:26:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruspulvinarsedMicroservicesposuereposuere
+2022-12-29 11:26:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2994171893363636876, "id": 2656272484425096901, "text": "puruspulvinarsedMicroservicesposuereposuere", "createdAt": 1672313194000}' to topic='twitter-topic'
+2022-12-29 11:26:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitconsectetuerconsectetuerliberoporttitormalesuadaliberoconsectetuerMicroservicesMaecenasadipiscingconsectetuermagnaLoremMaecenasLorem
+2022-12-29 11:26:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6093730607163853792, "id": 2570156701612869138, "text": "sitconsectetuerconsectetuerliberoporttitormalesuadaliberoconsectetuerMicroservicesMaecenasadipiscingconsectetuermagnaLoremMaecenasLorem", "createdAt": 1672313204000}' to topic='twitter-topic'
+2022-12-29 11:26:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorMaecenaspuruspulvinarMicroservicesadipiscingsit
+2022-12-29 11:26:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6906025061112682379, "id": 4982740463786647310, "text": "dolorMaecenaspuruspulvinarMicroservicesadipiscingsit", "createdAt": 1672313214000}' to topic='twitter-topic'
+2022-12-29 11:27:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereultriciesmalesuadamagnaFusceMaecenasdolorMicroservicesLoremmalesuadamalesuadadolorlectus
+2022-12-29 11:27:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5247743482729895110, "id": 7986742146647270709, "text": "posuereultriciesmalesuadamagnaFusceMaecenasdolorMicroservicesLoremmalesuadamalesuadadolorlectus", "createdAt": 1672313224000}' to topic='twitter-topic'
+2022-12-29 11:27:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitposuereametametposueremassaconsectetuerpulvinarMicroservicesposueredolormassalectusFusceametmassa
+2022-12-29 11:27:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2593863391218806928, "id": 4547832680653368037, "text": "sitposuereametametposueremassaconsectetuerpulvinarMicroservicesposueredolormassalectusFusceametmassa", "createdAt": 1672313234000}' to topic='twitter-topic'
+2022-12-29 11:27:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorporttitorlectusporttitorconsectetueripsummalesuadaLoremMicroserviceslectusposueredolorposuereultriciescongueLorem
+2022-12-29 11:27:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5636853006456386096, "id": 3991967234602942137, "text": "dolorporttitorlectusporttitorconsectetueripsummalesuadaLoremMicroserviceslectusposueredolorposuereultriciescongueLorem", "createdAt": 1672313244000}' to topic='twitter-topic'
+2022-12-29 11:27:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusMaecenasporttitormassaLoremultriciesLoremMicroservicesadipiscingposuereipsumsedcongue
+2022-12-29 11:27:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6584769706957742748, "id": 3242536690999016209, "text": "purusMaecenasporttitormassaLoremultriciesLoremMicroservicesadipiscingposuereipsumsedcongue", "createdAt": 1672313254000}' to topic='twitter-topic'
+2022-12-29 11:27:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscepulvinarlectusMicroservicesultriciesultricies
+2022-12-29 11:27:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2695145057436527708, "id": 8312637838773990411, "text": "FuscepulvinarlectusMicroservicesultriciesultricies", "createdAt": 1672313264000}' to topic='twitter-topic'
+2022-12-29 11:27:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedposuereporttitorcongueMicroservicesipsumLoremlectus
+2022-12-29 11:27:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1452542665134660459, "id": 6041151690825240174, "text": "sedposuereporttitorcongueMicroservicesipsumLoremlectus", "createdAt": 1672313274000}' to topic='twitter-topic'
+2022-12-29 11:28:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuspuruspurusconsectetuerelitpulvinarMicroservicessedpulvinarametMaecenas
+2022-12-29 11:28:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1838786130839916498, "id": 1782557599980134298, "text": "lectuspuruspurusconsectetuerelitpulvinarMicroservicessedpulvinarametMaecenas", "createdAt": 1672313284000}' to topic='twitter-topic'
+2022-12-29 11:28:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasposueremalesuadaporttitorMicroservicesmagnased
+2022-12-29 11:28:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2571329760373308546, "id": 2537775702214032521, "text": "MaecenasposueremalesuadaporttitorMicroservicesmagnased", "createdAt": 1672313294000}' to topic='twitter-topic'
+2022-12-29 11:28:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaadipiscingametipsumultriciesMicroserviceselitmalesuadaLoremlibero
+2022-12-29 11:28:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1700920494239164630, "id": 3643078366948605353, "text": "malesuadaadipiscingametipsumultriciesMicroserviceselitmalesuadaLoremlibero", "createdAt": 1672313304000}' to topic='twitter-topic'
+2022-12-29 11:28:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitsitposueremassasitliberoMicroserviceslectuspulvinarmalesuadaMaecenaselit
+2022-12-29 11:28:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5856574221885017698, "id": 3654873723673163479, "text": "sitsitposueremassasitliberoMicroserviceslectuspulvinarmalesuadaMaecenaselit", "createdAt": 1672313314000}' to topic='twitter-topic'
+2022-12-29 11:28:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmagnamalesuadadolordoloripsumMicroservicesliberodolorMaecenasadipiscing
+2022-12-29 11:28:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5076937412596283592, "id": 3945891255600431296, "text": "sitmagnamalesuadadolordoloripsumMicroservicesliberodolorMaecenasadipiscing", "createdAt": 1672313324000}' to topic='twitter-topic'
+2022-12-29 11:28:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaadipiscingpurusMicroserviceslectusmagna
+2022-12-29 11:28:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7157511825737566598, "id": 4442066886919115511, "text": "magnaadipiscingpurusMicroserviceslectusmagna", "createdAt": 1672313334000}' to topic='twitter-topic'
+2022-12-29 11:29:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnalectussitametlectusMicroservicesadipiscinglectuspurus
+2022-12-29 11:29:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1683574260509235911, "id": 6500840355549782690, "text": "magnalectussitametlectusMicroservicesadipiscinglectuspurus", "createdAt": 1672313344000}' to topic='twitter-topic'
+2022-12-29 11:29:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberodolorlectusMaecenasMicroservicesmassaconsectetuer
+2022-12-29 11:29:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9099074920309668568, "id": 7506473294818972415, "text": "liberodolorlectusMaecenasMicroservicesmassaconsectetuer", "createdAt": 1672313354000}' to topic='twitter-topic'
+2022-12-29 11:29:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametFuscesitmagnaipsummassaultriciesultriciesMicroservicespurusLoremadipiscingconsectetuerpulvinaradipiscingmagna
+2022-12-29 11:29:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2915514002835256915, "id": 8231751074647901230, "text": "ametFuscesitmagnaipsummassaultriciesultriciesMicroservicespurusLoremadipiscingconsectetuerpulvinaradipiscingmagna", "createdAt": 1672313364000}' to topic='twitter-topic'
+2022-12-29 11:29:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruslectusultriciessitposuereMicroservicessedelitMaecenasposuere
+2022-12-29 11:29:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1099086741063857834, "id": 234113407941807263, "text": "puruslectusultriciessitposuereMicroservicessedelitMaecenasposuere", "createdAt": 1672313374000}' to topic='twitter-topic'
+2022-12-29 11:29:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremmassaFuscesitporttitorMicroservicesliberoliberoconguepurus
+2022-12-29 11:29:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5658382991279039504, "id": 6608829652898523967, "text": "LoremmassaFuscesitporttitorMicroservicesliberoliberoconguepurus", "createdAt": 1672313384000}' to topic='twitter-topic'
+2022-12-29 11:29:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusametconsectetuerMicroservicesposuereadipiscing
+2022-12-29 11:29:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 32958675413728179, "id": 4806390687422708343, "text": "lectusametconsectetuerMicroservicesposuereadipiscing", "createdAt": 1672313394000}' to topic='twitter-topic'
+2022-12-29 11:30:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummalesuadamagnamalesuadaporttitormalesuadaelitposuereMicroservicesconsectetuerdolorelitposuereporttitorconsectetuerdolor
+2022-12-29 11:30:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6763337236156653221, "id": 1275694626854095272, "text": "ipsummalesuadamagnamalesuadaporttitormalesuadaelitposuereMicroservicesconsectetuerdolorelitposuereporttitorconsectetuerdolor", "createdAt": 1672313404000}' to topic='twitter-topic'
+2022-12-29 11:30:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguepurussedcongueporttitorliberomagnaMicroservicesFuscemassasedporttitoradipiscingsed
+2022-12-29 11:30:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9219035228388596880, "id": 5914838226275407709, "text": "conguepurussedcongueporttitorliberomagnaMicroservicesFuscemassasedporttitoradipiscingsed", "createdAt": 1672313414000}' to topic='twitter-topic'
+2022-12-29 11:30:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesLoremLoremadipiscingpulvinarMicroservicesametelitultricieslibero
+2022-12-29 11:30:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2508378343771294014, "id": 4990390150314675096, "text": "ultriciesLoremLoremadipiscingpulvinarMicroservicesametelitultricieslibero", "createdAt": 1672313424000}' to topic='twitter-topic'
+2022-12-29 11:30:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorpurusporttitorlectusMicroservicesdolorlectus
+2022-12-29 11:30:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1803116748629795333, "id": 7984584751311624227, "text": "dolorpurusporttitorlectusMicroservicesdolorlectus", "createdAt": 1672313434000}' to topic='twitter-topic'
+2022-12-29 11:30:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerporttitorposuereFuscemalesuadaelitLoremliberoMicroservicesipsumadipiscingFuscedolorconsectetuerposuere
+2022-12-29 11:30:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1346471058715464477, "id": 80495167716967834, "text": "consectetuerporttitorposuereFuscemalesuadaelitLoremliberoMicroservicesipsumadipiscingFuscedolorconsectetuerposuere", "createdAt": 1672313444000}' to topic='twitter-topic'
+2022-12-29 11:30:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceFuscepurusconsectetuerpurusMicroservicessedcongueFusce
+2022-12-29 11:30:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6095014212365706655, "id": 9144386930695300025, "text": "FusceFuscepurusconsectetuerpurusMicroservicessedcongueFusce", "createdAt": 1672313454000}' to topic='twitter-topic'
+2022-12-29 11:31:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitpulvinarMaecenassedMicroserviceslectusipsumconsectetuer
+2022-12-29 11:31:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1375691367904987136, "id": 4918848710099519886, "text": "elitpulvinarMaecenassedMicroserviceslectusipsumconsectetuer", "createdAt": 1672313464000}' to topic='twitter-topic'
+2022-12-29 11:31:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text doloradipiscingcongueMaecenasconguecongueMicroserviceselitultriciespulvinarpurus
+2022-12-29 11:31:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7181255828346487092, "id": 4153257940667490907, "text": "doloradipiscingcongueMaecenasconguecongueMicroserviceselitultriciespulvinarpurus", "createdAt": 1672313474000}' to topic='twitter-topic'
+2022-12-29 11:31:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumipsumsedelitpurusMicroservicessedsitLoremconsectetuer
+2022-12-29 11:31:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 737945110365637466, "id": 9220565677916350117, "text": "ipsumipsumsedelitpurusMicroservicessedsitLoremconsectetuer", "createdAt": 1672313484000}' to topic='twitter-topic'
+2022-12-29 11:31:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametipsumelitmagnaMicroservicesametlectus
+2022-12-29 11:31:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 94064675836017538, "id": 3857279339665621813, "text": "ametipsumelitmagnaMicroservicesametlectus", "createdAt": 1672313494000}' to topic='twitter-topic'
+2022-12-29 11:31:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsummassapulvinarmassaMicroservicesdolorultriciesporttitor
+2022-12-29 11:31:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2769364873332339344, "id": 2890667817676600926, "text": "ipsummassapulvinarmassaMicroservicesdolorultriciesporttitor", "createdAt": 1672313504000}' to topic='twitter-topic'
+2022-12-29 11:31:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarametadipiscingsedconguemagnaLoremMicroservicessitultriciesconsectetuerLoremmalesuada
+2022-12-29 11:31:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7680349664170111431, "id": 1809661040913132498, "text": "pulvinarametadipiscingsedconguemagnaLoremMicroservicessitultriciesconsectetuerLoremmalesuada", "createdAt": 1672313514000}' to topic='twitter-topic'
+2022-12-29 11:32:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopulvinarsitsedMicroservicescongueelit
+2022-12-29 11:32:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7579414095836668162, "id": 1615904676248273008, "text": "liberopulvinarsitsedMicroservicescongueelit", "createdAt": 1672313524000}' to topic='twitter-topic'
+2022-12-29 11:32:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massacongueposuereadipiscingelitMicroserviceslectuspulvinarultricies
+2022-12-29 11:32:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3991800390424111173, "id": 4456396469263932581, "text": "massacongueposuereadipiscingelitMicroserviceslectuspulvinarultricies", "createdAt": 1672313534000}' to topic='twitter-topic'
+2022-12-29 11:32:24 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamalesuadaFusceMicroservicesmassamalesuada
+2022-12-29 11:32:24 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 173585524552180646, "id": 750457553551921032, "text": "magnamalesuadaFusceMicroservicesmassamalesuada", "createdAt": 1672313544000}' to topic='twitter-topic'
+2022-12-29 11:32:34 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciessitFuscemalesuadaMicroservicesMaecenasdolorsed
+2022-12-29 11:32:34 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5514902890293118419, "id": 4197890269947020377, "text": "ultriciessitFuscemalesuadaMicroservicesMaecenasdolorsed", "createdAt": 1672313554000}' to topic='twitter-topic'
+2022-12-29 11:32:44 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaadipiscingposuereposuereliberositMicroservicespurusposueredolorsitmalesuada
+2022-12-29 11:32:44 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8885011479625841619, "id": 3424684891638511352, "text": "malesuadaadipiscingposuereposuereliberositMicroservicespurusposueredolorsitmalesuada", "createdAt": 1672313564000}' to topic='twitter-topic'
+2022-12-29 11:32:54 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremconsectetuerMaecenaslectusconsectetuerelitcongueelitMicroservicesdolorconsectetuerliberolectuslectusipsumdolor
+2022-12-29 11:32:54 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 197160676687232339, "id": 1332600154951929602, "text": "LoremconsectetuerMaecenaslectusconsectetuerelitcongueelitMicroservicesdolorconsectetuerliberolectuslectusipsumdolor", "createdAt": 1672313574000}' to topic='twitter-topic'
+2022-12-29 11:33:04 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruspurusMaecenasmagnapurusposuereadipiscingMicroservicesdolorLoremadipiscingultriciessitconsectetuer
+2022-12-29 11:33:04 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6072572955993675420, "id": 4836925556259087451, "text": "puruspurusMaecenasmagnapurusposuereadipiscingMicroservicesdolorLoremadipiscingultriciessitconsectetuer", "createdAt": 1672313584000}' to topic='twitter-topic'
+2022-12-29 11:33:14 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingmalesuadamagnasitpurusconsectetuerdolordolorMicroservicesipsumadipiscingposuereFuscepulvinarconsectetuerlibero
+2022-12-29 11:33:14 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1152670828868313345, "id": 6941472232309104025, "text": "adipiscingmalesuadamagnasitpurusconsectetuerdolordolorMicroservicesipsumadipiscingposuereFuscepulvinarconsectetuerlibero", "createdAt": 1672313594000}' to topic='twitter-topic'
+2022-12-29 11:33:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedporttitorlectusporttitorsitMicroservicesFusceporttitorelitmassa
+2022-12-29 11:33:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6453441590456877466, "id": 3812805119291895623, "text": "sedporttitorlectusporttitorsitMicroservicesFusceporttitorelitmassa", "createdAt": 1672313605000}' to topic='twitter-topic'
+2022-12-29 11:33:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremMaecenasipsumconsectetueradipiscingposuereametMicroservicesipsumposuerelectuselitultriciescongue
+2022-12-29 11:33:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3328062134570900222, "id": 2006784922111450576, "text": "LoremMaecenasipsumconsectetueradipiscingposuereametMicroservicesipsumposuerelectuselitultriciescongue", "createdAt": 1672313615000}' to topic='twitter-topic'
+2022-12-29 11:33:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaelitseddoloradipiscingdolormassaMicroservicesmalesuadaultriciesliberoliberoLorem
+2022-12-29 11:33:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2445440239973034496, "id": 6339212168179318966, "text": "massaelitseddoloradipiscingdolormassaMicroservicesmalesuadaultriciesliberoliberoLorem", "createdAt": 1672313625000}' to topic='twitter-topic'
+2022-12-29 11:33:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnapulvinaripsummalesuadalectuselitLoremMicroservicessedMaecenasultriciesultricieslectus
+2022-12-29 11:33:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4808625661346429933, "id": 1215459717930857730, "text": "magnapulvinaripsummalesuadalectuselitLoremMicroservicessedMaecenasultriciesultricieslectus", "createdAt": 1672313635000}' to topic='twitter-topic'
+2022-12-29 11:34:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuspulvinarametipsummassaMaecenasmalesuadaliberoMicroservicesconsectetuerametconsectetuerametipsumpulvinarmassa
+2022-12-29 11:34:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7016175009591725364, "id": 3578390000754050331, "text": "lectuspulvinarametipsummassaMaecenasmalesuadaliberoMicroservicesconsectetuerametconsectetuerametipsumpulvinarmassa", "createdAt": 1672313645000}' to topic='twitter-topic'
+2022-12-29 11:34:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorMaecenasmagnaMaecenasmassaMicroservicesconguesedLoremmassa
+2022-12-29 11:34:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2051054116187989073, "id": 5941534165026121421, "text": "dolorMaecenasmagnaMaecenasmassaMicroservicesconguesedLoremmassa", "createdAt": 1672313655000}' to topic='twitter-topic'
+2022-12-29 11:34:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedconsectetueripsumMicroservicesLoremsed
+2022-12-29 11:34:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5424743329076892067, "id": 405804062232836791, "text": "sedconsectetueripsumMicroservicesLoremsed", "createdAt": 1672313665000}' to topic='twitter-topic'
+2022-12-29 11:34:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasdolorFusceconsectetuercongueMicroservicesMaecenaspurusdolor
+2022-12-29 11:34:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5112952328931635412, "id": 3169499049371589052, "text": "MaecenasdolorFusceconsectetuercongueMicroservicesMaecenaspurusdolor", "createdAt": 1672313675000}' to topic='twitter-topic'
+2022-12-29 11:34:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueporttitoripsumultriciesconsectetuerMicroservicessedMaecenasmassa
+2022-12-29 11:34:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3661455318561267988, "id": 3540540107119440395, "text": "congueporttitoripsumultriciesconsectetuerMicroservicessedMaecenasmassa", "createdAt": 1672313685000}' to topic='twitter-topic'
+2022-12-29 11:34:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmalesuadamalesuadamagnaLoremporttitormalesuadaMicroservicessitMaecenassedLoremultriciesporttitor
+2022-12-29 11:34:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4846329973896413699, "id": 9128405890379291262, "text": "sitmalesuadamalesuadamagnaLoremporttitormalesuadaMicroservicessitMaecenassedLoremultriciesporttitor", "createdAt": 1672313695000}' to topic='twitter-topic'
+2022-12-29 11:35:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingdolorelitpulvinarFusceFuscesedMicroservicessedadipiscingmassaconguesitmalesuada
+2022-12-29 11:35:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6567063752914554168, "id": 50578231862049335, "text": "adipiscingdolorelitpulvinarFusceFuscesedMicroservicessedadipiscingmassaconguesitmalesuada", "createdAt": 1672313705000}' to topic='twitter-topic'
+2022-12-29 11:35:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenassedsedadipiscingipsumMicroservicessitporttitorcongue
+2022-12-29 11:35:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 494128400285606421, "id": 5740090577439043558, "text": "MaecenassedsedadipiscingipsumMicroservicessitporttitorcongue", "createdAt": 1672313715000}' to topic='twitter-topic'
+2022-12-29 11:35:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarconguedoloripsumMicroservicespurusametposuere
+2022-12-29 11:35:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6107267585719630779, "id": 172207852936961736, "text": "pulvinarconguedoloripsumMicroservicespurusametposuere", "createdAt": 1672313725000}' to topic='twitter-topic'
+2022-12-29 11:35:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereadipiscinglectuspurusMicroservicesipsumdolorsed
+2022-12-29 11:35:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6680866821521697454, "id": 2375530335349377677, "text": "posuereadipiscinglectuspurusMicroservicesipsumdolorsed", "createdAt": 1672313735000}' to topic='twitter-topic'
+2022-12-29 11:35:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinardolorsedliberoconsectetuersedMicroservicesametametmagnaipsumultricies
+2022-12-29 11:35:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9137968305585420116, "id": 2758500240151569229, "text": "pulvinardolorsedliberoconsectetuersedMicroservicesametametmagnaipsumultricies", "createdAt": 1672313745000}' to topic='twitter-topic'
+2022-12-29 11:35:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmassasitelitposueremagnaMicroservicesmalesuadadolorlectusLorem
+2022-12-29 11:35:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5744280281794653049, "id": 982304024875734271, "text": "sitmassasitelitposueremagnaMicroservicesmalesuadadolorlectusLorem", "createdAt": 1672313755000}' to topic='twitter-topic'
+2022-12-29 11:36:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscemalesuadapulvinarMicroservicesFuscepurus
+2022-12-29 11:36:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2871906495699579998, "id": 4324596130001167770, "text": "FuscemalesuadapulvinarMicroservicesFuscepurus", "createdAt": 1672313765000}' to topic='twitter-topic'
+2022-12-29 11:36:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingdolorametconsectetuerconsectetuerMicroservicessitdolorsit
+2022-12-29 11:36:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1403542186494369043, "id": 3605290636165233977, "text": "adipiscingdolorametconsectetuerconsectetuerMicroservicessitdolorsit", "createdAt": 1672313775000}' to topic='twitter-topic'
+2022-12-29 11:36:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarelitultriciessitsedsitMicroservicesmalesuadaFusceelitpulvinarporttitor
+2022-12-29 11:36:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5232185614163580373, "id": 3405920283400057711, "text": "pulvinarelitultriciessitsedsitMicroservicesmalesuadaFusceelitpulvinarporttitor", "createdAt": 1672313785000}' to topic='twitter-topic'
+2022-12-29 11:36:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueadipiscingMaecenasconsectetuermalesuadacongueMicroservicesmagnaliberocongueMaecenas
+2022-12-29 11:36:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5080273819720049390, "id": 7446016569776377592, "text": "congueadipiscingMaecenasconsectetuermalesuadacongueMicroservicesmagnaliberocongueMaecenas", "createdAt": 1672313795000}' to topic='twitter-topic'
+2022-12-29 11:36:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorsedconsectetuerposuereMicroservicesmassaFuscedolor
+2022-12-29 11:36:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8756784101393202337, "id": 5235362877205298470, "text": "porttitorsedconsectetuerposuereMicroservicesmassaFuscedolor", "createdAt": 1672313805000}' to topic='twitter-topic'
+2022-12-29 11:36:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitliberoametporttitorMicroservicesconsectetuerpulvinar
+2022-12-29 11:36:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7922480850183467522, "id": 465689520892111709, "text": "elitliberoametporttitorMicroservicesconsectetuerpulvinar", "createdAt": 1672313815000}' to topic='twitter-topic'
+2022-12-29 11:37:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruselitconsectetuersitLoremFuscepulvinarMicroservicesultriciesporttitorpuruspulvinaripsumsed
+2022-12-29 11:37:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8823530062108169726, "id": 3179088290572901197, "text": "puruselitconsectetuersitLoremFuscepulvinarMicroservicesultriciesporttitorpuruspulvinaripsumsed", "createdAt": 1672313825000}' to topic='twitter-topic'
+2022-12-29 11:37:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesporttitorporttitorsedsitliberoconsectetuerMicroservicesconsectetuerultriciesliberolectusliberocongue
+2022-12-29 11:37:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5776812728755724623, "id": 594078097602917687, "text": "ultriciesporttitorporttitorsedsitliberoconsectetuerMicroservicesconsectetuerultriciesliberolectusliberocongue", "createdAt": 1672313835000}' to topic='twitter-topic'
+2022-12-29 11:37:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitipsummassaMicroservicesultriciesFusce
+2022-12-29 11:37:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6060897813352893989, "id": 8080603347155567220, "text": "elitipsummassaMicroservicesultriciesFusce", "createdAt": 1672313845000}' to topic='twitter-topic'
+2022-12-29 11:37:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueresedporttitorMicroservicesLorempurus
+2022-12-29 11:37:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4578295260547359180, "id": 4549154823455380369, "text": "posueresedporttitorMicroservicesLorempurus", "createdAt": 1672313855000}' to topic='twitter-topic'
+2022-12-29 11:37:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguepulvinarametLoremporttitorametmagnaultriciesMicroserviceselitsedsitporttitorposuereipsumdolor
+2022-12-29 11:37:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8997546252325279936, "id": 9055635477049646524, "text": "conguepulvinarametLoremporttitorametmagnaultriciesMicroserviceselitsedsitporttitorposuereipsumdolor", "createdAt": 1672313865000}' to topic='twitter-topic'
+2022-12-29 11:37:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoposuereipsumposuereconsectetuerMicroservicesMaecenasliberoipsumlectus
+2022-12-29 11:37:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4797480901785883558, "id": 2016679423763103177, "text": "liberoposuereipsumposuereconsectetuerMicroservicesMaecenasliberoipsumlectus", "createdAt": 1672313875000}' to topic='twitter-topic'
+2022-12-29 11:38:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasdolormalesuadasitultriciesdolorsitMicroservicesconsectetuerFuscepulvinarmassaconsectetuermassa
+2022-12-29 11:38:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3759875798942709285, "id": 8927387658531693479, "text": "MaecenasdolormalesuadasitultriciesdolorsitMicroservicesconsectetuerFuscepulvinarmassaconsectetuermassa", "createdAt": 1672313885000}' to topic='twitter-topic'
+2022-12-29 11:38:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerMaecenasporttitorMicroservicesultriciesipsum
+2022-12-29 11:38:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 571617963272888358, "id": 9064620591682293336, "text": "consectetuerMaecenasporttitorMicroservicesultriciesipsum", "createdAt": 1672313895000}' to topic='twitter-topic'
+2022-12-29 11:38:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massasedmagnaFusceMicroservicespuruspurus
+2022-12-29 11:38:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3425099607349514049, "id": 2392147804159693895, "text": "massasedmagnaFusceMicroservicespuruspurus", "createdAt": 1672313905000}' to topic='twitter-topic'
+2022-12-29 11:38:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinaradipiscingconguemagnaposuerepulvinaripsumMicroservicessedadipiscingdoloradipiscingpurus
+2022-12-29 11:38:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7248650950155499526, "id": 3047422378359129350, "text": "pulvinaradipiscingconguemagnaposuerepulvinaripsumMicroservicessedadipiscingdoloradipiscingpurus", "createdAt": 1672313915000}' to topic='twitter-topic'
+2022-12-29 11:38:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posueresitliberomagnaMaecenassedMicroservicesLoremFuscepulvinaripsumMaecenas
+2022-12-29 11:38:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6193636696999769886, "id": 1690096636391178221, "text": "posueresitliberomagnaMaecenassedMicroservicesLoremFuscepulvinaripsumMaecenas", "createdAt": 1672313925000}' to topic='twitter-topic'
+2022-12-29 11:38:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueliberoLoremultriciesmassaipsumconguesitMicroserviceselitporttitormassaelitmalesuadaposuerepulvinar
+2022-12-29 11:38:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3998703478843550337, "id": 1594267470028059884, "text": "congueliberoLoremultriciesmassaipsumconguesitMicroserviceselitporttitormassaelitmalesuadaposuerepulvinar", "createdAt": 1672313935000}' to topic='twitter-topic'
+2022-12-29 11:39:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitadipiscingsedMicroservicesametpurus
+2022-12-29 11:39:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2034430200255280327, "id": 6685619524799736603, "text": "sitadipiscingsedMicroservicesametpurus", "createdAt": 1672313945000}' to topic='twitter-topic'
+2022-12-29 11:39:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitcongueadipiscingdolormagnaadipiscingMicroservicesametadipiscingsedMaecenaslectus
+2022-12-29 11:39:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 803449256124775802, "id": 5286642523304630947, "text": "elitcongueadipiscingdolormagnaadipiscingMicroservicesametadipiscingsedMaecenaslectus", "createdAt": 1672313955000}' to topic='twitter-topic'
+2022-12-29 11:39:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereipsummassaposuereipsumMicroservicesporttitormassapurus
+2022-12-29 11:39:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9000633448641701329, "id": 2106889135453903606, "text": "posuereipsummassaposuereipsumMicroservicesporttitormassapurus", "createdAt": 1672313965000}' to topic='twitter-topic'
+2022-12-29 11:39:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesporttitorametmagnaliberoelitMicroservicesmalesuadaMaecenassedadipiscinglibero
+2022-12-29 11:39:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3868431165752499300, "id": 6696673568368104622, "text": "ultriciesporttitorametmagnaliberoelitMicroservicesmalesuadaMaecenassedadipiscinglibero", "createdAt": 1672313975000}' to topic='twitter-topic'
+2022-12-29 11:39:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorametpulvinarMaecenasdoloripsumMicroservicesultriciesmagnalectuscongue
+2022-12-29 11:39:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5094189279269159398, "id": 4201466037342232622, "text": "dolorametpulvinarMaecenasdoloripsumMicroservicesultriciesmagnalectuscongue", "createdAt": 1672313985000}' to topic='twitter-topic'
+2022-12-29 11:39:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumpulvinarposueremagnaultriciesametMaecenasmagnaMicroservicesametFuscelectusconsectetuerposuerepulvinaripsum
+2022-12-29 11:39:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9037321386314980587, "id": 1262654353962342644, "text": "ipsumpulvinarposueremagnaultriciesametMaecenasmagnaMicroservicesametFuscelectusconsectetuerposuerepulvinaripsum", "createdAt": 1672313995000}' to topic='twitter-topic'
+2022-12-29 11:40:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text conguesitporttitorconsectetuermagnalectussitmassaMicroservicesFusceFusceconsectetuersedultriciessedposuere
+2022-12-29 11:40:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5714663285012262071, "id": 6738651107101595015, "text": "conguesitporttitorconsectetuermagnalectussitmassaMicroservicesFusceFusceconsectetuersedultriciessedposuere", "createdAt": 1672314005000}' to topic='twitter-topic'
+2022-12-29 11:40:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedsedpulvinarametpuruslectuspulvinarMicroservicesmassaposuereipsummalesuadaamet
+2022-12-29 11:40:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6036794656303492343, "id": 4864169704747888374, "text": "sedsedpulvinarametpuruslectuspulvinarMicroservicesmassaposuereipsummalesuadaamet", "createdAt": 1672314015000}' to topic='twitter-topic'
+2022-12-29 11:40:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorMaecenasmassaposuerelectussitMicroservicesmassaliberoLoremlectusamet
+2022-12-29 11:40:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5683413821098540708, "id": 7371171028939672588, "text": "dolorMaecenasmassaposuerelectussitMicroservicesmassaliberoLoremlectusamet", "createdAt": 1672314025000}' to topic='twitter-topic'
+2022-12-29 11:40:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusametultriciesMicroservicesFusceposuere
+2022-12-29 11:40:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 642956203095566087, "id": 5608015968693872109, "text": "purusametultriciesMicroservicesFusceposuere", "createdAt": 1672314035000}' to topic='twitter-topic'
+2022-12-29 11:40:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerconguepulvinarpurusdoloradipiscingcongueMicroservicessedelitmassapulvinarcongue
+2022-12-29 11:40:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2946737625384328321, "id": 5067372070377169032, "text": "consectetuerconguepulvinarpurusdoloradipiscingcongueMicroservicessedelitmassapulvinarcongue", "createdAt": 1672314045000}' to topic='twitter-topic'
+2022-12-29 11:40:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametliberocongueelitMicroservicesultriciespuruselit
+2022-12-29 11:40:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1483712064352208570, "id": 4255169702326084436, "text": "ametliberocongueelitMicroservicesultriciespuruselit", "createdAt": 1672314055000}' to topic='twitter-topic'
+2022-12-29 11:41:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumipsumametametFuscedolorporttitorMicroservicesLoremFuscepurusmagnaposuere
+2022-12-29 11:41:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4035257107034619662, "id": 294334527950572719, "text": "ipsumipsumametametFuscedolorporttitorMicroservicesLoremFuscepurusmagnaposuere", "createdAt": 1672314065000}' to topic='twitter-topic'
+2022-12-29 11:41:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumsitlectusliberositmassaMicroserviceselitpuruselitmassaipsum
+2022-12-29 11:41:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6683972699362793619, "id": 4022809299352548004, "text": "ipsumsitlectusliberositmassaMicroserviceselitpuruselitmassaipsum", "createdAt": 1672314075000}' to topic='twitter-topic'
+2022-12-29 11:41:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaconsectetuerconguepulvinarliberoMicroservicesposuereultriciespulvinarmalesuada
+2022-12-29 11:41:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3215183020499668599, "id": 3063840113860503144, "text": "magnaconsectetuerconguepulvinarliberoMicroservicesposuereultriciespulvinarmalesuada", "createdAt": 1672314085000}' to topic='twitter-topic'
+2022-12-29 11:41:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinaripsumLoremmalesuadamagnasedsedposuereMicroservicesMaecenasadipiscingMaecenasporttitorsitporttitor
+2022-12-29 11:41:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 671190333727761081, "id": 1755218518108818982, "text": "pulvinaripsumLoremmalesuadamagnasedsedposuereMicroservicesMaecenasadipiscingMaecenasporttitorsitporttitor", "createdAt": 1672314095000}' to topic='twitter-topic'
+2022-12-29 11:41:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitoradipiscingmagnaMaecenasMicroservicesFusceconsectetuerporttitor
+2022-12-29 11:41:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2033679552791278072, "id": 5680307715470493523, "text": "porttitoradipiscingmagnaMaecenasMicroservicesFusceconsectetuerporttitor", "createdAt": 1672314105000}' to topic='twitter-topic'
+2022-12-29 11:41:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitipsummassaliberoMaecenasultriciesMicroservicesLoremFusceadipiscingultricies
+2022-12-29 11:41:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7654762098397354579, "id": 227630803877160841, "text": "sitipsummassaliberoMaecenasultriciesMicroservicesLoremFusceadipiscingultricies", "createdAt": 1672314115000}' to topic='twitter-topic'
+2022-12-29 11:42:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueporttitorametmagnamalesuadaMicroservicesFusceMaecenaspurussit
+2022-12-29 11:42:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6428279185180929654, "id": 4900532747654480776, "text": "congueporttitorametmagnamalesuadaMicroservicesFusceMaecenaspurussit", "createdAt": 1672314125000}' to topic='twitter-topic'
+2022-12-29 11:42:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuersedsitliberomalesuadaelitsitipsumMicroservicesmassaFusceLoremmagnaMaecenaspurus
+2022-12-29 11:42:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8587188951965805138, "id": 2513252910924727929, "text": "consectetuersedsitliberomalesuadaelitsitipsumMicroservicesmassaFusceLoremmagnaMaecenaspurus", "createdAt": 1672314135000}' to topic='twitter-topic'
+2022-12-29 11:42:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaMaecenasposuereLoremipsumsitpuruspulvinarMicroservicesMaecenasadipiscingconsectetuermagnapuruselitLorem
+2022-12-29 11:42:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4747885551526340032, "id": 8778747883892592883, "text": "malesuadaMaecenasposuereLoremipsumsitpuruspulvinarMicroservicesMaecenasadipiscingconsectetuermagnapuruselitLorem", "createdAt": 1672314145000}' to topic='twitter-topic'
+2022-12-29 11:42:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesultriciesporttitordolorultriciesMicroservicespurusliberodolor
+2022-12-29 11:42:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8873701512856458264, "id": 8306364007372560251, "text": "ultriciesultriciesporttitordolorultriciesMicroservicespurusliberodolor", "createdAt": 1672314155000}' to topic='twitter-topic'
+2022-12-29 11:42:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitporttitorsedposuerepurusmassalectusmagnaMicroservicessitametadipiscingmassamagnapurusFusce
+2022-12-29 11:42:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2622700635890942276, "id": 4369578921691789150, "text": "elitporttitorsedposuerepurusmassalectusmagnaMicroservicessitametadipiscingmassamagnapurusFusce", "createdAt": 1672314165000}' to topic='twitter-topic'
+2022-12-29 11:42:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereipsumporttitorpulvinarMicroservicesultriciesFusce
+2022-12-29 11:42:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5270331317603042939, "id": 4594775558117578984, "text": "posuereipsumporttitorpulvinarMicroservicesultriciesFusce", "createdAt": 1672314175000}' to topic='twitter-topic'
+2022-12-29 11:43:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopurusMaecenasLoremmalesuadaporttitorsitsitMicroservicesipsummalesuadaMaecenasmassaLoremmalesuadaadipiscing
+2022-12-29 11:43:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7310810947433338887, "id": 7691371746723666554, "text": "liberopurusMaecenasLoremmalesuadaporttitorsitsitMicroservicesipsummalesuadaMaecenasmassaLoremmalesuadaadipiscing", "createdAt": 1672314185000}' to topic='twitter-topic'
+2022-12-29 11:43:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitadipiscingconsectetuerconsectetuerliberosedmassaMicroservicessitsitliberoadipiscingpurusMaecenas
+2022-12-29 11:43:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7295582864230770512, "id": 1345321973024179622, "text": "elitadipiscingconsectetuerconsectetuerliberosedmassaMicroservicessitsitliberoadipiscingpurusMaecenas", "createdAt": 1672314195000}' to topic='twitter-topic'
+2022-12-29 11:43:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereconsectetueripsumposuereMicroservicesconguemassa
+2022-12-29 11:43:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5339436629064347129, "id": 2040065942091943902, "text": "posuereconsectetueripsumposuereMicroservicesconguemassa", "createdAt": 1672314205000}' to topic='twitter-topic'
+2022-12-29 11:43:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumultriciesametLoremmassaMicroservicesFusceultriciesultriciesultricies
+2022-12-29 11:43:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8169797528072693216, "id": 3171710846490672600, "text": "ipsumultriciesametLoremmassaMicroservicesFusceultriciesultriciesultricies", "createdAt": 1672314215000}' to topic='twitter-topic'
+2022-12-29 11:43:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametconguedolorpurusporttitorMicroservicesmassaconsectetuerconsectetuer
+2022-12-29 11:43:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7667997692536017408, "id": 2705550730899921915, "text": "ametconguedolorpurusporttitorMicroservicesmassaconsectetuerconsectetuer", "createdAt": 1672314225000}' to topic='twitter-topic'
+2022-12-29 11:43:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueultriciesadipiscingpuruspulvinarLoremconguepulvinarMicroservicesametmagnaLoremLoremliberopurus
+2022-12-29 11:43:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3771937735089869733, "id": 971442184386184685, "text": "congueultriciesadipiscingpuruspulvinarLoremconguepulvinarMicroservicesametmagnaLoremLoremliberopurus", "createdAt": 1672314235000}' to topic='twitter-topic'
+2022-12-29 11:44:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massapurusmagnaporttitorsedMicroservicespuruscongueconsectetuer
+2022-12-29 11:44:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4723489173374418982, "id": 8927411632573216479, "text": "massapurusmagnaporttitorsedMicroservicespuruscongueconsectetuer", "createdAt": 1672314245000}' to topic='twitter-topic'
+2022-12-29 11:44:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text doloradipiscingmassaposuerepulvinarMicroservicesmassapulvinarametelit
+2022-12-29 11:44:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4330748163588266003, "id": 6233135511368263869, "text": "doloradipiscingmassaposuerepulvinarMicroservicesmassapulvinarametelit", "createdAt": 1672314255000}' to topic='twitter-topic'
+2022-12-29 11:44:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorporttitorMaecenasconsectetuermalesuadasedsitLoremMicroservicescongueMaecenasFusceMaecenasmagnaMaecenassed
+2022-12-29 11:44:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3403212502510513311, "id": 1803567277943972394, "text": "porttitorporttitorMaecenasconsectetuermalesuadasedsitLoremMicroservicescongueMaecenasFusceMaecenasmagnaMaecenassed", "createdAt": 1672314265000}' to topic='twitter-topic'
+2022-12-29 11:44:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasadipiscingLorempuruscongueLoremMicroservicesporttitorsitporttitorMaecenasultricies
+2022-12-29 11:44:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7338884323476785520, "id": 6446133394642785823, "text": "MaecenasadipiscingLorempuruscongueLoremMicroservicesporttitorsitporttitorMaecenasultricies", "createdAt": 1672314275000}' to topic='twitter-topic'
+2022-12-29 11:44:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomalesuadacongueliberoultricieselitpurusMicroservicesliberoultriciesMaecenasMaecenascongue
+2022-12-29 11:44:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4289531632452084011, "id": 4837346898756813039, "text": "liberomalesuadacongueliberoultricieselitpurusMicroservicesliberoultriciesMaecenasMaecenascongue", "createdAt": 1672314285000}' to topic='twitter-topic'
+2022-12-29 11:44:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerultriciesporttitorconsectetuerMicroservicesmagnaamet
+2022-12-29 11:44:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2105193389917601370, "id": 4139515607533275296, "text": "consectetuerultriciesporttitorconsectetuerMicroservicesmagnaamet", "createdAt": 1672314295000}' to topic='twitter-topic'
+2022-12-29 11:45:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadadolorposueresedpurusliberoMicroservicesliberosedMaecenaspurusmalesuada
+2022-12-29 11:45:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7660747992252605659, "id": 5490185227586393966, "text": "malesuadadolorposueresedpurusliberoMicroservicesliberosedMaecenaspurusmalesuada", "createdAt": 1672314305000}' to topic='twitter-topic'
+2022-12-29 11:45:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorconguedolorsedultriciesLoremipsumMicroservicescongueFusceametametcongue
+2022-12-29 11:45:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1425186963676125319, "id": 9082633166854200178, "text": "dolorconguedolorsedultriciesLoremipsumMicroservicescongueFusceametametcongue", "createdAt": 1672314315000}' to topic='twitter-topic'
+2022-12-29 11:45:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingmalesuadaposuereultriciespulvinaripsummalesuadaMicroserviceslectusposueremagnapurusposuereMaecenas
+2022-12-29 11:45:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6985777431167451661, "id": 530836609468971571, "text": "adipiscingmalesuadaposuereultriciespulvinaripsummalesuadaMicroserviceslectusposueremagnapurusposuereMaecenas", "createdAt": 1672314325000}' to topic='twitter-topic'
+2022-12-29 11:45:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasLoremliberoposuereMicroservicesFuscelibero
+2022-12-29 11:45:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3646484074347210014, "id": 7176355881071269435, "text": "MaecenasLoremliberoposuereMicroservicesFuscelibero", "createdAt": 1672314335000}' to topic='twitter-topic'
+2022-12-29 11:45:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarposuereposuerelectusipsumporttitormagnaMicroservicesmassalectuselitliberopuruspurus
+2022-12-29 11:45:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 895272889811045566, "id": 8159932439679067389, "text": "pulvinarposuereposuerelectusipsumporttitormagnaMicroservicesmassalectuselitliberopuruspurus", "createdAt": 1672314345000}' to topic='twitter-topic'
+2022-12-29 11:45:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarpurusposuereipsumconsectetuerconsectetuerMicroservicesporttitorLoremliberoconguecongue
+2022-12-29 11:45:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4909505971095675871, "id": 4155745898893149186, "text": "pulvinarpurusposuereipsumconsectetuerconsectetuerMicroservicesporttitorLoremliberoconguecongue", "createdAt": 1672314355000}' to topic='twitter-topic'
+2022-12-29 11:46:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultricieselitlectusametMicroservicesposueresed
+2022-12-29 11:46:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4817411684793374669, "id": 363823967270410708, "text": "ultricieselitlectusametMicroservicesposueresed", "createdAt": 1672314365000}' to topic='twitter-topic'
+2022-12-29 11:46:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereFuscedolorsitlectusdolormalesuadamassaMicroserviceslectusconsectetuerporttitorFuscemalesuadaliberoipsum
+2022-12-29 11:46:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3342024344135271882, "id": 7092208515128344635, "text": "posuereFuscedolorsitlectusdolormalesuadamassaMicroserviceslectusconsectetuerporttitorFuscemalesuadaliberoipsum", "createdAt": 1672314375000}' to topic='twitter-topic'
+2022-12-29 11:46:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberomassaultriciesposueresitpurusMicroservicespuruspurusadipiscingmagnalectus
+2022-12-29 11:46:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5112226113933041665, "id": 7427059657208700270, "text": "liberomassaultriciesposueresitpurusMicroservicespuruspurusadipiscingmagnalectus", "createdAt": 1672314385000}' to topic='twitter-topic'
+2022-12-29 11:46:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuersitMaecenasipsumMaecenasMicroservicespulvinarultricieselitmassa
+2022-12-29 11:46:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7082566123149077320, "id": 3894972506886524418, "text": "consectetuersitMaecenasipsumMaecenasMicroservicespulvinarultricieselitmassa", "createdAt": 1672314395000}' to topic='twitter-topic'
+2022-12-29 11:46:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceporttitormalesuadaporttitorpurusmalesuadaMicroserviceslectuspurusLoremMaecenas
+2022-12-29 11:46:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 20487457313140445, "id": 1498576209319302275, "text": "FusceporttitormalesuadaporttitorpurusmalesuadaMicroserviceslectuspurusLoremMaecenas", "createdAt": 1672314405000}' to topic='twitter-topic'
+2022-12-29 11:46:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorpurusametmalesuadamalesuadamagnaFusceMicroservicesultriciesdolorposuereultriciesipsumipsum
+2022-12-29 11:46:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3917380765706886623, "id": 5926156278745513433, "text": "porttitorpurusametmalesuadamalesuadamagnaFusceMicroservicesultriciesdolorposuereultriciesipsumipsum", "createdAt": 1672314415000}' to topic='twitter-topic'
+2022-12-29 11:47:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitormagnaconsectetuerMaecenasliberoMicroservicesultriciesFusceultricies
+2022-12-29 11:47:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3147889015151798328, "id": 3070675864507675535, "text": "porttitormagnaconsectetuerMaecenasliberoMicroservicesultriciesFusceultricies", "createdAt": 1672314425000}' to topic='twitter-topic'
+2022-12-29 11:47:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesporttitoripsumadipiscinglectusMaecenassitametMicroservicesFuscepurusposuereadipiscingpurusliberolectus
+2022-12-29 11:47:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4579546131719309246, "id": 6614570662504795935, "text": "ultriciesporttitoripsumadipiscinglectusMaecenassitametMicroservicesFuscepurusposuereadipiscingpurusliberolectus", "createdAt": 1672314435000}' to topic='twitter-topic'
+2022-12-29 11:47:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaadipiscingelitametmalesuadaliberoMicroservicesmalesuadaultriciesmagnaamet
+2022-12-29 11:47:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7035307934457092196, "id": 7912660926401868659, "text": "malesuadaadipiscingelitametmalesuadaliberoMicroservicesmalesuadaultriciesmagnaamet", "createdAt": 1672314445000}' to topic='twitter-topic'
+2022-12-29 11:47:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametsitFusceporttitorLoremseddolorMicroservicesLoremporttitorpulvinarMaecenasdolorlibero
+2022-12-29 11:47:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2660432281154141360, "id": 3591390576764723456, "text": "ametsitFusceporttitorLoremseddolorMicroservicesLoremporttitorpulvinarMaecenasdolorlibero", "createdAt": 1672314455000}' to topic='twitter-topic'
+2022-12-29 11:47:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedseddolorconsectetuerMicroservicesametMaecenas
+2022-12-29 11:47:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7049720441615943818, "id": 9152277852399215386, "text": "sedseddolorconsectetuerMicroservicesametMaecenas", "createdAt": 1672314465000}' to topic='twitter-topic'
+2022-12-29 11:47:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumLoremlectuscongueametpurusconsectetuerLoremMicroservicespulvinarposueremassamassaporttitorelit
+2022-12-29 11:47:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4001504794685115510, "id": 1750931762024471247, "text": "ipsumLoremlectuscongueametpurusconsectetuerLoremMicroservicespulvinarposueremassamassaporttitorelit", "createdAt": 1672314475000}' to topic='twitter-topic'
+2022-12-29 11:48:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciessedporttitorliberositMicroserviceselitpulvinarultriciesipsum
+2022-12-29 11:48:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2585251107504570717, "id": 7477278139350659651, "text": "ultriciessedporttitorliberositMicroserviceselitpulvinarultriciesipsum", "createdAt": 1672314485000}' to topic='twitter-topic'
+2022-12-29 11:48:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaporttitormagnaelitMicroservicesdolorlibero
+2022-12-29 11:48:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 533043314920098643, "id": 8729050763888262511, "text": "malesuadaporttitormagnaelitMicroservicesdolorlibero", "createdAt": 1672314495000}' to topic='twitter-topic'
+2022-12-29 11:48:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusametseddolorFusceelitsedMicroservicesMaecenasliberoipsumultriciesmassamassa
+2022-12-29 11:48:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2508547246922113059, "id": 3371209863630062513, "text": "purusametseddolorFusceelitsedMicroservicesMaecenasliberoipsumultriciesmassamassa", "createdAt": 1672314505000}' to topic='twitter-topic'
+2022-12-29 11:48:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberosedconsectetuersitMicroservicesadipiscingporttitor
+2022-12-29 11:48:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4607919496871352523, "id": 3664039671986697705, "text": "liberosedconsectetuersitMicroservicesadipiscingporttitor", "createdAt": 1672314515000}' to topic='twitter-topic'
+2022-12-29 11:48:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametpulvinarporttitorMicroserviceselitconsectetuer
+2022-12-29 11:48:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5127480253290594225, "id": 3153248684955980723, "text": "ametpulvinarporttitorMicroserviceselitconsectetuer", "createdAt": 1672314525000}' to topic='twitter-topic'
+2022-12-29 11:48:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorFusceMaecenasipsumMicroservicesipsumpurus
+2022-12-29 11:48:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4938880112661986965, "id": 4693664757211902283, "text": "dolorFusceMaecenasipsumMicroservicesipsumpurus", "createdAt": 1672314535000}' to topic='twitter-topic'
+2022-12-29 11:49:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massamalesuadasitmassapurussitametMicroservicesporttitorpurusposuerepurusconguemalesuada
+2022-12-29 11:49:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4881000079737416775, "id": 9005838099865784124, "text": "massamalesuadasitmassapurussitametMicroservicesporttitorpurusposuerepurusconguemalesuada", "createdAt": 1672314545000}' to topic='twitter-topic'
+2022-12-29 11:49:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaultriciessitsedMicroservicesliberoelit
+2022-12-29 11:49:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5308947720736161568, "id": 8599761248850506994, "text": "malesuadaultriciessitsedMicroservicesliberoelit", "createdAt": 1672314555000}' to topic='twitter-topic'
+2022-12-29 11:49:25 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitdolorLoremdolormassasitconsectetuerMicroservicesLoremporttitorFuscedolormagnalibero
+2022-12-29 11:49:25 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7832253722705690526, "id": 8304013460986948497, "text": "elitdolorLoremdolormassasitconsectetuerMicroservicesLoremporttitorFuscedolormagnalibero", "createdAt": 1672314565000}' to topic='twitter-topic'
+2022-12-29 11:49:35 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereposuereposuereadipiscingMicroservicesipsumLoremporttitor
+2022-12-29 11:49:35 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 529853694306241223, "id": 5874696229108584159, "text": "posuereposuereposuereadipiscingMicroservicesipsumLoremporttitor", "createdAt": 1672314575000}' to topic='twitter-topic'
+2022-12-29 11:49:45 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasipsummassaametMicroservicesmagnaporttitor
+2022-12-29 11:49:45 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4168251801211435210, "id": 1279263744629909834, "text": "MaecenasipsummassaametMicroservicesmagnaporttitor", "createdAt": 1672314585000}' to topic='twitter-topic'
+2022-12-29 11:49:55 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massamagnaadipiscingsitposuereliberoMicroservicesmassaFuscesitLorem
+2022-12-29 11:49:55 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8797229117551009888, "id": 2428249338938053465, "text": "massamagnaadipiscingsitposuereliberoMicroservicesmassaFuscesitLorem", "createdAt": 1672314595000}' to topic='twitter-topic'
+2022-12-29 11:50:05 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingdoloripsumconsectetuerMicroservicesmalesuadaultricies
+2022-12-29 11:50:05 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1945660735859992907, "id": 7486052525019285668, "text": "adipiscingdoloripsumconsectetuerMicroservicesmalesuadaultricies", "createdAt": 1672314605000}' to topic='twitter-topic'
+2022-12-29 11:50:15 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorpurusposuereadipiscingMicroservicesmassapulvinar
+2022-12-29 11:50:15 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4548912377650696056, "id": 6685331384132634835, "text": "dolorpurusposuereadipiscingMicroservicesmassapulvinar", "createdAt": 1672314615000}' to topic='twitter-topic'
+2022-12-29 11:50:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereadipiscingMaecenasmagnaMaecenasMicroservicesadipiscingdolorcongue
+2022-12-29 11:50:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4887646156438500551, "id": 1081367692967394203, "text": "posuereadipiscingMaecenasmagnaMaecenasMicroservicesadipiscingdolorcongue", "createdAt": 1672314625000}' to topic='twitter-topic'
+2022-12-29 11:50:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitdolorconsectetuerpulvinarFusceconsectetuerMicroservicesmassaadipiscingmagnamalesuadaadipiscing
+2022-12-29 11:50:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2180927751385962706, "id": 3004545173801374237, "text": "elitdolorconsectetuerpulvinarFusceconsectetuerMicroservicesmassaadipiscingmagnamalesuadaadipiscing", "createdAt": 1672314636000}' to topic='twitter-topic'
+2022-12-29 11:50:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueposueredolorposueresedsitpulvinarcongueMicroserviceslectusipsumFuscemassamalesuadamagnacongue
+2022-12-29 11:50:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8600025397515566580, "id": 1283713430016924554, "text": "congueposueredolorposueresedsitpulvinarcongueMicroserviceslectusipsumFuscemassamalesuadamagnacongue", "createdAt": 1672314646000}' to topic='twitter-topic'
+2022-12-29 11:50:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitliberoelitMaecenasporttitorcongueelitMicroservicesLoremcongueipsumelitFuscecongue
+2022-12-29 11:50:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 584778570558556120, "id": 1076534870154186421, "text": "sitliberoelitMaecenasporttitorcongueelitMicroservicesLoremcongueipsumelitFuscecongue", "createdAt": 1672314656000}' to topic='twitter-topic'
+2022-12-29 11:51:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasipsummassaMaecenasporttitorMicroserviceslectusultriciespuruslibero
+2022-12-29 11:51:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6950161441732697694, "id": 6565786305428674694, "text": "MaecenasipsummassaMaecenasporttitorMicroserviceslectusultriciespuruslibero", "createdAt": 1672314666000}' to topic='twitter-topic'
+2022-12-29 11:51:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaametmassamagnaporttitorultriciesFusceMicroservicesconsectetuerporttitorelitametmalesuada
+2022-12-29 11:51:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8613055841471402612, "id": 2197687995421423535, "text": "magnaametmassamagnaporttitorultriciesFusceMicroservicesconsectetuerporttitorelitametmalesuada", "createdAt": 1672314676000}' to topic='twitter-topic'
+2022-12-29 11:51:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusconsectetuerseddolorcongueMicroservicesporttitorposuereMaecenas
+2022-12-29 11:51:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3434636627898830523, "id": 6535480655610572335, "text": "purusconsectetuerseddolorcongueMicroservicesporttitorposuereMaecenas", "createdAt": 1672314686000}' to topic='twitter-topic'
+2022-12-29 11:51:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorLoremFuscesedconsectetueradipiscingelitpulvinarMicroserviceselitultriciesconsectetuerlectusadipiscinglectusposuere
+2022-12-29 11:51:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4172331714127524238, "id": 518247250227288932, "text": "dolorLoremFuscesedconsectetueradipiscingelitpulvinarMicroserviceselitultriciesconsectetuerlectusadipiscinglectusposuere", "createdAt": 1672314696000}' to topic='twitter-topic'
+2022-12-29 11:51:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerLoremdoloripsumconsectetuermagnadolorMicroservicesadipiscingmassasedFusceporttitor
+2022-12-29 11:51:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4041763693447881158, "id": 3842979554273456393, "text": "consectetuerLoremdoloripsumconsectetuermagnadolorMicroservicesadipiscingmassasedFusceporttitor", "createdAt": 1672314706000}' to topic='twitter-topic'
+2022-12-29 11:51:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedLoremdolormassaametdolorMicroservicesliberoFusceliberodolormagna
+2022-12-29 11:51:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7472981139440650205, "id": 6894278418732995983, "text": "sedLoremdolormassaametdolorMicroservicesliberoFusceliberodolormagna", "createdAt": 1672314716000}' to topic='twitter-topic'
+2022-12-29 11:52:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopulvinarMaecenaspurusMicroservicesporttitorMaecenas
+2022-12-29 11:52:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7588510230034332875, "id": 8288830738660139301, "text": "liberopulvinarMaecenaspurusMicroservicesporttitorMaecenas", "createdAt": 1672314726000}' to topic='twitter-topic'
+2022-12-29 11:52:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesdolorFusceMaecenasconsectetuerMicroservicesmalesuadaposueremassacongue
+2022-12-29 11:52:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6241340151028408614, "id": 2983218760363642061, "text": "ultriciesdolorFusceMaecenasconsectetuerMicroservicesmalesuadaposueremassacongue", "createdAt": 1672314736000}' to topic='twitter-topic'
+2022-12-29 11:52:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorporttitoripsumelitMaecenaslectusadipiscingMicroservicesipsumconsectetuerconsectetuerFusceelit
+2022-12-29 11:52:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1153156032608287369, "id": 2491374692539851329, "text": "porttitorporttitoripsumelitMaecenaslectusadipiscingMicroservicesipsumconsectetuerconsectetuerFusceelit", "createdAt": 1672314746000}' to topic='twitter-topic'
+2022-12-29 11:52:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorametpuruspulvinarmagnamagnaMicroservicesposuereMaecenasipsumultriciesposuere
+2022-12-29 11:52:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7481735832247640937, "id": 4075915074719213030, "text": "dolorametpuruspulvinarmagnamagnaMicroservicesposuereMaecenasipsumultriciesposuere", "createdAt": 1672314756000}' to topic='twitter-topic'
+2022-12-29 11:52:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerultriciespurusFusceametLoremporttitorLoremMicroservicesadipiscingmalesuadaconsectetuerLoremdolordolor
+2022-12-29 11:52:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2763264847471251529, "id": 4367086159135487496, "text": "consectetuerultriciespurusFusceametLoremporttitorLoremMicroservicesadipiscingmalesuadaconsectetuerLoremdolordolor", "createdAt": 1672314766000}' to topic='twitter-topic'
+2022-12-29 11:52:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerconsectetuermassaMaecenassitsedpurusMicroservicesultriciesmagnaelitconsectetueradipiscing
+2022-12-29 11:52:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5841298371696939651, "id": 2003038707601090515, "text": "consectetuerconsectetuermassaMaecenassitsedpurusMicroservicesultriciesmagnaelitconsectetueradipiscing", "createdAt": 1672314776000}' to topic='twitter-topic'
+2022-12-29 11:53:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueelitipsumametMicroservicesdolorpulvinar
+2022-12-29 11:53:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 654564739063536766, "id": 1272968326652982189, "text": "congueelitipsumametMicroservicesdolorpulvinar", "createdAt": 1672314786000}' to topic='twitter-topic'
+2022-12-29 11:53:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusLoremmagnadolorultriciesFusceMicroservicesmalesuadasedFuscelibero
+2022-12-29 11:53:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8510862166327578526, "id": 3143813385200025324, "text": "purusLoremmagnadolorultriciesFusceMicroservicesmalesuadasedFuscelibero", "createdAt": 1672314796000}' to topic='twitter-topic'
+2022-12-29 11:53:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorconsectetuerelitMicroservicesdoloramet
+2022-12-29 11:53:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6755345398382104212, "id": 6924311420726906939, "text": "porttitorconsectetuerelitMicroservicesdoloramet", "createdAt": 1672314806000}' to topic='twitter-topic'
+2022-12-29 11:53:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametposuereFuscesitMicroserviceslectussit
+2022-12-29 11:53:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5669136805766737429, "id": 1187326679723899699, "text": "ametposuereFuscesitMicroserviceslectussit", "createdAt": 1672314816000}' to topic='twitter-topic'
+2022-12-29 11:53:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereMaecenasadipiscingpurusametlectusMicroservicessedipsumultriciesultricies
+2022-12-29 11:53:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4027162267728815609, "id": 7322660928436543069, "text": "posuereMaecenasadipiscingpurusametlectusMicroservicessedipsumultriciesultricies", "createdAt": 1672314826000}' to topic='twitter-topic'
+2022-12-29 11:53:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesliberoposueremalesuadaMicroservicesadipiscingsedmassa
+2022-12-29 11:53:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3358219375779375053, "id": 3730934178141839276, "text": "ultriciesliberoposueremalesuadaMicroservicesadipiscingsedmassa", "createdAt": 1672314836000}' to topic='twitter-topic'
+2022-12-29 11:54:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadamassaipsumelitMicroserviceselitMaecenasmagna
+2022-12-29 11:54:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1364668403373434447, "id": 7909144125306917799, "text": "malesuadamassaipsumelitMicroserviceselitMaecenasmagna", "createdAt": 1672314846000}' to topic='twitter-topic'
+2022-12-29 11:54:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueipsumsedMaecenaspurusMicroservicesametFuscelectusipsum
+2022-12-29 11:54:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7576772768007722983, "id": 697983167165132549, "text": "congueipsumsedMaecenaspurusMicroservicesametFuscelectusipsum", "createdAt": 1672314856000}' to topic='twitter-topic'
+2022-12-29 11:54:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text seddolorametametFusceametametMicroservicesmassapulvinarposueresedelit
+2022-12-29 11:54:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3765116716068393796, "id": 8894334691271189389, "text": "seddolorametametFusceametametMicroservicesmassapulvinarposueresedelit", "createdAt": 1672314866000}' to topic='twitter-topic'
+2022-12-29 11:54:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusdolorconsectetuermalesuadaconsectetuermagnaliberoMicroservicesadipiscingultriciesliberoametposuere
+2022-12-29 11:54:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1272311920668909387, "id": 427010926053313486, "text": "purusdolorconsectetuermalesuadaconsectetuermagnaliberoMicroservicesadipiscingultriciesliberoametposuere", "createdAt": 1672314876000}' to topic='twitter-topic'
+2022-12-29 11:54:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnapulvinarLoremmassalectusMaecenasultriciesMicroservicesipsumconguesitFusceMaecenasconsectetuer
+2022-12-29 11:54:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4858035795813727162, "id": 5953150759129082441, "text": "magnapulvinarLoremmassalectusMaecenasultriciesMicroservicesipsumconguesitFusceMaecenasconsectetuer", "createdAt": 1672314886000}' to topic='twitter-topic'
+2022-12-29 11:54:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueipsumconsectetuerametLoremMicroservicesadipiscingcongueelitadipiscing
+2022-12-29 11:54:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7332853560796338195, "id": 7022169962860421390, "text": "congueipsumconsectetuerametLoremMicroservicesadipiscingcongueelitadipiscing", "createdAt": 1672314896000}' to topic='twitter-topic'
+2022-12-29 11:55:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberoMaecenasmassalectuspurusporttitorMicroservicesmagnaLoremporttitorpurusconsectetuer
+2022-12-29 11:55:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2488879847875409237, "id": 6964040677086013667, "text": "liberoMaecenasmassalectuspurusporttitorMicroservicesmagnaLoremporttitorpurusconsectetuer", "createdAt": 1672314906000}' to topic='twitter-topic'
+2022-12-29 11:55:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitpurusposueremagnaporttitormassaMicroservicesposueremalesuadasitporttitor
+2022-12-29 11:55:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3689318975484994439, "id": 358975385005851999, "text": "elitpurusposueremagnaporttitormassaMicroservicesposueremalesuadasitporttitor", "createdAt": 1672314916000}' to topic='twitter-topic'
+2022-12-29 11:55:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadapulvinardolorLoremconguelectusposueremalesuadaMicroservicesametFusceelitFuscemagnaelitadipiscing
+2022-12-29 11:55:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1194472999997387931, "id": 1424502263089149646, "text": "malesuadapulvinardolorLoremconguelectusposueremalesuadaMicroservicesametFusceelitFuscemagnaelitadipiscing", "createdAt": 1672314926000}' to topic='twitter-topic'
+2022-12-29 11:55:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremsitpulvinarmagnaelitpulvinarposuerepulvinarMicroservicesdolorLoremlectussitultriciesultricies
+2022-12-29 11:55:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1104406943486534857, "id": 1770108689067811972, "text": "LoremsitpulvinarmagnaelitpulvinarposuerepulvinarMicroservicesdolorLoremlectussitultriciesultricies", "createdAt": 1672314936000}' to topic='twitter-topic'
+2022-12-29 11:55:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitpulvinarporttitorMaecenasposuereelitdolorMicroservicesdolormassaadipiscingmagnalectusamet
+2022-12-29 11:55:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4023066214930952140, "id": 2795467943316957198, "text": "sitpulvinarporttitorMaecenasposuereelitdolorMicroservicesdolormassaadipiscingmagnalectusamet", "createdAt": 1672314946000}' to topic='twitter-topic'
+2022-12-29 11:55:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitlectuselitconguelectusMicroservicesliberodolorelitdolor
+2022-12-29 11:55:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 459416552628492138, "id": 3715024705323574279, "text": "elitlectuselitconguelectusMicroservicesliberodolorelitdolor", "createdAt": 1672314956000}' to topic='twitter-topic'
+2022-12-29 11:56:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumelitsitpurusMicroservicesametpurusFusce
+2022-12-29 11:56:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8438027702894682249, "id": 5253688332488944891, "text": "ipsumelitsitpurusMicroservicesametpurusFusce", "createdAt": 1672314966000}' to topic='twitter-topic'
+2022-12-29 11:56:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitametsedmalesuadamalesuadaconguesedposuereMicroservicesmalesuadaporttitormagnaposuereMaecenasLoremporttitor
+2022-12-29 11:56:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3362101425782479795, "id": 3863341050398653242, "text": "sitametsedmalesuadamalesuadaconguesedposuereMicroservicesmalesuadaporttitormagnaposuereMaecenasLoremporttitor", "createdAt": 1672314976000}' to topic='twitter-topic'
+2022-12-29 11:56:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedliberoLoremMaecenasMicroservicesadipiscingipsum
+2022-12-29 11:56:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1831281344230146664, "id": 6055621054882281515, "text": "sedliberoLoremMaecenasMicroservicesadipiscingipsum", "createdAt": 1672314986000}' to topic='twitter-topic'
+2022-12-29 11:56:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purussitsedsitsedconsectetuerMicroservicesposueresedLoremsedsed
+2022-12-29 11:56:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8649919392194704281, "id": 3429747347028759798, "text": "purussitsedsitsedconsectetuerMicroservicesposueresedLoremsedsed", "createdAt": 1672314996000}' to topic='twitter-topic'
+2022-12-29 11:56:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametultricieslectusFuscemassaMaecenassedMicroservicesmagnapulvinarlectuslectuslectuspulvinar
+2022-12-29 11:56:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8771105188727162609, "id": 7381530224534962749, "text": "ametultricieslectusFuscemassaMaecenassedMicroservicesmagnapulvinarlectuslectuslectuspulvinar", "createdAt": 1672315006000}' to topic='twitter-topic'
+2022-12-29 11:56:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text seddolorconguedolorMicroservicesFusceadipiscing
+2022-12-29 11:56:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 625633926216034814, "id": 1445554276529667840, "text": "seddolorconguedolorMicroservicesFusceadipiscing", "createdAt": 1672315016000}' to topic='twitter-topic'
+2022-12-29 11:57:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitoripsumLorempurusMicroservicessitconsectetuer
+2022-12-29 11:57:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7782400847870985502, "id": 1402412461607663873, "text": "porttitoripsumLorempurusMicroservicessitconsectetuer", "createdAt": 1672315026000}' to topic='twitter-topic'
+2022-12-29 11:57:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaadipiscingpurusametpurusporttitorMicroservicespulvinarliberoconsectetuerMaecenasmalesuada
+2022-12-29 11:57:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8971390471118678384, "id": 6803492009893874122, "text": "malesuadaadipiscingpurusametpurusporttitorMicroservicespulvinarliberoconsectetuerMaecenasmalesuada", "createdAt": 1672315036000}' to topic='twitter-topic'
+2022-12-29 11:57:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitsitFusceLoremMicroservicesliberomassa
+2022-12-29 11:57:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2907005187665684828, "id": 7262608821089775263, "text": "elitsitFusceLoremMicroservicesliberomassa", "createdAt": 1672315046000}' to topic='twitter-topic'
+2022-12-29 11:57:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorporttitorpulvinarconsectetuerdolordolormagnaMicroservicesipsumsedmagnaametpurus
+2022-12-29 11:57:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6254629747921081701, "id": 594037880453836606, "text": "dolorporttitorpulvinarconsectetuerdolordolormagnaMicroservicesipsumsedmagnaametpurus", "createdAt": 1672315056000}' to topic='twitter-topic'
+2022-12-29 11:57:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaultricieselitMicroserviceselitconsectetuer
+2022-12-29 11:57:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4104730995322559311, "id": 158088513295114127, "text": "malesuadaultricieselitMicroserviceselitconsectetuer", "createdAt": 1672315066000}' to topic='twitter-topic'
+2022-12-29 11:57:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusporttitormassamassaultriciesliberoMicroservicesultriciesmassaametFusce
+2022-12-29 11:57:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7836355786223127361, "id": 2579690441640552160, "text": "lectusporttitormassamassaultriciesliberoMicroservicesultriciesmassaametFusce", "createdAt": 1672315076000}' to topic='twitter-topic'
+2022-12-29 11:58:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceelitultricieslectusconsectetuerconsectetuerultriciespulvinarMicroservicesipsummalesuadacongueMaecenasconguemagnacongue
+2022-12-29 11:58:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3202728016915434973, "id": 2901146043349736370, "text": "FusceelitultricieslectusconsectetuerconsectetuerultriciespulvinarMicroservicesipsummalesuadacongueMaecenasconguemagnacongue", "createdAt": 1672315086000}' to topic='twitter-topic'
+2022-12-29 11:58:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuspulvinaripsumlectusMicroservicessedadipiscing
+2022-12-29 11:58:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3791235581980614625, "id": 103689869771228663, "text": "lectuspulvinaripsumlectusMicroservicessedadipiscing", "createdAt": 1672315096000}' to topic='twitter-topic'
+2022-12-29 11:58:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingpulvinardolorMicroservicessedMaecenas
+2022-12-29 11:58:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3857091533153754112, "id": 1088776606160799115, "text": "adipiscingpulvinardolorMicroservicessedMaecenas", "createdAt": 1672315106000}' to topic='twitter-topic'
+2022-12-29 11:58:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereametposuereconsectetuersitultriciesMicroservicespulvinaradipiscingpulvinarelit
+2022-12-29 11:58:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4524129656200272654, "id": 3242600761576503233, "text": "posuereametposuereconsectetuersitultriciesMicroservicespulvinaradipiscingpulvinarelit", "createdAt": 1672315116000}' to topic='twitter-topic'
+2022-12-29 11:58:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremMaecenasposuerecongueconsectetuerposuereconsectetuerMicroservicespulvinarposueresitelitdolorelit
+2022-12-29 11:58:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1727739681509828372, "id": 9198463487875536652, "text": "LoremMaecenasposuerecongueconsectetuerposuereconsectetuerMicroservicespulvinarposueresitelitdolorelit", "createdAt": 1672315126000}' to topic='twitter-topic'
+2022-12-29 11:58:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumadipiscingultricieselitLoremadipiscingpuruspurusMicroservicesconguedolormassaFuscepulvinarpulvinar
+2022-12-29 11:58:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7540048034911558221, "id": 1984380665669628685, "text": "ipsumadipiscingultricieselitLoremadipiscingpuruspurusMicroservicesconguedolormassaFuscepulvinarpulvinar", "createdAt": 1672315136000}' to topic='twitter-topic'
+2022-12-29 11:59:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorLoremsitconsectetuersitametMaecenasMicroservicesmalesuadadolordolorconguepurus
+2022-12-29 11:59:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 953987682308113853, "id": 3020171410532881192, "text": "dolorLoremsitconsectetuersitametMaecenasMicroservicesmalesuadadolordolorconguepurus", "createdAt": 1672315146000}' to topic='twitter-topic'
+2022-12-29 11:59:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadalectusultriciesmagnaMicroserviceselitelit
+2022-12-29 11:59:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6921018478378054922, "id": 8040851263406769769, "text": "malesuadalectusultriciesmagnaMicroserviceselitelit", "createdAt": 1672315156000}' to topic='twitter-topic'
+2022-12-29 11:59:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscepulvinarLoremFuscepulvinarpulvinarMicroservicesliberomagnadolorpurus
+2022-12-29 11:59:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8986070067871779472, "id": 3885250733393653320, "text": "FuscepulvinarLoremFuscepulvinarpulvinarMicroservicesliberomagnadolorpurus", "createdAt": 1672315166000}' to topic='twitter-topic'
+2022-12-29 11:59:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerconsectetuerliberopurusposueremalesuadapurusMaecenasMicroservicesmalesuadapulvinarcongueMaecenasmassapulvinar
+2022-12-29 11:59:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 705071605084040899, "id": 6674195558515713325, "text": "consectetuerconsectetuerliberopurusposueremalesuadapurusMaecenasMicroservicesmalesuadapulvinarcongueMaecenasmassapulvinar", "createdAt": 1672315176000}' to topic='twitter-topic'
+2022-12-29 11:59:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnamassamagnaliberoelitlectuselitFusceMicroservicessitmassadolorconsectetuerpulvinardolor
+2022-12-29 11:59:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5067288521025034085, "id": 3306832748266130977, "text": "magnamassamagnaliberoelitlectuselitFusceMicroservicessitmassadolorconsectetuerpulvinardolor", "createdAt": 1672315186000}' to topic='twitter-topic'
+2022-12-29 11:59:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitmassamagnaporttitormagnaporttitorMicroservicesametposuereMaecenasconsectetuerposuere
+2022-12-29 11:59:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5833043147569497530, "id": 7856015081459466500, "text": "sitmassamagnaporttitormagnaporttitorMicroservicesametposuereMaecenasconsectetuerposuere", "createdAt": 1672315196000}' to topic='twitter-topic'
+2022-12-29 12:00:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarFusceMaecenasmagnaelitmassaMicroservicescongueposuereametporttitor
+2022-12-29 12:00:06 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1230117103753846842, "id": 150730309025058259, "text": "pulvinarFusceMaecenasmagnaelitmassaMicroservicescongueposuereametporttitor", "createdAt": 1672315206000}' to topic='twitter-topic'
+2022-12-29 12:00:16 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorMaecenasposuereconguemassaposuerecongueultriciesMicroservicespulvinarpurusLoremporttitoradipiscingadipiscingmalesuada
+2022-12-29 12:00:16 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6548876810253708174, "id": 8252272428336034586, "text": "porttitorMaecenasposuereconguemassaposuerecongueultriciesMicroservicespulvinarpurusLoremporttitoradipiscingadipiscingmalesuada", "createdAt": 1672315216000}' to topic='twitter-topic'
+2022-12-29 12:00:26 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremposuereultriciesametLoremMicroservicesFusceametconsectetuerlectus
+2022-12-29 12:00:26 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3149304366564244665, "id": 8237609808705565473, "text": "LoremposuereultriciesametLoremMicroservicesFusceametconsectetuerlectus", "createdAt": 1672315226000}' to topic='twitter-topic'
+2022-12-29 12:00:36 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolordolorultriciesconsectetuerpulvinarlectusconguepulvinarMicroserviceslectusposuereametFusceLorempurus
+2022-12-29 12:00:36 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3411899815157543681, "id": 8392424979350874714, "text": "dolordolorultriciesconsectetuerpulvinarlectusconguepulvinarMicroserviceslectusposuereametFusceLorempurus", "createdAt": 1672315236000}' to topic='twitter-topic'
+2022-12-29 12:00:46 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarsedsedconsectetuerametMicroservicesipsumultriciesmagna
+2022-12-29 12:00:46 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8929276337829031075, "id": 3942446677294262424, "text": "pulvinarsedsedconsectetuerametMicroservicesipsumultriciesmagna", "createdAt": 1672315246000}' to topic='twitter-topic'
+2022-12-29 12:00:56 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscepulvinarelitmalesuadapulvinardolorpulvinaripsumMicroservicessedmassaposuerepulvinarLoremporttitor
+2022-12-29 12:00:56 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2671587721655604192, "id": 3200864080397743672, "text": "FuscepulvinarelitmalesuadapulvinardolorpulvinaripsumMicroservicessedmassaposuerepulvinarLoremporttitor", "createdAt": 1672315256000}' to topic='twitter-topic'
+2022-12-29 12:01:06 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuselitultriciesliberoipsumadipiscingMicroservicesipsumipsumadipiscingmalesuadaporttitor
+2022-12-29 12:01:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5091914665328193160, "id": 614158697656124214, "text": "lectuselitultriciesliberoipsumadipiscingMicroservicesipsumipsumadipiscingmalesuadaporttitor", "createdAt": 1672315266000}' to topic='twitter-topic'
+2022-12-29 12:01:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerporttitorsitlectusMicroservicescongueposuere
+2022-12-29 12:01:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7927498244416897355, "id": 5393529720217756295, "text": "consectetuerporttitorsitlectusMicroservicescongueposuere", "createdAt": 1672315277000}' to topic='twitter-topic'
+2022-12-29 12:01:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumlectusliberopulvinarliberoelitmalesuadaametMicroservicesmalesuadapuruslectuscongueFusceMaecenas
+2022-12-29 12:01:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 206729310501902970, "id": 1607169839525199925, "text": "ipsumlectusliberopulvinarliberoelitmalesuadaametMicroservicesmalesuadapuruslectuscongueFusceMaecenas", "createdAt": 1672315287000}' to topic='twitter-topic'
+2022-12-29 12:01:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberopulvinarlectusFusceMaecenasposuereMicroservicespulvinarMaecenaslectusipsum
+2022-12-29 12:01:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6716213911991995417, "id": 5314002051474390495, "text": "liberopulvinarlectusFusceMaecenasposuereMicroservicespulvinarMaecenaslectusipsum", "createdAt": 1672315297000}' to topic='twitter-topic'
+2022-12-29 12:01:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitpuruselitMicroservicespuruspulvinar
+2022-12-29 12:01:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 286362306381054620, "id": 947977897549994643, "text": "sitpuruselitMicroservicespuruspulvinar", "createdAt": 1672315307000}' to topic='twitter-topic'
+2022-12-29 12:01:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitmalesuadasitliberomassapurusMicroservicesporttitorpurusLoremadipiscing
+2022-12-29 12:01:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1294161095670564660, "id": 1086267717900472489, "text": "elitmalesuadasitliberomassapurusMicroservicesporttitorpurusLoremadipiscing", "createdAt": 1672315317000}' to topic='twitter-topic'
+2022-12-29 12:02:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnasedpulvinarlectusMicroserviceselitMaecenasipsum
+2022-12-29 12:02:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2317412842934783933, "id": 8943364927714320009, "text": "magnasedpulvinarlectusMicroserviceselitMaecenasipsum", "createdAt": 1672315327000}' to topic='twitter-topic'
+2022-12-29 12:02:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitconguedolorLoremdolorMicroservicesFuscemalesuadapurus
+2022-12-29 12:02:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6009950064322563811, "id": 8190281819721062462, "text": "sitconguedolorLoremdolorMicroservicesFuscemalesuadapurus", "createdAt": 1672315337000}' to topic='twitter-topic'
+2022-12-29 12:02:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FusceametametpurusmassamagnaMicroservicespulvinarmassaposueremalesuadalectus
+2022-12-29 12:02:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2404772524914209826, "id": 3224649080784933782, "text": "FusceametametpurusmassamagnaMicroservicespulvinarmassaposueremalesuadalectus", "createdAt": 1672315347000}' to topic='twitter-topic'
+2022-12-29 12:02:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedultriciespulvinarsitliberodolorMicroservicesMaecenasipsumFusceametultricies
+2022-12-29 12:02:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7815788792860012832, "id": 7517582402195721108, "text": "sedultriciespulvinarsitliberodolorMicroservicesMaecenasipsumFusceametultricies", "createdAt": 1672315357000}' to topic='twitter-topic'
+2022-12-29 12:02:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedmassaadipiscingelitmalesuadaMicroservicesMaecenasametLorem
+2022-12-29 12:02:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2750638054189430753, "id": 7446755463725652160, "text": "sedmassaadipiscingelitmalesuadaMicroservicesMaecenasametLorem", "createdAt": 1672315367000}' to topic='twitter-topic'
+2022-12-29 12:02:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarposuereadipiscingposueremalesuadaporttitorMicroservicesmassaametmagnaLoremconsectetuer
+2022-12-29 12:02:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2095040825096545, "id": 3758436835725251991, "text": "pulvinarposuereadipiscingposueremalesuadaporttitorMicroservicesmassaametmagnaLoremconsectetuer", "createdAt": 1672315377000}' to topic='twitter-topic'
+2022-12-29 12:03:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitLoremLoremLoremcongueelitMicroservicespulvinarposuereFuscemalesuada
+2022-12-29 12:03:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 925136898168415565, "id": 5352000446797977913, "text": "elitLoremLoremLoremcongueelitMicroservicespulvinarposuereFuscemalesuada", "createdAt": 1672315387000}' to topic='twitter-topic'
+2022-12-29 12:03:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedpulvinarmagnaposuereMicroservicesadipiscingMaecenas
+2022-12-29 12:03:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1080226608790502904, "id": 4938512150851318999, "text": "sedpulvinarmagnaposuereMicroservicesadipiscingMaecenas", "createdAt": 1672315397000}' to topic='twitter-topic'
+2022-12-29 12:03:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumconsectetuerFuscesitconsectetueradipiscingMaecenasMicroservicesFusceametametporttitorconsectetuer
+2022-12-29 12:03:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3515555741487084667, "id": 2046042140193229621, "text": "ipsumconsectetuerFuscesitconsectetueradipiscingMaecenasMicroservicesFusceametametporttitorconsectetuer", "createdAt": 1672315407000}' to topic='twitter-topic'
+2022-12-29 12:03:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorFuscesitmassacongueLoremmalesuadaMicroservicespulvinarultriciesmagnaporttitorpulvinar
+2022-12-29 12:03:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2978474800678737630, "id": 2783228632085748541, "text": "porttitorFuscesitmassacongueLoremmalesuadaMicroservicespulvinarultriciesmagnaporttitorpulvinar", "createdAt": 1672315417000}' to topic='twitter-topic'
+2022-12-29 12:03:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametpulvinarsitMaecenasipsumliberoMicroservicespurusmassamassalectus
+2022-12-29 12:03:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 19064966848999364, "id": 2169633597988634355, "text": "ametpulvinarsitMaecenasipsumliberoMicroservicespurusmassamassalectus", "createdAt": 1672315427000}' to topic='twitter-topic'
+2022-12-29 12:03:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedconsectetuerposuereLoremMaecenassitultriciesMicroservicessitliberoipsumametsitLorem
+2022-12-29 12:03:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4184923229496240655, "id": 1456672217505731907, "text": "sedconsectetuerposuereLoremMaecenassitultriciesMicroservicessitliberoipsumametsitLorem", "createdAt": 1672315437000}' to topic='twitter-topic'
+2022-12-29 12:04:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuercongueseddolorsedpurusMicroservicespulvinarultriciesporttitorliberolibero
+2022-12-29 12:04:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5575101106833375732, "id": 4883800864325362641, "text": "consectetuercongueseddolorsedpurusMicroservicespulvinarultriciesporttitorliberolibero", "createdAt": 1672315447000}' to topic='twitter-topic'
+2022-12-29 12:04:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedpulvinarposueredolordolormagnaMicroservicesliberolectuscongueultriciesipsum
+2022-12-29 12:04:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1994239756676793895, "id": 7693285434481221033, "text": "sedpulvinarposueredolordolormagnaMicroservicesliberolectuscongueultriciesipsum", "createdAt": 1672315457000}' to topic='twitter-topic'
+2022-12-29 12:04:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaLoremmassaMicroservicesFusceadipiscing
+2022-12-29 12:04:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7505679310871132390, "id": 7927965463525122782, "text": "magnaLoremmassaMicroservicesFusceadipiscing", "createdAt": 1672315467000}' to topic='twitter-topic'
+2022-12-29 12:04:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinaripsumlectuspurusdolorLoremMicroservicesipsumMaecenasliberoconsectetueripsum
+2022-12-29 12:04:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4520236000114629742, "id": 429196727896471601, "text": "pulvinaripsumlectuspurusdolorLoremMicroservicesipsumMaecenasliberoconsectetueripsum", "createdAt": 1672315477000}' to topic='twitter-topic'
+2022-12-29 12:04:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerdolorultriciesmagnaconguepurusMicroservicesadipiscingmalesuadamalesuadaLorem
+2022-12-29 12:04:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8103103165756798764, "id": 2301160682791172980, "text": "consectetuerdolorultriciesmagnaconguepurusMicroservicesadipiscingmalesuadamalesuadaLorem", "createdAt": 1672315487000}' to topic='twitter-topic'
+2022-12-29 12:04:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultriciesultriciescongueMicroservicesmagnamassa
+2022-12-29 12:04:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4415645073666261504, "id": 9044463101873794862, "text": "ultriciesultriciescongueMicroservicesmagnamassa", "createdAt": 1672315497000}' to topic='twitter-topic'
+2022-12-29 12:05:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasipsumconsectetuerametelitMicroservicesmagnaconsectetuerlectus
+2022-12-29 12:05:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1429350683287495022, "id": 8425881811754146281, "text": "MaecenasipsumconsectetuerametelitMicroservicesmagnaconsectetuerlectus", "createdAt": 1672315507000}' to topic='twitter-topic'
+2022-12-29 12:05:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumpulvinarsitMaecenasametMicroservicesametposuereLorempulvinar
+2022-12-29 12:05:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4579545196169489572, "id": 3762901050273583833, "text": "ipsumpulvinarsitMaecenasametMicroservicesametposuereLorempulvinar", "createdAt": 1672315517000}' to topic='twitter-topic'
+2022-12-29 12:05:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitoripsumsedadipiscingconsectetuerporttitorMaecenasMicroservicesadipiscingdolorpurusLoremcongue
+2022-12-29 12:05:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7891247529055307323, "id": 7087064423911583890, "text": "porttitoripsumsedadipiscingconsectetuerporttitorMaecenasMicroservicesadipiscingdolorpurusLoremcongue", "createdAt": 1672315527000}' to topic='twitter-topic'
+2022-12-29 12:05:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuermagnaametcongueliberoMicroservicesFuscesitpulvinar
+2022-12-29 12:05:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 60432345487895220, "id": 5439200022642666691, "text": "consectetuermagnaametcongueliberoMicroservicesFuscesitpulvinar", "createdAt": 1672315537000}' to topic='twitter-topic'
+2022-12-29 12:05:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusporttitorconsectetuermassaconsectetuerMicroservicesametpulvinarsit
+2022-12-29 12:05:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7515403591484162771, "id": 148145359970818594, "text": "lectusporttitorconsectetuermassaconsectetuerMicroservicesametpulvinarsit", "createdAt": 1672315547000}' to topic='twitter-topic'
+2022-12-29 12:05:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuersitultriciescongueelitMicroservicessitporttitorliberoFusce
+2022-12-29 12:05:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3852368033794443101, "id": 6902925109867035437, "text": "consectetuersitultriciescongueelitMicroservicessitporttitorliberoFusce", "createdAt": 1672315557000}' to topic='twitter-topic'
+2022-12-29 12:06:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectusMaecenasametdolorconsectetueradipiscingmalesuadaametMicroservicespulvinarametmassadolorconsectetueripsum
+2022-12-29 12:06:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 420629710639532510, "id": 3938674889577915160, "text": "lectusMaecenasametdolorconsectetueradipiscingmalesuadaametMicroservicespulvinarametmassadolorconsectetueripsum", "createdAt": 1672315567000}' to topic='twitter-topic'
+2022-12-29 12:06:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LorempulvinarlectusadipiscingMicroservicespurusFusce
+2022-12-29 12:06:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7241405405776232667, "id": 782332445202323182, "text": "LorempulvinarlectusadipiscingMicroservicespurusFusce", "createdAt": 1672315577000}' to topic='twitter-topic'
+2022-12-29 12:06:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text elitultriciesliberomagnaMicroservicesmagnaconsectetuer
+2022-12-29 12:06:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7892279701106119282, "id": 4830978134180825826, "text": "elitultriciesliberomagnaMicroservicesmagnaconsectetuer", "createdAt": 1672315587000}' to topic='twitter-topic'
+2022-12-29 12:06:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorliberoultriciesmalesuadapurusconsectetuerMicroserviceselitametelitlibero
+2022-12-29 12:06:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5024086686907001362, "id": 2037120445183724043, "text": "dolorliberoultriciesmalesuadapurusconsectetuerMicroserviceselitametelitlibero", "createdAt": 1672315597000}' to topic='twitter-topic'
+2022-12-29 12:06:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text purusadipiscingLoremMaecenasMicroservicessitmassa
+2022-12-29 12:06:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7137846887917542702, "id": 1725955991573530674, "text": "purusadipiscingLoremMaecenasMicroservicessitmassa", "createdAt": 1672315607000}' to topic='twitter-topic'
+2022-12-29 12:06:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuereconsectetuerFusceliberoMicroservicesadipiscingFusceipsum
+2022-12-29 12:06:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8053816598136571216, "id": 2207412698472035060, "text": "posuereconsectetuerFusceliberoMicroservicesadipiscingFusceipsum", "createdAt": 1672315617000}' to topic='twitter-topic'
+2022-12-29 12:07:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametametdoloripsumMicroserviceslectusmagnalectus
+2022-12-29 12:07:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4082846434292192647, "id": 6280020722415934354, "text": "ametametdoloripsumMicroserviceslectusmagnalectus", "createdAt": 1672315627000}' to topic='twitter-topic'
+2022-12-29 12:07:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ametmagnaelitMicroservicesmalesuadaporttitor
+2022-12-29 12:07:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6472628514015542714, "id": 8911245181513826739, "text": "ametmagnaelitMicroservicesmalesuadaporttitor", "createdAt": 1672315637000}' to topic='twitter-topic'
+2022-12-29 12:07:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaipsumlectusMicroserviceslectuscongue
+2022-12-29 12:07:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6010461207902195270, "id": 3254150674067432685, "text": "massaipsumlectusMicroserviceslectuscongue", "createdAt": 1672315647000}' to topic='twitter-topic'
+2022-12-29 12:07:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text liberodolorcongueMicroserviceslectuspulvinar
+2022-12-29 12:07:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5859029866300618792, "id": 8590273771347264597, "text": "liberodolorcongueMicroserviceslectuspulvinar", "createdAt": 1672315657000}' to topic='twitter-topic'
+2022-12-29 12:07:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuerepuruslectusmagnaultriciespulvinarmagnaMicroservicesposueremalesuadaFusceultriciesLoremsed
+2022-12-29 12:07:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5947357587205066540, "id": 3265485142137659111, "text": "posuerepuruslectusmagnaultriciespulvinarmagnaMicroservicesposueremalesuadaFusceultriciesLoremsed", "createdAt": 1672315667000}' to topic='twitter-topic'
+2022-12-29 12:07:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text posuerepurusconsectetuermassaliberoMicroservicesultriciesconguemagnaamet
+2022-12-29 12:07:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1603844166044297563, "id": 9194369256909026794, "text": "posuerepurusconsectetuermassaliberoMicroservicesultriciesconguemagnaamet", "createdAt": 1672315677000}' to topic='twitter-topic'
+2022-12-29 12:08:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text puruspurusLoremFuscesedlectuspulvinarMicroservicessitlectusmalesuadaultriciesmagna
+2022-12-29 12:08:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3631637410996662390, "id": 7883568072229007262, "text": "puruspurusLoremFuscesedlectuspulvinarMicroservicessitlectusmalesuadaultriciesmagna", "createdAt": 1672315687000}' to topic='twitter-topic'
+2022-12-29 12:08:17 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text lectuscongueporttitorpulvinarcongueconsectetuerMicroservicesipsumMaecenasporttitordolorsit
+2022-12-29 12:08:17 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5037617309248653608, "id": 4757866915635590147, "text": "lectuscongueporttitorpulvinarcongueconsectetuerMicroservicesipsumMaecenasporttitordolorsit", "createdAt": 1672315697000}' to topic='twitter-topic'
+2022-12-29 12:08:27 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaipsumconguesedpulvinardolorconsectetuermalesuadaMicroserviceselitmalesuadamalesuadaporttitorametdolor
+2022-12-29 12:08:27 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 2758723947058438662, "id": 8692584015618525551, "text": "malesuadaipsumconguesedpulvinardolorconsectetuermalesuadaMicroserviceselitmalesuadamalesuadaporttitorametdolor", "createdAt": 1672315707000}' to topic='twitter-topic'
+2022-12-29 12:08:37 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text dolorFusceconguesitelitipsummassaMicroservicessitconsectetueradipiscingsitlectus
+2022-12-29 12:08:37 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3250066978402233300, "id": 8218725899701503271, "text": "dolorFusceconguesitelitipsummassaMicroservicessitconsectetueradipiscingsitlectus", "createdAt": 1672315717000}' to topic='twitter-topic'
+2022-12-29 12:08:47 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sitsedpulvinarsitipsumMicroservicesliberoametmagnaLorem
+2022-12-29 12:08:47 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7943673484914592267, "id": 3276026120421083902, "text": "sitsedpulvinarsitipsumMicroservicesliberoametmagnaLorem", "createdAt": 1672315727000}' to topic='twitter-topic'
+2022-12-29 12:08:57 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumlectussitMicroservicescongueLorem
+2022-12-29 12:08:57 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5090186238508527973, "id": 602376101274354054, "text": "ipsumlectussitMicroservicescongueLorem", "createdAt": 1672315737000}' to topic='twitter-topic'
+2022-12-29 12:09:07 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massamagnaelitMicroservicesMaecenasipsum
+2022-12-29 12:09:07 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3598419709285023920, "id": 7427560547789188245, "text": "massamagnaelitMicroservicesMaecenasipsum", "createdAt": 1672315747000}' to topic='twitter-topic'
+2022-12-29 21:15:09 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService v0.0.1-SNAPSHOT using Java 17.0.5 on 5c4b4debc491 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2022-12-29 21:15:09 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - The following 1 profile is active: "twitter_to_kafka"
+2022-12-29 21:15:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2022-12-29 21:15:09 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=twitter-to-kafka-service, profiles=[twitter_to_kafka], label=null, version=746c0075b1f68e247b6d9bf820da0ff9a3570ab1, state=null
+2022-12-29 21:15:11 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'retryTemplate' defined in class path resource [com/zackLabs/kafka/admin/config/WebClientConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webClientConfig; factoryMethodName=retryTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/kafka/admin/config/WebClientConfig.class]] for bean 'retryTemplate': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=retryConfig; factoryMethodName=retryTemplate; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/common/config/RetryConfig.class]] bound.
+2022-12-29 21:15:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-29 21:15:11 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'retryTemplate', defined in class path resource [com/zackLabs/kafka/admin/config/WebClientConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/zackLabs/common/config/RetryConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2022-12-29 21:25:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService v0.0.1-SNAPSHOT using Java 17.0.5 on 27ffe47fdc9d with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2022-12-29 21:25:34 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - The following 1 profile is active: "twitter_to_kafka"
+2022-12-29 21:25:34 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2022-12-29 21:25:34 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=twitter-to-kafka-service, profiles=[twitter_to_kafka], label=null, version=746c0075b1f68e247b6d9bf820da0ff9a3570ab1, state=null
+2022-12-29 21:25:40 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=13e43a48-043e-39a0-97d6-0c3ea970440f
+2022-12-29 21:25:41 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configserver:https://github.com/eliHandy6/event-driven-config-repository.git/application-twitter_to_kafka.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 21:25:41 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 21:25:43 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-12-29 21:25:43 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-12-29 21:25:43 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-12-29 21:25:43 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-29 21:25:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2022-12-29 21:25:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2022-12-29 21:25:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1672349144323
+2022-12-29 21:26:12 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8181
+2022-12-29 21:26:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 50.306 seconds (JVM running for 53.022)
+2022-12-29 21:26:12 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-12-29 21:26:12 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2022-12-29 21:26:12 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2022-12-29 21:26:12 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2022-12-29 21:26:52 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-29 21:26:52 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackLabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: com.zackLabs.kafka.admin.exceptions.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.zackLabs.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:129)
+	at com.zackLabs.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.zackLabs.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:29)
+	at com.zackLabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:34)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 13 common frames omitted
+2022-12-29 21:26:52 [main] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Closing kafka producer!
+2022-12-29 21:26:52 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2022-12-29 21:26:52 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-12-29 21:26:52 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-12-29 21:26:52 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2022-12-29 23:02:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService v0.0.1-SNAPSHOT using Java 17.0.5 on 5a058d7f11bf with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2022-12-29 23:02:02 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - The following 1 profile is active: "twitter_to_kafka"
+2022-12-29 23:02:03 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2022-12-29 23:02:03 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=twitter-to-kafka-service, profiles=[twitter_to_kafka], label=null, version=746c0075b1f68e247b6d9bf820da0ff9a3570ab1, state=null
+2022-12-29 23:02:14 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=13e43a48-043e-39a0-97d6-0c3ea970440f
+2022-12-29 23:02:15 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configserver:https://github.com/eliHandy6/event-driven-config-repository.git/application-twitter_to_kafka.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 23:02:15 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-12-29 23:02:24 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-12-29 23:02:24 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-12-29 23:02:24 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-12-29 23:02:24 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-29 23:02:26 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2022-12-29 23:02:26 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2022-12-29 23:02:26 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1672354946240
+2022-12-29 23:02:45 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8181
+2022-12-29 23:02:46 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 55.668 seconds (JVM running for 61.293)
+2022-12-29 23:02:46 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2022-12-29 23:02:46 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2022-12-29 23:02:46 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2022-12-29 23:02:46 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2022-12-29 23:03:22 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-29 23:03:22 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackLabs.twitter.to.kafka.service.TwitterToKafkaService.main(TwitterToKafkaService.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: com.zackLabs.kafka.admin.exceptions.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.zackLabs.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:130)
+	at com.zackLabs.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:89)
+	at com.zackLabs.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:29)
+	at com.zackLabs.twitter.to.kafka.service.TwitterToKafkaService.run(TwitterToKafkaService.java:34)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	... 13 common frames omitted
+2022-12-29 23:03:22 [main] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Closing kafka producer!
+2022-12-29 23:03:22 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2022-12-29 23:03:22 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2022-12-29 23:03:23 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-12-29 23:03:23 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
