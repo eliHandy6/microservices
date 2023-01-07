@@ -27,3 +27,13 @@ winpty  docker exec -t 50e8f151251e /bin/bash
 
 sol :bug dos2unix [filename] --->exec /usr/local/bin/check-config-server-started.sh: no such file or directory
 
+
+
+
+I found a fix for max virtual memory areas vm.max_map_count
+on Windows 10 and Docker Desktop:
+
+open powershell
+wsl -d docker-desktop
+sysctl -w vm.max_map_count=262144
+
