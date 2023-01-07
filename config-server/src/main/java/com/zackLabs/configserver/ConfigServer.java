@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableConfigServer
-@ComponentScan(basePackages = {"com.zackilabs", "com.zackLabs"})
+//@ComponentScan(basePackages = {"com.zackilabs", "com.zackLabs"})
 public class ConfigServer {
 
     public static void main(String args[]) {

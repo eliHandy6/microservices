@@ -9,7 +9,6 @@ import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
 @Configuration
-@Import(RetryConfigData.class)
 public class RetryConfig {
 
     private final RetryConfigData retryConfigData;

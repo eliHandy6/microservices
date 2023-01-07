@@ -8,7 +8,13 @@ spring:
     fail-fast: true
 
   profiles:
-    active: kafka_to_elastic
+    active: kafka-to-elastic-service
+
+  security:
+    user:
+      name: spring_cloud_user
+      password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
+
 
   cloud:
     config:

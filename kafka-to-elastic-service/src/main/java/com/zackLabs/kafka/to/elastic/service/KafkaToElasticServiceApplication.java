@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.zackLabs", "com.zackilabs.appconfigdata","com.zackLabs.kafka.to.elastic.service.consumer"})
+@ComponentScan(basePackages = {"com.zackLabs","com.zackLabs.kafka.consumer.config"})
 public class KafkaToElasticServiceApplication {
+
+
     public static void main(String[] args) {
         SpringApplication.run(KafkaToElasticServiceApplication.class, args);
     }

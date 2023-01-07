@@ -1,0 +1,303 @@
+2023-01-07 17:01:03 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Starting KafkaToElasticServiceApplication using Java 17.0.4.1 on DESKTOP-4QUEA7J with PID 14536 (C:\ZACK\microservices\kafka-to-elastic-service\target\classes started by user in C:\ZACK\microservices\kafka-to-elastic-service)
+2023-01-07 17:01:03 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic-service"
+2023-01-07 17:01:03 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-01-07 17:01:03 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[kafka-to-elastic-service], label=null, version=255f50feb81e96ecb2f83ef29b83e7d5a184ee78, state=null
+2023-01-07 17:01:03 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'consumerConfigs' defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=kafkaConsumerConfig; factoryMethodName=consumerConfigs; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class]] for bean 'consumerConfigs': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=kafkaConsumerConfig2; factoryMethodName=consumerConfigs; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/kafka/to/elastic/service/consumer/imp/KafkaConsumerConfig2.class]] bound.
+2023-01-07 17:01:03 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-07 17:01:03 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'consumerConfigs', defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/zackLabs/kafka/to/elastic/service/consumer/imp/KafkaConsumerConfig2.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-01-07 17:02:11 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Starting KafkaToElasticServiceApplication using Java 17.0.4.1 on DESKTOP-4QUEA7J with PID 12520 (C:\ZACK\microservices\kafka-to-elastic-service\target\classes started by user in C:\ZACK\microservices\kafka-to-elastic-service)
+2023-01-07 17:02:11 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic-service"
+2023-01-07 17:02:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-01-07 17:02:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[kafka-to-elastic-service], label=null, version=255f50feb81e96ecb2f83ef29b83e7d5a184ee78, state=null
+2023-01-07 17:02:11 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'consumerConfigs' defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=kafkaConsumerConfig; factoryMethodName=consumerConfigs; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class]] for bean 'consumerConfigs': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=kafkaConsumerConfig2; factoryMethodName=consumerConfigs; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/zackLabs/kafka/to/elastic/service/consumer/imp/KafkaConsumerConfig2.class]] bound.
+2023-01-07 17:02:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-07 17:02:11 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'consumerConfigs', defined in class path resource [com/zackLabs/kafka/consumer/config/KafkaConsumerConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/zackLabs/kafka/to/elastic/service/consumer/imp/KafkaConsumerConfig2.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-01-07 17:03:02 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Starting KafkaToElasticServiceApplication using Java 17.0.4.1 on DESKTOP-4QUEA7J with PID 7024 (C:\ZACK\microservices\kafka-to-elastic-service\target\classes started by user in C:\ZACK\microservices\kafka-to-elastic-service)
+2023-01-07 17:03:02 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic-service"
+2023-01-07 17:03:02 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-01-07 17:03:02 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[kafka-to-elastic-service], label=null, version=255f50feb81e96ecb2f83ef29b83e7d5a184ee78, state=null
+2023-01-07 17:03:03 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=14d3c0f4-efe4-349c-81bb-8e1cc3853306
+2023-01-07 17:03:03 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-01-07 17:03:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-01-07 17:03:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-01-07 17:03:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1673100183979
+2023-01-07 17:03:05 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8182 is already in use
+2023-01-07 17:03:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2023-01-07 17:03:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-01-07 17:03:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-01-07 17:03:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-01-07 17:03:07 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-07 17:03:07 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8182 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8182 or configure this application to listen on another port.
+
+2023-01-07 17:03:48 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Starting KafkaToElasticServiceApplication using Java 17.0.4.1 on DESKTOP-4QUEA7J with PID 13448 (C:\ZACK\microservices\kafka-to-elastic-service\target\classes started by user in C:\ZACK\microservices\kafka-to-elastic-service)
+2023-01-07 17:03:48 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic-service"
+2023-01-07 17:03:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-01-07 17:03:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[kafka-to-elastic-service], label=null, version=255f50feb81e96ecb2f83ef29b83e7d5a184ee78, state=null
+2023-01-07 17:03:49 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=14d3c0f4-efe4-349c-81bb-8e1cc3853306
+2023-01-07 17:03:49 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-01-07 17:03:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-01-07 17:03:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-01-07 17:03:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1673100229896
+2023-01-07 17:03:50 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8182
+2023-01-07 17:03:51 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 4.937 seconds (JVM running for 5.401)
+2023-01-07 17:03:51 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2023-01-07 17:03:51 [main] INFO  c.z.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2023-01-07 17:07:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2023-01-07 17:07:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-01-07 17:07:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-01-07 17:07:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-01-07 17:08:01 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Starting KafkaToElasticServiceApplication using Java 17.0.4.1 on DESKTOP-4QUEA7J with PID 11648 (C:\ZACK\microservices\kafka-to-elastic-service\target\classes started by user in C:\ZACK\microservices\kafka-to-elastic-service)
+2023-01-07 17:08:01 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - The following 1 profile is active: "kafka-to-elastic-service"
+2023-01-07 17:08:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-01-07 17:08:01 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[kafka-to-elastic-service], label=null, version=255f50feb81e96ecb2f83ef29b83e7d5a184ee78, state=null
+2023-01-07 17:08:02 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=14d3c0f4-efe4-349c-81bb-8e1cc3853306
+2023-01-07 17:08:02 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-01-07 17:08:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-01-07 17:08:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-01-07 17:08:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1673100482967
+2023-01-07 17:08:04 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8182
+2023-01-07 17:08:04 [main] INFO  c.z.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 4.805 seconds (JVM running for 5.277)
+2023-01-07 17:08:04 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2023-01-07 17:08:04 [main] INFO  c.z.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2023-01-07 17:08:04 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-07 17:08:04 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+	at com.zackLabs.kafka.to.elastic.service.consumer.imp.TwitterKafkaConsumer.onAppStarted(TwitterKafkaConsumer.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:344)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:229)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.boot.context.event.EventPublishingRunListener.started(EventPublishingRunListener.java:108)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$started$5(SpringApplicationRunListeners.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.started(SpringApplicationRunListeners.java:78)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.zackLabs.kafka.to.elastic.service.KafkaToElasticServiceApplication.main(KafkaToElasticServiceApplication.java:13)
+2023-01-07 17:08:04 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2023-01-07 17:08:04 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-01-07 17:08:04 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-01-07 17:08:04 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed

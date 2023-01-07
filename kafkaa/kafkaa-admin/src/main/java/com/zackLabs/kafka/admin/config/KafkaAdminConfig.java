@@ -13,7 +13,6 @@ import java.util.Map;
 
 @EnableRetry
 @Configuration
-@Import({KafkaConfigData.class, KafkaProducerConfigData.class})
 public class KafkaAdminConfig {
 
     private final KafkaConfigData kafkaConfigData;
