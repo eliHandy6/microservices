@@ -48,8 +48,9 @@
         <spring.security-version>2.7.6</spring.security-version>
         <jasypt.spring-boot-version>3.0.5</jasypt.spring-boot-version>
         <elastic-search.version>2.6.8</elastic-search.version>
-        <elastic.version>7.17.8</elastic.version>
-        <elastic.version>7.17.8</elastic.version>
+        <elastic.version>7.6.2</elastic.version>
+
+
 
     </properties>
 
@@ -115,6 +116,24 @@
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>kafkaa-producer</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-config</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
@@ -220,7 +239,8 @@
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
-                <version>${elastic.version}</version>
+                <version>7.6.1</version>
+
             </dependency>
         </dependencies>
 
