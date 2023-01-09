@@ -49,6 +49,7 @@
         <jasypt.spring-boot-version>3.0.5</jasypt.spring-boot-version>
         <elastic-search.version>2.6.8</elastic-search.version>
         <elastic.version>7.17.8</elastic.version>
+        <elastic.version>7.17.8</elastic.version>
 
     </properties>
 
@@ -68,6 +69,12 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-config-server</artifactId>
                 <version>${spring-cloud-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
             <dependency>
