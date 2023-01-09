@@ -1,12 +1,17 @@
 package com.zackLabs.elastic.config;
 
+
 import com.zackilabs.appconfigdata.config.ElasticConfigData;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfiguration;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -14,12 +19,14 @@ import java.util.Objects;
 
 
 @Configuration
+@Import({ElasticConfigData.class})
+@EnableElasticsearchRepositories(basePackages = "com.zackLabs.index.client.repository")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
-    private  ElasticConfigData elasticConfigData;
+    private  final ElasticConfigData elasticConfigData;
 
-    public void ElasticsearchConfig(ElasticConfigData configData) {
-        this.elasticConfigData = configData;
+    public ElasticSearchConfig(ElasticConfigData elasticConfigData) {
+        this.elasticConfigData = elasticConfigData;
     }
 
 
@@ -40,5 +47,10 @@ public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
                 )
         );
+    }
+
+    @Bean
+    public ElasticsearchOperations elasticsearchTemplate() {
+        return new ElasticsearchRestTemplate(elasticsearchClient());
     }
 }

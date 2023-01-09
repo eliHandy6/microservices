@@ -30,10 +30,10 @@
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
             </dependency>
+
             <dependency>
                 <groupId>com.zackLabs</groupId>
-                <artifactId>app-config-data</artifactId>
-                <scope>compile</scope>
+                <artifactId>elastic-index-client</artifactId>
             </dependency>
         </dependencies>
 </project>
