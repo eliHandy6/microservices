@@ -48,7 +48,7 @@
         <spring.security-version>2.7.6</spring.security-version>
         <jasypt.spring-boot-version>3.0.5</jasypt.spring-boot-version>
         <elastic-search.version>2.6.8</elastic-search.version>
-        <elastic.version>7.6.2</elastic.version>
+        <elastic.version>7.15.2</elastic.version>
 
 
 
@@ -239,7 +239,7 @@
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
-                <version>7.6.1</version>
+                <version>${elastic.version}</version>
 
             </dependency>
         </dependencies>

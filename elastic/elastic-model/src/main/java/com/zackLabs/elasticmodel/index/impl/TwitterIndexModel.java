@@ -11,6 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 
 @Data
@@ -29,5 +30,5 @@ public class TwitterIndexModel implements IndexModel {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd'T'HH:mm:ssZZ")
     @JsonProperty
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 }
