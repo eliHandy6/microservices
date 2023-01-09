@@ -13,6 +13,8 @@
         <module>config-server</module>
         <module>kafkaa/kafkaa-consumer</module>
         <module>kafka-to-elastic-service</module>
+        <module>elastic</module>
+        <module>elastic/elastic-model</module>
 
     </modules>
     <parent>
@@ -45,6 +47,8 @@
         <spring-starter-config-version>3.1.5</spring-starter-config-version>
         <spring.security-version>2.7.6</spring.security-version>
         <jasypt.spring-boot-version>3.0.5</jasypt.spring-boot-version>
+        <elastic-search.version>2.6.8</elastic-search.version>
+        <elastic.version>7.17.8</elastic.version>
 
     </properties>
 
@@ -185,11 +189,26 @@
                 <groupId>com.github.ulisesbocchio</groupId>
                 <artifactId>jasypt-spring-boot-starter</artifactId>
                 <version>${jasypt.spring-boot-version}</version>
-
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-elasticsearch -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${elastic-search.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elastic.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elastic.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
