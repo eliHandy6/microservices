@@ -34,6 +34,7 @@
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>elastic-index-client</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
 </project>

@@ -15,6 +15,8 @@
         <module>kafka-to-elastic-service</module>
         <module>elastic</module>
         <module>elastic/elastic-model</module>
+        <module>elastic/elastic-config</module>
+        <module>elastic/elastic-index-client</module>
 
     </modules>
     <parent>
@@ -73,18 +75,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.zackLabs</groupId>
-                <artifactId>elastic-model</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.zackLabs</groupId>
-                <artifactId>elastic-index-client</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud-version-dependencies.version}</version>
@@ -131,11 +121,6 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.zackLabs</groupId>
-                <artifactId>elastic-model</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
