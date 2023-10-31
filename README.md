@@ -37,3 +37,12 @@ open powershell
 wsl -d docker-desktop
 sysctl -w vm.max_map_count=262144
 
+
+
+sysctl -w vm.max_map_count=262144
+services:
+  es:
+    image: elasticsearch
+    environment:
+      - discovery.type=single-node
+
