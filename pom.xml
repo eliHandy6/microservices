@@ -17,6 +17,8 @@
         <module>elastic/elastic-model</module>
         <module>elastic/elastic-config</module>
         <module>elastic/elastic-index-client</module>
+        <module>elastic/elastic-query-client</module>
+        <module>common-util</module>
 
     </modules>
     <parent>
@@ -98,6 +100,17 @@
                 <groupId>com.zackLabs</groupId>
                 <artifactId>common-config</artifactId>
             </dependency>
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-config</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>common-util</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+                <scope>compile</scope>
+            </dependency>s
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>kafkaa-admin</artifactId>

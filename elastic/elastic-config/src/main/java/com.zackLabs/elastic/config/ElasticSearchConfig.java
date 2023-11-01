@@ -22,7 +22,7 @@ import java.util.Objects;
 
 @Configuration
 @Import({ElasticConfigData.class})
-@EnableElasticsearchRepositories(basePackages = "com.zackLabs.index.client.repository")
+@EnableElasticsearchRepositories(basePackages = "com.zackLabs")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     private final ElasticConfigData elasticConfigData;

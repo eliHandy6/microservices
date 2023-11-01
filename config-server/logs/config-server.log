@@ -51,3 +51,55 @@
 2022-12-30 01:12:45 [http-nio-8888-exec-5] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\ZACKOG~1\AppData\Local\Temp\config-repo-6227409987817373432\application-kafka_to_elastic.yml]' via location 'file:/C:/Users/ZACKOG~1/AppData/Local/Temp/config-repo-6227409987817373432/'
 2022-12-30 01:20:06 [http-nio-8888-exec-7] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\ZACKOG~1\AppData\Local\Temp\config-repo-6227409987817373432\application-kafka_to_elastic.yml]' via location 'file:/C:/Users/ZACKOG~1/AppData/Local/Temp/config-repo-6227409987817373432/'
 2022-12-30 01:22:03 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\ZACKOG~1\AppData\Local\Temp\config-repo-6227409987817373432\.git\objects\pack\pack-b144b6abad40c69bf2b5a37191ad46f6ac843b02.idx
+2023-10-31 05:25:30 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-10-31 05:25:30 [main] INFO  c.zackLabs.configserver.ConfigServer - Starting ConfigServer using Java 17.0.9 on kali with PID 11339 (/home/champion/Documents/Projects/microservices/config-server/target/classes started by champion in /home/champion/Documents/Projects/microservices)
+2023-10-31 05:25:30 [main] INFO  c.zackLabs.configserver.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-10-31 05:25:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5a9928f1-94dd-3fcd-b232-d0645de0b54a
+2023-10-31 05:25:31 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configServerClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-10-31 05:25:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-10-31 05:25:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-10-31 05:25:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-10-31 05:25:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-10-31 05:25:31 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-10-31 05:25:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 826 ms
+2023-10-31 05:25:31 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-10-31 05:25:31 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-10-31 05:25:31 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-10-31 05:25:32 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/actuator/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-31 05:25:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/actuator/**']
+2023-10-31 05:25:32 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/encrypt/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-31 05:25:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/encrypt/**']
+2023-10-31 05:25:32 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/decrypt/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-31 05:25:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/decrypt/**']
+2023-10-31 05:25:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45d56062, org.springframework.security.web.context.SecurityContextPersistenceFilter@89caf47, org.springframework.security.web.header.HeaderWriterFilter@43935e9c, org.springframework.security.web.authentication.logout.LogoutFilter@6de004f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b877a54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@113f9078, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4026461d, org.springframework.security.web.session.SessionManagementFilter@18709cb2, org.springframework.security.web.access.ExceptionTranslationFilter@b2c4a8b]
+2023-10-31 05:25:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-10-31 05:25:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.RefreshScopeRefreshedEventListener - Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemProperties refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemEnvironment refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source random refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source cachedrandom refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source configServerClient refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source springCloudClientHostInfo refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2023-10-31 05:25:37 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2023-10-31 05:25:37 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2023-10-31 05:25:37 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2023-10-31 05:25:37 [main] INFO  c.zackLabs.configserver.ConfigServer - Started ConfigServer in 7.052 seconds (JVM running for 7.608)
+2023-10-31 05:25:51 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-31 05:25:51 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-10-31 05:25:51 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-10-31 05:25:52 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1785472190676103199/application-twitter-to-kafka-service.yml]' via location 'file:/tmp/config-repo-1785472190676103199/'
+2023-10-31 05:28:58 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1785472190676103199/application-twitter-to-kafka-service.yml]' via location 'file:/tmp/config-repo-1785472190676103199/'
+2023-10-31 05:45:44 [http-nio-8888-exec-5] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1785472190676103199/application-twitter-to-kafka-service.yml]' via location 'file:/tmp/config-repo-1785472190676103199/'
+2023-10-31 05:49:22 [http-nio-8888-exec-7] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1785472190676103199/application-twitter-to-kafka-service.yml]' via location 'file:/tmp/config-repo-1785472190676103199/'
