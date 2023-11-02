@@ -19,6 +19,7 @@
         <module>elastic/elastic-index-client</module>
         <module>elastic/elastic-query-client</module>
         <module>common-util</module>
+        <module>elastic-query-service</module>
 
     </modules>
     <parent>
@@ -66,16 +67,12 @@
     </repositories>
 
     <dependencyManagement>
-
-
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-config-server</artifactId>
                 <version>${spring-cloud-version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -89,7 +86,6 @@
                 <artifactId>spring-cloud-starter-config</artifactId>
                 <version>${spring-starter-config-version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>app-config-data</artifactId>
@@ -105,12 +101,18 @@
                 <artifactId>elastic-config</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.zackLabs</groupId>
+                <artifactId>elastic-query-client</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>common-util</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
                 <scope>compile</scope>
-            </dependency>s
+            </dependency>
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>kafkaa-admin</artifactId>
@@ -233,15 +235,12 @@
                 <artifactId>elasticsearch</artifactId>
                 <version>${elastic.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elastic.version}</version>
-
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
     <build>
@@ -265,9 +264,5 @@
             </plugins>
         </pluginManagement>
     </build>
-
-
-
-
 
 </project>
