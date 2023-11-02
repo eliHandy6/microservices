@@ -1,5 +1,7 @@
 http://localhost:8183/elastic-query-service/swagger-ui/index.html
 
+sudo chmod 666 /var/run/docker.sock
+
 
 
 # microservices
