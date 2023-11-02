@@ -1,3 +1,7 @@
+http://localhost:8183/elastic-query-service/swagger-ui/index.html
+
+
+
 # microservices
 docker-compose -f common.yml -f kafka_cluster.yml up.
 
@@ -45,4 +49,5 @@ services:
     image: elasticsearch
     environment:
       - discovery.type=single-node
+
 
