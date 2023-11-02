@@ -82,3 +82,247 @@
 2023-11-02 02:43:13 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text LoremmagnasedadipiscingmagnaultriciesametmassaMicroservicesmalesuadamagnaametmagnasitFuscedolor
 2023-11-02 02:43:13 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1309588241753758626, "id": 5490342778130888272, "text": "LoremmagnasedadipiscingmagnaultriciesametmassaMicroservicesmalesuadamagnaametmagnasitFuscedolor", "createdAt": 1698892993000}' to topic='twitter-topic'
 2023-11-02 02:43:13 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 1555; Timestamp 1698892993611, at time 59817479932496
+2023-11-02 18:50:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Starting TwitterToKafkaService v0.0.1-SNAPSHOT using Java 17.0.7 on cfe8a3e1164f with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2023-11-02 18:50:39 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - The following 1 profile is active: "twitter-to-kafka-service"
+2023-11-02 18:50:39 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2023-11-02 18:50:39 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=twitter-to-kafka-service, profiles=[twitter-to-kafka-service], label=null, version=30a395ff5a94608ed50f590a0c7678e3d4cd591b, state=null
+2023-11-02 18:50:39 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9e9cb39d-9f7d-343d-a70b-571bc42955ad
+2023-11-02 18:50:39 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configserver:https://github.com/eliHandy6/event-driven-config-repository.git/application-twitter-to-kafka-service.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-11-02 18:50:39 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-11-02 18:50:40 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-11-02 18:50:40 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-11-02 18:50:40 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-11-02 18:50:40 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-02 18:50:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-11-02 18:50:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-11-02 18:50:40 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1698951040480
+2023-11-02 18:50:41 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8181
+2023-11-02 18:50:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Started TwitterToKafkaService in 4.938 seconds (JVM running for 5.297)
+2023-11-02 18:50:41 [main] INFO  c.z.t.t.k.s.TwitterToKafkaService - Application has started
+2023-11-02 18:50:41 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2023-11-02 18:50:41 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2023-11-02 18:50:41 [main] INFO  c.z.k.admin.client.KafkaAdminClient - Reading [twitter-topic] topics(s), attempt 0
+2023-11-02 18:50:41 [main] INFO  c.z.t.t.k.s.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations!
+2023-11-02 18:50:41 [main] INFO  c.z.t.t.k.s.r.I.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Microservices]
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarsitultriciesultriciesipsumLoremlectusMicroservicesametultriciesMaecenasmagnaconguesed
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5633546436765482118, "id": 4139201955017336076, "text": "pulvinarsitultriciesultriciesipsumLoremlectusMicroservicesametultriciesMaecenasmagnaconguesed", "createdAt": 1698951041000}' to topic='twitter-topic'
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.1
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8e30984f43e64d8b
+2023-11-02 18:50:41 [pool-3-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1698951041725
+2023-11-02 18:50:41 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: pd_dEgAhSpSK01DRmGveuw
+2023-11-02 18:50:41 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2023-11-02 18:50:42 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 0; Timestamp 1698951041741, at time 100211348889719
+2023-11-02 18:50:51 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ultricieslectusFuscesedlectussedMicroservicesporttitorporttitorMaecenasultriciesLorem
+2023-11-02 18:50:51 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5925980399793661023, "id": 8895087607486497862, "text": "ultricieslectusFuscesedlectussedMicroservicesporttitorporttitorMaecenasultriciesLorem", "createdAt": 1698951051000}' to topic='twitter-topic'
+2023-11-02 18:50:52 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 1; Timestamp 1698951051995, at time 100221353863405
+2023-11-02 18:51:01 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massacongueMaecenasmalesuadaMicroservicesMaecenaselitadipiscing
+2023-11-02 18:51:01 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5849493668181382792, "id": 1871274529030289333, "text": "massacongueMaecenasmalesuadaMicroservicesMaecenaselitadipiscing", "createdAt": 1698951061000}' to topic='twitter-topic'
+2023-11-02 18:51:02 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 0; Timestamp 1698951061997, at time 100231322018388
+2023-11-02 18:51:11 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text consectetuerpulvinaradipiscingporttitordolorMicroservicesmassaposuereconsectetuersit
+2023-11-02 18:51:11 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4593770681484951430, "id": 3866638367303543582, "text": "consectetuerpulvinaradipiscingporttitordolorMicroservicesmassaposuereconsectetuersit", "createdAt": 1698951071000}' to topic='twitter-topic'
+2023-11-02 18:51:12 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 2; Timestamp 1698951071998, at time 100241294609736
+2023-11-02 18:51:22 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaposuerepurusconsectetuermassaelitmagnalectusMicroservicesliberodolorcongueposuereporttitorelitMaecenas
+2023-11-02 18:51:22 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 9010828645867468671, "id": 3374140425430117524, "text": "magnaposuerepurusconsectetuermassaelitmagnalectusMicroservicesliberodolorcongueposuereporttitorelitMaecenas", "createdAt": 1698951081000}' to topic='twitter-topic'
+2023-11-02 18:51:22 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 0; Timestamp 1698951082002, at time 100251380451802
+2023-11-02 18:51:32 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadaconsectetueripsumpurusliberoultriciescongueMicroservicessedmagnaipsumlectuslibero
+2023-11-02 18:51:32 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8835062553553783270, "id": 110012353223196273, "text": "malesuadaconsectetueripsumpurusliberoultriciescongueMicroservicessedmagnaipsumlectuslibero", "createdAt": 1698951092000}' to topic='twitter-topic'
+2023-11-02 18:51:32 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 1; Timestamp 1698951092005, at time 100261302970618
+2023-11-02 18:51:42 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text congueconsectetuerelitpurusMicroserviceselitsitipsum
+2023-11-02 18:51:42 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4525196236393036157, "id": 7775340013496188261, "text": "congueconsectetuerelitpurusMicroserviceselitsitipsum", "createdAt": 1698951102000}' to topic='twitter-topic'
+2023-11-02 18:51:42 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 3; Timestamp 1698951102008, at time 100271312229167
+2023-11-02 18:51:52 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnaliberomassamassaultriciesporttitorposuereMicroservicesmagnadolorliberodolorposuere
+2023-11-02 18:51:52 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7256899158341391483, "id": 9163015097259246949, "text": "magnaliberomassamassaultriciesporttitorposuereMicroservicesmagnadolorliberodolorposuere", "createdAt": 1698951112000}' to topic='twitter-topic'
+2023-11-02 18:51:52 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 2; Timestamp 1698951112012, at time 100281313474001
+2023-11-02 18:52:02 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text MaecenasliberoporttitorsedMicroservicesporttitorporttitor
+2023-11-02 18:52:02 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6452045775692982489, "id": 8822316622469171768, "text": "MaecenasliberoporttitorsedMicroservicesporttitorporttitor", "createdAt": 1698951122000}' to topic='twitter-topic'
+2023-11-02 18:52:02 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 3; Timestamp 1698951122015, at time 100291320944482
+2023-11-02 18:52:12 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorametelitsedametametMicroservicesliberomassapurussedposuere
+2023-11-02 18:52:12 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1779251611229595830, "id": 6721190331530697655, "text": "porttitorametelitsedametametMicroservicesliberomassapurussedposuere", "createdAt": 1698951132000}' to topic='twitter-topic'
+2023-11-02 18:52:12 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 1; Timestamp 1698951132017, at time 100301319728811
+2023-11-02 18:52:22 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitormassaipsumcongueliberomagnaMicroservicesadipiscingLoremametLorem
+2023-11-02 18:52:22 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 1463459867993588251, "id": 3238730644735686407, "text": "porttitormassaipsumcongueliberomagnaMicroservicesadipiscingLoremametLorem", "createdAt": 1698951142000}' to topic='twitter-topic'
+2023-11-02 18:52:22 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 2; Timestamp 1698951142021, at time 100311370138242
+2023-11-02 18:52:32 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text pulvinarposuereliberoMicroservicesposuerepulvinar
+2023-11-02 18:52:32 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3342795520602867066, "id": 5164200450130709537, "text": "pulvinarposuereliberoMicroservicesposuerepulvinar", "createdAt": 1698951152000}' to topic='twitter-topic'
+2023-11-02 18:52:32 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 4; Timestamp 1698951152079, at time 100321380921335
+2023-11-02 18:52:42 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingsedFuscemassasedmalesuadadolorMicroservicesdolorlectusadipiscingdoloradipiscing
+2023-11-02 18:52:42 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 3249451060370100830, "id": 637734978684014023, "text": "adipiscingsedFuscemassasedmalesuadadolorMicroservicesdolorlectusadipiscingdoloradipiscing", "createdAt": 1698951162000}' to topic='twitter-topic'
+2023-11-02 18:52:42 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 3; Timestamp 1698951162082, at time 100331375266963
+2023-11-02 18:52:52 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text FuscesedFusceconguesedFuscelectusipsumMicroservicesconsectetuercongueliberoconguemalesuadaultricies
+2023-11-02 18:52:52 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8668717115032810409, "id": 62831867557190472, "text": "FuscesedFusceconguesedFuscelectusipsumMicroservicesconsectetuercongueliberoconguemalesuadaultricies", "createdAt": 1698951172000}' to topic='twitter-topic'
+2023-11-02 18:52:52 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 4; Timestamp 1698951172085, at time 100341389998193
+2023-11-02 18:53:02 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text malesuadasedsedposuereposuereadipiscingMicroservicesipsumposuereelitposuere
+2023-11-02 18:53:02 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4315017927958579229, "id": 7422064002946467908, "text": "malesuadasedsedposuereposuereadipiscingMicroservicesipsumposuereelitposuere", "createdAt": 1698951182000}' to topic='twitter-topic'
+2023-11-02 18:53:02 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 4; Timestamp 1698951182088, at time 100351387846664
+2023-11-02 18:53:12 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text porttitorcongueadipiscingporttitorFusceadipiscingliberomassaMicroservicesametconguesitLoremposuereadipiscingposuere
+2023-11-02 18:53:12 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4188566835323151136, "id": 8117902050003784470, "text": "porttitorcongueadipiscingporttitorFusceadipiscingliberomassaMicroservicesametconguesitLoremposuereadipiscingposuere", "createdAt": 1698951192000}' to topic='twitter-topic'
+2023-11-02 18:53:12 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 5; Timestamp 1698951192091, at time 100361385884557
+2023-11-02 18:53:22 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text sedmassaMaecenasFuscemalesuadaFusceMicroservicesposuereipsumconguecongueelit
+2023-11-02 18:53:22 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 6275152862571118977, "id": 9089459141269648376, "text": "sedmassaMaecenasFuscemalesuadaFusceMicroservicesposuereipsumconguecongueelit", "createdAt": 1698951202000}' to topic='twitter-topic'
+2023-11-02 18:53:22 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 5; Timestamp 1698951202094, at time 100371393500075
+2023-11-02 18:53:32 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumMaecenasseddolorFusceporttitorultriciessedMicroservicesmassaLoremLorempuruslectusipsummagna
+2023-11-02 18:53:32 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7567415719069160950, "id": 5377294627380920675, "text": "ipsumMaecenasseddolorFusceporttitorultriciessedMicroservicesmassaLoremLorempuruslectusipsummagna", "createdAt": 1698951212000}' to topic='twitter-topic'
+2023-11-02 18:53:32 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 6; Timestamp 1698951212150, at time 100381451179228
+2023-11-02 18:53:42 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text magnapurussedametultriciesMicroservicespurusFuscesedcongue
+2023-11-02 18:53:42 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 5459506639662554502, "id": 5108822956520937776, "text": "magnapurussedametultriciesMicroservicespurusFuscesedcongue", "createdAt": 1698951222000}' to topic='twitter-topic'
+2023-11-02 18:53:42 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 5; Timestamp 1698951222154, at time 100391454075316
+2023-11-02 18:53:52 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumelitFusceultriciesliberoMaecenasMicroservicesultriciesdolorultriciesmalesuadaFusce
+2023-11-02 18:53:52 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7716105872307758938, "id": 6661350643244037808, "text": "ipsumelitFusceultriciesliberoMaecenasMicroservicesultriciesdolorultriciesmalesuadaFusce", "createdAt": 1698951232000}' to topic='twitter-topic'
+2023-11-02 18:53:52 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 6; Timestamp 1698951232155, at time 100401447712174
+2023-11-02 18:54:02 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text ipsumametsitlectuscongueelitMicroservicesporttitormagnamagnaLoremcongue
+2023-11-02 18:54:02 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 4890102833268542093, "id": 5750986940708487268, "text": "ipsumametsitlectuscongueelitMicroservicesporttitormagnamagnaLoremcongue", "createdAt": 1698951242000}' to topic='twitter-topic'
+2023-11-02 18:54:02 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 7; Timestamp 1698951242158, at time 100411457621913
+2023-11-02 18:54:12 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text massaultriciesadipiscingipsumsitMicroservicesadipiscingpurusametmassa
+2023-11-02 18:54:12 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 7698245847898819327, "id": 5340379211093850654, "text": "massaultriciesadipiscingipsumsitMicroservicesadipiscingpurusametmassa", "createdAt": 1698951252000}' to topic='twitter-topic'
+2023-11-02 18:54:12 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 6; Timestamp 1698951252160, at time 100421461248544
+2023-11-02 18:54:22 [pool-3-thread-1] INFO  c.z.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with the text adipiscingipsummalesuadamagnacongueporttitorpurusMicroservicessedsitametpurusmalesuada
+2023-11-02 18:54:22 [pool-3-thread-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Sending message='{"userId": 8368248332170665936, "id": 3310652543336123522, "text": "adipiscingipsummalesuadamagnacongueporttitorpurusMicroservicessedsitametpurusmalesuada", "createdAt": 1698951262000}' to topic='twitter-topic'
+2023-11-02 18:54:22 [kafka-producer-network-thread | producer-1] INFO  c.z.k.p.c.s.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 8; Timestamp 1698951262163, at time 100431462816809
