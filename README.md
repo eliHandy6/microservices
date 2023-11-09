@@ -1,5 +1,7 @@
 http://localhost:8183/elastic-query-service/swagger-ui/index.html
 
+http://localhost:8184/elastic-query-web-client/query-by-text
+
 sudo chmod 666 /var/run/docker.sock
 
 
