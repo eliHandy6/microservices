@@ -56,6 +56,7 @@
         <elastic-search.version>2.6.8</elastic-search.version>
         <elastic.version>7.15.2</elastic.version>
         <springdoc-openapi-ui.version>1.6.3</springdoc-openapi-ui.version>
+        <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
 
     </properties>
 
@@ -245,6 +246,12 @@
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elastic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+                <version>${spring-cloud.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
