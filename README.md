@@ -63,3 +63,5 @@ services:
       - discovery.type=single-node
 ```
 
+sudo find . -type d -name 'target' -exec chmod -R a+rwx {} \;
+
