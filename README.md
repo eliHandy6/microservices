@@ -61,7 +61,11 @@ services:
     image: elasticsearch
     environment:
       - discovery.type=single-node
-```
 
+
+```sh 
 sudo find . -type d -name 'target' -exec chmod -R a+rwx {} \;
+``````
+
+
 
