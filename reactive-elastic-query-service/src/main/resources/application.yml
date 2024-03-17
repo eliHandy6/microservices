@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: reactive-elastic-query-service
+  config:
+    import: 'configserver:'
+    username: spring_cloud_user
+    password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
+    fail-fast: true
+
+  profiles:
+    active: reactive-elastic-query-service
+  security:
+    user:
+      name: spring_cloud_user
+      password: ENC (kIg5mA002MZ0ipLLAS0OKEYR/wMo8iUHcYSTnUt7zGTzl7vn8/lJjYZqx8fmMlD+/Jajqktrt+/IHerk9BRcQw==)
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+  endpoint:
+    refresh:
+      enabled: true
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD}
+
+
+
+
+
+
+
+

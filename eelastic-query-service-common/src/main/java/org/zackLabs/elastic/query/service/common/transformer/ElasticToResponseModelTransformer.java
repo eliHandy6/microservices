@@ -1,4 +1,4 @@
-package com.zackLabs.transformer;
+package org.zackLabs.elastic.query.service.common.transformer;
 
 
 import com.zackLabs.elasticmodel.index.impl.TwitterIndexModel;

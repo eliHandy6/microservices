@@ -1,4 +1,4 @@
-package com.zackLabs.model;
+package org.zackLabs.elastic.query.service.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -2,8 +2,6 @@ package com.zackLabs.api;
 
 
 import com.zackLabs.business.ElasticQueryService;
-import com.zackLabs.model.ElasticQueryServiceRequestModel;
-import com.zackLabs.model.ElasticQueryServiceResponseModel;
 import com.zackLabs.model.ElasticQueryServiceResponseModelV2;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -15,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;

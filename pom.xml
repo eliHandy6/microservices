@@ -21,6 +21,9 @@
         <module>common-util</module>
         <module>elastic-query-service</module>
         <module>elastic-query-web-client</module>
+        <module>eelastic-query-service-common</module>
+        <module>elastic-query-web-client-common</module>
+        <module>reactive-elastic-query-service</module>
 
     </modules>
     <parent>
@@ -93,6 +96,14 @@
                 <version>0.0.1-SNAPSHOT</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>eelastic-query-service-common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+                <scope>provided</scope>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.zackLabs</groupId>
                 <artifactId>common-config</artifactId>

@@ -20,6 +20,10 @@
             <artifactId>app-config-data</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>eelastic-query-service-common</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.zackLabs</groupId>
             <artifactId>elastic-query-client</artifactId>
         </dependency>

@@ -1,7 +1,7 @@
 package com.zackLabs.business;
 
 
-import com.zackLabs.model.ElasticQueryServiceResponseModel;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 
 import java.util.List;
 

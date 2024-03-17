@@ -4,11 +4,11 @@ package com.zackLabs.business.impl;
 import com.zackLabs.business.ElasticQueryService;
 import com.zackLabs.elastic.query.client.service.ElasticQueryClient;
 import com.zackLabs.elasticmodel.index.impl.TwitterIndexModel;
-import com.zackLabs.model.ElasticQueryServiceResponseModel;
 import com.zackLabs.model.assembler.ElasticQueryServiceResponseModelAssembler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 
 import java.util.List;
 
