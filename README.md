@@ -79,9 +79,13 @@ alter user postgres with password 'admin2030'
 CREATE USER keyclock WITH ENCRYPTED PASSWORD 'keyclock';
 GRANT ALL PRIVILEGES ON DATABASE keyclock TO keyclock;
 ``````
-
+```sh 
 http://localhost:8184/elastic-query-web-client/login/oauth2/code/keyclock
 http://localhost:8183/elastic-query-service/login/oauth2/code/keyclock
+``````
+```sh 
+curl -X  POST -d 'grant_type=password&username=app_user&password=app_user&client_id=elastic-query-web-client&client_secret=0fed21ea-592b-4da7-bbf1-087d0c7bdbc4' http://localhost:8081/auth/realms/microservices-realm/protocol/openid-connect/token
+``````
 
 
 
