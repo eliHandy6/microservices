@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
@@ -36,6 +37,7 @@ public class ElasticDocumentController {
     @Value("${server.port}")
     private String port;
 
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @Operation(summary = "Get all elastic documents.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {
@@ -84,6 +86,7 @@ public class ElasticDocumentController {
             @ApiResponse(responseCode = "400", description = "Not found."),
             @ApiResponse(responseCode = "500", description = "Internal server error.")
     })
+    @PreAuthorize("hasPermission(#id, 'ElasticQueryServiceResponseModel','READ')")
     @GetMapping(value = "/{id}", produces = "application/vnd.api.v2+json")
     public @ResponseBody
     ResponseEntity<ElasticQueryServiceResponseModelV2>
@@ -93,7 +96,9 @@ public class ElasticDocumentController {
         LOG.debug("Elasticsearch returned document with id {} on port {}", id, port);
         return ResponseEntity.ok(responseModelV2);
     }
-    @PreAuthorize("hasRole('APP_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
+
+    @PreAuthorize("hasRole('APP_USER_ROLE') || hasRole('APP_SUPER_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @Operation(summary = "Get elastic document by text.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful response.", content = {

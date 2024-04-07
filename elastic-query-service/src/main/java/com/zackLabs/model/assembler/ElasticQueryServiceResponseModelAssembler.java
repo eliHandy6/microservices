@@ -3,10 +3,11 @@ package com.zackLabs.model.assembler;
 
 import com.zackLabs.api.ElasticDocumentController;
 import com.zackLabs.elasticmodel.index.impl.TwitterIndexModel;
-import com.zackLabs.transformer.ElasticToResponseModelTransformer;
+import org.springframework.context.annotation.Import;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
+import org.zackLabs.elastic.query.service.common.transformer.ElasticToResponseModelTransformer;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,6 +16,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Component
+@Import(ElasticToResponseModelTransformer.class)
 public class ElasticQueryServiceResponseModelAssembler extends RepresentationModelAssemblerSupport<TwitterIndexModel, ElasticQueryServiceResponseModel> {
 
     private final ElasticToResponseModelTransformer elasticToResponseModelTransformer;
