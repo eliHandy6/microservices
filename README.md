@@ -75,6 +75,9 @@ select version();
 \du
 alter user postgres with password 'admin2030'
 \l
+
+CREATE USER keyclock WITH ENCRYPTED PASSWORD 'keyclock';
+GRANT ALL PRIVILEGES ON DATABASE keyclock TO keyclock;
 ``````
 
 
