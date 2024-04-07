@@ -66,14 +66,16 @@ services:
 ```sh 
 sudo find . -type d -name 'target' -exec chmod -R a+rwx {} \;
 ``````
+```sh 
 sudo systemctl status postgresql.service
+
 sudo systemctl enable postgresql.service
 sudo -i -u postgres
 select version();
 \du
 alter user postgres with password 'admin2030'
 \l
-
+``````
 
 
 
