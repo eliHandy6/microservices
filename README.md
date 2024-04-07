@@ -80,6 +80,8 @@ CREATE USER keyclock WITH ENCRYPTED PASSWORD 'keyclock';
 GRANT ALL PRIVILEGES ON DATABASE keyclock TO keyclock;
 ``````
 
+http://localhost:8184/elastic-query-web-client/login/oauth2/code/keyclock
+http://localhost:8183/elastic-query-service/login/oauth2/code/keyclock
 
 
 
