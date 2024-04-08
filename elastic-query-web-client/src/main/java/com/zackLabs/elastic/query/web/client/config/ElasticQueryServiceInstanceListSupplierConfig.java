@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Configuration
-@Primary
 public class ElasticQueryServiceInstanceListSupplierConfig implements ServiceInstanceListSupplier {
 
     private final ElasticQueryWebClientConfigData.WebClient webClientConfig;

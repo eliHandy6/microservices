@@ -15,12 +15,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
-import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
+
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
+import org.zackLabs.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 
 @PreAuthorize("isAuthenticated()")
 @RestController

@@ -1,61 +1,55 @@
-elastic-query-service:
-  version: v1
-  custom-audience: elastic-query-service
-
 server:
-  port: 8183
+  port: 8184
   servlet:
-    context-path: /elastic-query-service
+    context-path: /elastic-query-web-client
+
+elastic-query-web-client:
+  webclient:
+    connect-timeout-ms: 10000
+    read-timeout-ms: 10000
+    write-timeout-ms: 10000
+    max-in-memory-size: 10485760 # 10MB
+    content-type: 'application/vnd.api.v1+json'
+    accept-type: 'application/vnd.api.v1+json'
+    base-url: 'http://elastic-query-service/elastic-query-service/documents'
+    service-id: elastic-query-service
+    instances:
+      -
+        id: elastic-query-service-1
+        host: localhost
+        port: 8183
+      -
+        id: elastic-query-service-2
+        host: localhost
+        port: 8185
+  query-by-text:
+    method: POST
+    uri: "/get-document-by-text"
+    accept: ${elastic-query-web-client.webclient.accept-type}
 
 spring:
-  mvc:
-    pathpattern:
-      matching-strategy: ant_path_matcher
+  thymeleaf:
+    cache: false
   security:
     oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8081/auth/realms/microservices-realm
-          jwk-set-uri: http://localhost:8081/auth/realms/microservices-realm/protocol/openid-connect/certs
+      client:
+        registration:
+          keycloak:
+            client-id: 'elastic-query-web-client'
+            client-secret: '0fed21ea-592b-4da7-bbf1-087d0c7bdbc4'
+            authorization-grant-type: authorization_code
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope: openid
+        provider:
+          keycloak:
+            issuerUri: http://localhost:8081/auth/realms/microservices-realm
 
-  jpa:
-    open-in-view: false
-    show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL9Dialect
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public&binaryTransfer=true&reWriteBatchedInserts=true
-    username: postgres
-    password: admin2030
-    driver-class-name: org.postgresql.Driver
-    platform: postgres
-    schema: classpath:init-schema.sql
-    data: classpath:init-data.sql
-    initialization-mode: always
 
-elastic-query-config:
-  text-field: text
-
-elastic-config:
-  index-name: twitter-index
-  connection-url: http://localhost:9200
-  connect-timeout-ms: 5000
-  socket-timeout-ms: 30000
+security:
+  logout-success-url: http://localhost:8184/elastic-query-web-client
+  default-client-registration-id: keycloak
 
 user-config:
   username: test
   password: test1234
   roles: USER
-
-springdoc:
-  api-docs:
-    path: /api-docs
-  swagger-ui:
-    path: /swagger-ui.html
-
-security:
-  paths-to-ignore: /api-docs
-
-
